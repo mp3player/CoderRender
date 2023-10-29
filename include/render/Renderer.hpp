@@ -1,0 +1,6 @@
+#ifndef _COMPONENT_MESH_RENDERER_HPP_
+#define _COMPONENT_MESH_RENDERER_HPP_
+
+
+
+#endif 
