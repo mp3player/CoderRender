@@ -1,13 +1,20 @@
 #include <scene/Node.hpp>
 #include <glad/glad.h>
 
-
+static int entity_version = 0;
 
 // Entity
-Node::Node( std::string name ) : name( name ){}
+Node::Node(  ) : name( "DefaultNode_" + std::to_string( entity_version ) ){
+    entity_version += 1;
+    this->addComponent( new TransformComponent() );
+}
 
 Node::~Node(){
     
+}
+
+void Node::setName( std::string name ) {
+    this->name = name;
 }
 
 std::string Node::getName() const {
@@ -18,6 +25,7 @@ void Node::addComponent( Component * component ){
 
     if( this->components.find( component->getName() ) == this->components.end() ){
         this->components.emplace( component->getName() , component );
+        component->setNode( this );
     }
 
 }
@@ -51,6 +59,24 @@ Component * Node::removeComponent( std::string name ){
 
 }
 
+void Node::update( float deltaTime ){
+
+
+#define Iterator std::unordered_map< std::string , Component * >::iterator 
+
+    Iterator begin = this->components.begin();
+    Iterator end = this->components.end();
+
+    while( begin != end ){
+        
+        Component * component = begin->second;
+        component->update( deltaTime );
+        begin++;
+
+    }
+
+}
+
 void Node::dispose(){
     
     // delete component
@@ -62,5 +88,3 @@ void Node::dispose(){
     }
 
 }
-
-

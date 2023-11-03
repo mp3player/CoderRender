@@ -2,7 +2,6 @@
 
 Scene::~Scene(){
 
-
     auto release = []( Node * node ){
         if( node != nullptr ){
             delete node;

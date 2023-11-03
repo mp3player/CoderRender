@@ -7,12 +7,7 @@ uniform mat4 projectionMatrix;
 uniform mat4 viewMatrix;
 uniform mat4 viewProjectionMatrix;
 
-uniform float time;
 
 void main(){
-    gl_Position =  mat4( 
-        cos(time ) , sin( time ) , 0 , 0 ,
-        -sin( time ) , cos( time) , 0 , 0 ,
-        0 , 0 , 1 , 0 ,
-        0 , 0 , 0, 1 ) * vec4( position , 1.0f );
+    gl_Position = projectionMatrix * viewMatrix  * vec4( position / 2.0f, 1.0f );
 }

@@ -41,22 +41,13 @@ struct Application {
 
     public:
 
-        void addNode( ){ }
+        Node * addNode( );
 
-        void addMesh( std::string path ){
+        Node * addNode( std::string path );
 
-            Mesh * mesh = Mesh::ReadAttributeFromFile( path );
-            Node * node = new Node();
-            
-            TransformComponent * transformComponent = new TransformComponent( );
-            MeshComponent * meshComponent = new MeshComponent( mesh, "render" );
+        Node * addCamera();
 
-            node->addComponent( meshComponent );
-            node->addComponent( transformComponent );
-
-            this->scene->children.push_back( node );
-
-        }
+        Node * addLight();
 
 
     private:

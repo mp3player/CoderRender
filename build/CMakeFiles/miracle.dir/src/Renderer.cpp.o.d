@@ -318,4 +318,5 @@ CMakeFiles/miracle.dir/src/Renderer.cpp.o: \
  /usr/include/c++/11/bits/fstream.tcc /usr/include/c++/11/sstream \
  /usr/include/c++/11/bits/sstream.tcc \
  /home/coder/project/c++/engine/./include/scene/Material.hpp \
+ /home/coder/project/c++/engine/./include/scene/Texture.hpp \
  /home/coder/project/c++/engine/./include/render/Renderer.hpp

@@ -1,6 +1,7 @@
 
 #include <opengl/shader/Program.hpp>
 #include <glm/gtc/type_ptr.hpp>
+#include <core/Log.hpp>
 
 const std::string INCLUDE_LIB_FOLDER = "/home/coder/project/c++/engine/shader/lib/";
 
@@ -9,7 +10,9 @@ static std::string readFile( std::string fileName){
     std::stringstream ss = std::stringstream();
 
     if (!f.is_open()) {
-        std::cout << "read file failed" << std::endl;;
+
+        Log::cout( __FILE__ , "filed to read file : " , fileName );
+
         return "";
     }
     ss << f.rdbuf();
@@ -27,11 +30,12 @@ bool createShader(const char * const code , unsigned int type , unsigned int & s
     glGetShaderiv(shader, GL_COMPILE_STATUS, &status);
     if (!status) {
         glGetShaderInfoLog(shader, 512, NULL, info);
-        std::cout << (type == GL_VERTEX_SHADER ? "VERTEX : " : "FRAGMENT : " ) << info << std::endl;
+        Log::cout( __FILE__ , type == GL_VERTEX_SHADER ? "VERTEX : " : "FRAGMENT : " , info );;
+        // Log::cout( __FILE__ , );
         return false;
     }
 
-    std::cout << (type == GL_VERTEX_SHADER ? "VERTEX shader successfully" : "FRAGMENT shader successfully " ) << std::endl;
+    Log::cout( __FILE__ , type == GL_VERTEX_SHADER ? "VERTEX shader" : "FRAGMENT shader " , "successfuly " ) ;
     return true;
 }
 
@@ -44,7 +48,7 @@ bool createProgram( const char * const vCode , const char * const fCode , unsign
     program = glCreateProgram();
 
     if (!vStatus || !fStatus) {
-        std::cout << "Program : create shader failed " << std::endl;
+        Log::cout( __FILE__ , "Program : create shader failed " );;
         return false;
     }
 
@@ -57,7 +61,7 @@ bool createProgram( const char * const vCode , const char * const fCode , unsign
     glGetProgramiv(program, GL_LINK_STATUS, &status);
     if (!status) {
         glGetProgramInfoLog(program, 512, NULL, info);
-        std::cout << info << std::endl;
+        Log::cout( __FILE__ , info );
         return false;
     }
     //delete the shader
@@ -93,7 +97,7 @@ bool compile( unsigned int & program ){
     glGetProgramiv(program, GL_LINK_STATUS, &status);
     if (!status) {
         glGetProgramInfoLog(program, 512, NULL, info);
-        std::cout << info << std::endl;
+        Log::cout( __FILE__ , info );
         return false;
     }
     //delete the shader
@@ -414,24 +418,26 @@ bool Program::compile(){
     
     if( !this->isReady ) return false;
 
-    this->programID = glCreateProgram();
+    this->UIProgramID = glCreateProgram();
 
-    glAttachShader( this->programID , this->vertexShader->shaderID );
-    glAttachShader( this->programID , this->fragmentShader->shaderID );
+    glAttachShader( this->UIProgramID , this->vertexShader->shaderID );
+    glAttachShader( this->UIProgramID , this->fragmentShader->shaderID );
 
-    glLinkProgram( this->programID );
+    glLinkProgram( this->UIProgramID );
     int status;
     char info[512];
-    glGetProgramiv( this->programID , GL_LINK_STATUS, &status);
+    glGetProgramiv( this->UIProgramID , GL_LINK_STATUS, &status);
 
     if (!status) {
-        glGetProgramInfoLog( this->programID , 512, NULL, info);
-        std::cout << info << std::endl;
+        glGetProgramInfoLog( this->UIProgramID , 512, NULL, info);
+        Log::cout( __FILE__ , info );
         this->isReady = false;
         return false; 
     }
 
     this->isReady = true;
+
+    this->regist();
 
     return this->isReady;
 
@@ -449,12 +455,17 @@ bool Program::dispose(){
     if( this->vertexShader != nullptr ) delete this->vertexShader;
     if( this->fragmentShader != nullptr ) delete this->fragmentShader;
 
-    if( glIsProgram( this->programID ) == GL_TRUE ) glDeleteProgram( this->programID );
+    if( glIsProgram( this->UIProgramID ) == GL_TRUE ) glDeleteProgram( this->UIProgramID );
 
     this->vertexShader = nullptr , this->fragmentShader = nullptr ; 
     this->isReady = false;
 
     return true;
+}
+
+
+unsigned int Program::ID() const {
+    return this->UIProgramID;
 }
 
 /**
@@ -468,7 +479,7 @@ void Program::regist( ){
 
     // active uniform 
     int uniformCount = 0;
-    glGetProgramiv( this->programID , GL_ACTIVE_UNIFORMS , &uniformCount );
+    glGetProgramiv( this->UIProgramID , GL_ACTIVE_UNIFORMS , &uniformCount );
 
     int maxLength = 64;
     int length = 0;
@@ -477,17 +488,17 @@ void Program::regist( ){
     char name[64];
 
     for( int i = 0 ; i < uniformCount ; ++ i ){
-        glGetActiveUniform( this->programID , i , maxLength , &length , &size , &type , name );
+        glGetActiveUniform( this->UIProgramID , i , maxLength , &length , &size , &type , name );
         this->uniforms.emplace( name , i );
-        std::cout << "regist : " << name << std::endl;
+        Log::cout( __FILE__ , "regist : " , name );
     }
 
     // active attribute
     int attribCount = 0;
-    glGetProgramiv( this->programID , GL_ACTIVE_ATTRIBUTES , &attribCount );
+    glGetProgramiv( this->UIProgramID , GL_ACTIVE_ATTRIBUTES , &attribCount );
 
     for( int i = 0 ; i < attribCount ; ++ i ){
-        glGetActiveAttrib( this->programID , i , maxLength , &length , &size , &type , name );
+        glGetActiveAttrib( this->UIProgramID , i , maxLength , &length , &size , &type , name );
         this->attributes.emplace( name , i );
     }
 
@@ -499,7 +510,7 @@ void Program::regist( ){
  */
 void Program::bind(){
 
-    glUseProgram( this->programID );
+    glUseProgram( this->UIProgramID );
 
 }
 

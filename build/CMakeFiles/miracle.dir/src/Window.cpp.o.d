@@ -150,6 +150,11 @@ CMakeFiles/miracle.dir/src/Window.cpp.o: \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc \
  /home/coder/project/c++/engine/./include/scene/Scene.hpp \
+ /home/coder/project/c++/engine/./include/core/MemoryManager.hpp \
+ /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_uninitialized.h \
+ /usr/include/c++/11/bits/stl_vector.h \
+ /usr/include/c++/11/bits/stl_bvector.h \
+ /usr/include/c++/11/bits/vector.tcc \
  /home/coder/project/c++/engine/./include/scene/Node.hpp \
  /usr/include/c++/11/unordered_map \
  /usr/include/c++/11/ext/aligned_buffer.h \
@@ -315,11 +320,8 @@ CMakeFiles/miracle.dir/src/Window.cpp.o: \
  /usr/local/include/glm/integer.hpp \
  /usr/local/include/glm/detail/func_integer.inl \
  /home/coder/project/c++/engine/./include/scene/Mesh.hpp \
- /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_uninitialized.h \
- /usr/include/c++/11/bits/stl_vector.h \
- /usr/include/c++/11/bits/stl_bvector.h \
- /usr/include/c++/11/bits/vector.tcc \
  /home/coder/project/c++/engine/./include/core/Ref.hpp \
  /home/coder/project/c++/engine/./include/scene/Material.hpp \
+ /home/coder/project/c++/engine/./include/scene/Texture.hpp \
  /home/coder/project/c++/engine/./include/scene/Layer.hpp \
- /home/coder/project/c++/engine/./include/scene/Texture.hpp
+ /home/coder/project/c++/engine/./include/core/Log.hpp

@@ -5,7 +5,7 @@
 #include<component/Component.hpp>
 #include <scene/Layer.hpp>
 
-static int entity_version = 0;
+
 
 struct Component ;
 
@@ -13,20 +13,21 @@ struct Node : Ref {
 
     public:
         std::vector< Node * > children;
+        Layer layer;
 
     private:
 
         std::string name;
-        
         std::unordered_map< std::string , Component *> components;
-        Layer layer;
 
     public:
 
-        explicit Node( std::string name = "DefaultNode_" + entity_version );
+        explicit Node(  );
         ~Node();
 
     public:
+
+        void setName( std::string );
 
         std::string getName() const ;
 
@@ -39,7 +40,12 @@ struct Node : Ref {
         Component * removeComponent( std::string name );
 
     private:
+
         void dispose();
+
+    public:
+
+        void update( float deltaTime );
 
 };
 

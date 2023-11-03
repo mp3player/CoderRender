@@ -20,7 +20,7 @@ struct Component {
         bool needUpdate = true;
 
     public:
-        explicit Component( std::string name = "Component" );
+        Component( );
 
         void setNode( Node * node );
 
@@ -28,30 +28,55 @@ struct Component {
 
         std::string getName() const ;
 
-        virtual void init() = 0;
 
-        virtual void update( float deltaTime ) = 0 ;
 
         template< typename T > 
         T findComponent(  );
+
+    public:
+    
+        virtual void init() = 0;
+
+        virtual void update( float deltaTime ) = 0 ;
 
     public :
         bool isUpdated() ;
 
 };
 
+const glm::vec3 O = glm::vec3( 0.0f , 0.0f , 0.0f );
+const glm::vec3 X = glm::vec3( 1.0f , 0.0f , 0.0f );
+const glm::vec3 Y = glm::vec3( 0.0f , 1.0f , 0.0f );
+const glm::vec3 Z = glm::vec3( 0.0f , 0.0f , 1.0f );
+
 struct TransformComponent : Component {
 
     public:
-        glm::vec3 v3Translation;
-        glm::vec3 v3Scale;
-        glm::vec3 v3Rotation;
-        glm::mat4 transform;
+        
+        glm::vec3 v3Translation = O;
+        glm::vec3 v3Scale = glm::vec3( 1.0f , 1.0f , 1.0f );
+        glm::vec3 v3Rotation = O;
+
+        glm::vec3 v3LookAt = -Z;
+        glm::vec3 v3Right = X;
+        glm::vec3 v3Up = Y;
+
 
     public:
-        TransformComponent( std::string name = "transform" );
+        
+        glm::mat4 m4ModelTransform;
+        glm::mat4 m4InverseModelTransform;
+        glm::mat4 m4WorldTransform;
+        glm::mat4 m4InverseWorldTransform;
+        glm::mat4 m4ModelWorldTransform;
+        glm::mat4 m4InverseModelWorldTransform;
 
     public:
+
+        TransformComponent(  );
+
+    public:
+
         void setTranslation( glm::vec3 ) ;
         void setRotation( glm::vec3 );
         void setScale( glm::vec3 );
@@ -60,7 +85,11 @@ struct TransformComponent : Component {
         void scale( float x = 1.0f , float y = 1.0f , float z = 1.0f );
         void rotate( float x = 0.0f , float y = 0.0f , float z = 0.0f );
 
-        glm::mat4 getTransformMatrix();
+    public:
+
+        void setWorldTransform( glm::mat4 worldTransform , glm::mat4 inverseWorldTransform );
+        void updateTransform();
+        void updateModelWorldTransform();
 
     public:
         void init() override;
@@ -75,8 +104,11 @@ struct MeshComponent : Component {
         Mesh * mesh;
 
     public:
-        explicit MeshComponent( Mesh * mesh , std::string name = "mesh" );
+        explicit MeshComponent( Mesh * mesh );
         ~MeshComponent();
+
+    public: 
+        unsigned int vertexCount() const;
 
     public:
         void init() override;
@@ -88,7 +120,13 @@ struct RenderComponent : Component {
 
     public:
 
-        Material * material;
+        Material * material = nullptr ;
+
+    public:
+
+        explicit RenderComponent( );
+
+    public:
 
         void init() override;
         void update( float deltaTime ) override ;

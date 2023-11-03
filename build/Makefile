@@ -273,6 +273,30 @@ src/CoordinateSystem.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/CoordinateSystem.cpp.s
 .PHONY : src/CoordinateSystem.cpp.s
 
+src/Geometry.o: src/Geometry.cpp.o
+.PHONY : src/Geometry.o
+
+# target to build an object file
+src/Geometry.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/Geometry.cpp.o
+.PHONY : src/Geometry.cpp.o
+
+src/Geometry.i: src/Geometry.cpp.i
+.PHONY : src/Geometry.i
+
+# target to preprocess a source file
+src/Geometry.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/Geometry.cpp.i
+.PHONY : src/Geometry.cpp.i
+
+src/Geometry.s: src/Geometry.cpp.s
+.PHONY : src/Geometry.s
+
+# target to generate assembly for a file
+src/Geometry.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/Geometry.cpp.s
+.PHONY : src/Geometry.cpp.s
+
 src/Layer.o: src/Layer.cpp.o
 .PHONY : src/Layer.o
 
@@ -321,6 +345,30 @@ src/Light.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/Light.cpp.s
 .PHONY : src/Light.cpp.s
 
+src/Log.o: src/Log.cpp.o
+.PHONY : src/Log.o
+
+# target to build an object file
+src/Log.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/Log.cpp.o
+.PHONY : src/Log.cpp.o
+
+src/Log.i: src/Log.cpp.i
+.PHONY : src/Log.i
+
+# target to preprocess a source file
+src/Log.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/Log.cpp.i
+.PHONY : src/Log.cpp.i
+
+src/Log.s: src/Log.cpp.s
+.PHONY : src/Log.s
+
+# target to generate assembly for a file
+src/Log.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/Log.cpp.s
+.PHONY : src/Log.cpp.s
+
 src/Material.o: src/Material.cpp.o
 .PHONY : src/Material.o
 
@@ -344,6 +392,30 @@ src/Material.s: src/Material.cpp.s
 src/Material.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/Material.cpp.s
 .PHONY : src/Material.cpp.s
+
+src/MemoryManager.o: src/MemoryManager.cpp.o
+.PHONY : src/MemoryManager.o
+
+# target to build an object file
+src/MemoryManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/MemoryManager.cpp.o
+.PHONY : src/MemoryManager.cpp.o
+
+src/MemoryManager.i: src/MemoryManager.cpp.i
+.PHONY : src/MemoryManager.i
+
+# target to preprocess a source file
+src/MemoryManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/MemoryManager.cpp.i
+.PHONY : src/MemoryManager.cpp.i
+
+src/MemoryManager.s: src/MemoryManager.cpp.s
+.PHONY : src/MemoryManager.s
+
+# target to generate assembly for a file
+src/MemoryManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/MemoryManager.cpp.s
+.PHONY : src/MemoryManager.cpp.s
 
 src/Mesh.o: src/Mesh.cpp.o
 .PHONY : src/Mesh.o
@@ -660,15 +732,24 @@ help:
 	@echo "... src/CoordinateSystem.o"
 	@echo "... src/CoordinateSystem.i"
 	@echo "... src/CoordinateSystem.s"
+	@echo "... src/Geometry.o"
+	@echo "... src/Geometry.i"
+	@echo "... src/Geometry.s"
 	@echo "... src/Layer.o"
 	@echo "... src/Layer.i"
 	@echo "... src/Layer.s"
 	@echo "... src/Light.o"
 	@echo "... src/Light.i"
 	@echo "... src/Light.s"
+	@echo "... src/Log.o"
+	@echo "... src/Log.i"
+	@echo "... src/Log.s"
 	@echo "... src/Material.o"
 	@echo "... src/Material.i"
 	@echo "... src/Material.s"
+	@echo "... src/MemoryManager.o"
+	@echo "... src/MemoryManager.i"
+	@echo "... src/MemoryManager.s"
 	@echo "... src/Mesh.o"
 	@echo "... src/Mesh.i"
 	@echo "... src/Mesh.s"

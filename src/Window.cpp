@@ -1,6 +1,7 @@
 #include <Window.hpp>
 #include <unordered_map>
 #include <scene/Texture.hpp>
+#include <core/Log.hpp>
 
 Window::Window(unsigned int width , unsigned int height , const std::string title) : width(width) , height(height) , title(title) {
     this->init();
@@ -23,7 +24,7 @@ void Window::init(unsigned int width , unsigned int height , const std::string t
 
 void Window::init(){
     if (!glfwInit()) {
-        std::cout << "glfw init failed" << std::endl;
+        Log::cout( __FILE__ , "glfw init failed" );;
         this->visiable = false;
         return ;
     }
@@ -35,7 +36,7 @@ void Window::init(){
     glfwWindowHint(GLFW_TRANSPARENT_FRAMEBUFFER, GLFW_TRUE);
 
     if (this->window == NULL) {
-        std::cout << "init window failed " << std::endl;
+        Log::cout( __FILE__ , "init window failed " );
         glfwTerminate();
         this->visiable = false;
         return ;
@@ -45,12 +46,12 @@ void Window::init(){
 
     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
     {
-        std::cout << "Failed to initialize GLAD" << std::endl;
+        Log::cout( __FILE__ , "Failed to initialize GLAD" );
         this->visiable = false;
         return ;
     }
 
-    std::cout << "window inited" << std::endl;
+    Log::cout( __FILE__, "window inited" );
 }
 
 void Window::destory(){

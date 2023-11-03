@@ -14,10 +14,15 @@ add_executable(miracle
 # opengl 
 src/glad.c
 
+# geometry
+src/Geometry.cpp
+
 
 # core 
+src/Log.cpp
 src/Ref.cpp
 src/Buffer.cpp
+src/MemoryManager.cpp
 
 # util 
 src/Layer.cpp
@@ -30,6 +35,8 @@ src/Camera.cpp
 src/Mesh.cpp
 src/Renderer.cpp
 src/Material.cpp
+
+# scene
 src/Texture.cpp
 
 # window 

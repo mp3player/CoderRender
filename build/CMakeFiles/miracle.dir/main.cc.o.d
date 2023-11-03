@@ -152,6 +152,11 @@ CMakeFiles/miracle.dir/main.cc.o: /home/coder/project/c++/engine/main.cc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc \
  /home/coder/project/c++/engine/./include/scene/Scene.hpp \
+ /home/coder/project/c++/engine/./include/core/MemoryManager.hpp \
+ /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_uninitialized.h \
+ /usr/include/c++/11/bits/stl_vector.h \
+ /usr/include/c++/11/bits/stl_bvector.h \
+ /usr/include/c++/11/bits/vector.tcc \
  /home/coder/project/c++/engine/./include/scene/Node.hpp \
  /usr/include/c++/11/unordered_map \
  /usr/include/c++/11/ext/aligned_buffer.h \
@@ -317,15 +322,34 @@ CMakeFiles/miracle.dir/main.cc.o: /home/coder/project/c++/engine/main.cc \
  /usr/local/include/glm/integer.hpp \
  /usr/local/include/glm/detail/func_integer.inl \
  /home/coder/project/c++/engine/./include/scene/Mesh.hpp \
- /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_uninitialized.h \
- /usr/include/c++/11/bits/stl_vector.h \
- /usr/include/c++/11/bits/stl_bvector.h \
- /usr/include/c++/11/bits/vector.tcc \
  /home/coder/project/c++/engine/./include/core/Ref.hpp \
  /home/coder/project/c++/engine/./include/scene/Material.hpp \
+ /home/coder/project/c++/engine/./include/scene/Texture.hpp \
  /home/coder/project/c++/engine/./include/scene/Layer.hpp \
  /home/coder/project/c++/engine/./include/system/System.hpp \
  /home/coder/project/c++/engine/./include/system/CoordinateSystem.hpp \
  /home/coder/project/c++/engine/./include/system/RenderSystem.hpp \
+ /home/coder/project/c++/engine/./include/opengl/shader/Program.hpp \
+ /usr/include/c++/11/fstream /usr/include/c++/11/bits/codecvt.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
+ /usr/include/c++/11/bits/fstream.tcc /usr/include/c++/11/sstream \
+ /usr/include/c++/11/bits/sstream.tcc \
+ /home/coder/project/c++/engine/./include/core/Buffer.hpp \
+ /home/coder/project/c++/engine/./include/component/Camera.hpp \
+ /home/coder/project/c++/engine/./include/component/Light.hpp \
  /home/coder/project/c++/engine/./include/system/TimeSystem.hpp \
- /usr/include/c++/11/ctime
+ /usr/include/c++/11/ctime \
+ /home/coder/project/c++/engine/./include/core/Log.hpp \
+ /usr/local/include/glm/gtc/matrix_transform.hpp \
+ /usr/local/include/glm/ext/matrix_projection.hpp \
+ /usr/local/include/glm/gtc/constants.hpp \
+ /usr/local/include/glm/ext/scalar_constants.hpp \
+ /usr/local/include/glm/ext/scalar_constants.inl \
+ /usr/local/include/glm/gtc/constants.inl \
+ /usr/local/include/glm/ext/matrix_projection.inl \
+ /usr/local/include/glm/ext/matrix_clip_space.hpp \
+ /usr/local/include/glm/ext/matrix_clip_space.inl \
+ /usr/local/include/glm/ext/matrix_transform.hpp \
+ /usr/local/include/glm/ext/matrix_transform.inl \
+ /usr/local/include/glm/gtc/matrix_transform.inl

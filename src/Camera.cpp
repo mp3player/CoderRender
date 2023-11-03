@@ -3,68 +3,25 @@
 
 
 
-std::ostream & operator << ( std::ostream & cout , glm::mat4 mat ){
-    for( int i = 0 ; i < 4 ; ++ i ){
-        for( int j = 0 ; j < 4 ; ++ j ){
-            std::cout << mat[ i ][ j ] << "\t";
-        }
-        std::cout << std::endl;
-    }
-    return cout;
-}
-
-
-std::ostream & operator << ( std::ostream & cout , glm::vec3 vec ){
-
-    std::cout << vec.x << " " << vec.y << " " << vec.z ;
-    return cout;
-
-}
 
 // Camera
+
+Camera::Camera( )
+{
+    this->name = "camera";
+}
+
 Camera::~Camera(){}
 
-void Camera::updateViewMatrix(){
-
-    this->m4ViewMatrix = glm::lookAt( this->v3Position , this->v3LookAt , this->v3Up );
-    
-}
-
-void Camera::updateViewProjectionMatrix(){
-    this->m4ViewProjectionMatrix = this->m4ProjectionMatrix * this->m4ViewMatrix;
-}
 
 glm::mat4 Camera::getProjectionMatrix(){
     return this->m4ProjectionMatrix;
 }
 
-glm::mat4 Camera::getViewMatrix(){
-    return this->m4ViewMatrix;
-}
-
-glm::mat4 Camera::getViewProjectionMatrix(){
-    return this->m4ViewProjectionMatrix;
-}
-
-void Camera::setPosition( glm::vec3 position ){
-    this->v3Position = position;
-    this->needUpdate = true;
-}
-
-void Camera::setLookAt( glm::vec3 lookAt ){
-    this->v3LookAt = lookAt;
-    this->needUpdate = true;
-}
-
-void Camera::setUp( glm::vec3 up ){
-    this->v3Up = up;
-    this->needUpdate = true;
-}
-
 // PerspectiveCamera
 
 PerspectiveCamera::PerspectiveCamera( float fov , float aspect , float near , float far )
-    : fov( fov ) , aspect( aspect ) , near( near ) , far( far ) 
+    : fov( fov ) , aspect( aspect ) , near( near ) , far( far ) , Camera()
 {
     this->updateProjectionMatrix();
     this->updateFrustum();
@@ -86,7 +43,7 @@ void PerspectiveCamera::init(){
 }
 
 void PerspectiveCamera::update( float deltaTime ){
-
+    
 }
 
 // Orthographic Camera 
@@ -110,6 +67,8 @@ void OrthogonalCamera::updateProjectionMatrix(){
 
 void OrthogonalCamera::init(){}
 
-void OrthogonalCamera::update( float deltaTime ) {}
+void OrthogonalCamera::update( float deltaTime ) {
+
+}
 
 

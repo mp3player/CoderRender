@@ -313,7 +313,11 @@ CMakeFiles/miracle.dir/src/Camera.cpp.o: \
  /usr/include/c++/11/bits/unordered_map.h \
  /usr/include/c++/11/bits/erase_if.h \
  /home/coder/project/c++/engine/./include/core/Ref.hpp \
+ /home/coder/project/c++/engine/./include/core/MemoryManager.hpp \
  /home/coder/project/c++/engine/./include/scene/Material.hpp \
+ /home/coder/project/c++/engine/./include/scene/Texture.hpp \
+ /home/coder/project/c++/engine/./include/glad/glad.h \
+ /usr/include/KHR/khrplatform.h \
  /home/coder/project/c++/engine/./include/scene/Node.hpp \
  /home/coder/project/c++/engine/./include/scene/Layer.hpp \
  /usr/local/include/glm/ext.hpp \

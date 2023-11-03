@@ -1,105 +1,158 @@
 #include <scene/Texture.hpp>
-
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.c"
+
 #include <iostream>
 
-// TODO : texture data should be stored in Resource Manager to prevent the destructor calling automaticly in local variables;
 
-Texture::~Texture(){
-    
+#define R___ 0x2002
+#define RG__ 0x8227
+#define RGB_ 0x1907
+#define RGBA 0x1908
+
+
+Texture2D::Texture2D( std::string path )
+    : path( path ) , width( 0 ) , height( 0 )
+{
+    this->loadImageData( path );
 }
 
-int Texture::getWidth() const {
+Texture2D::~Texture2D(){
+    this->dispose();
+}
+
+int Texture2D::getWidth() const {
     return this->width;
 }
 
-int Texture::getHeight() const {
+int Texture2D::getHeight() const {
     return this->height;
 }
 
-void * Texture::ptr() const {
+int Texture2D::getChannel() const {
+    return this->channel;
+}
+
+unsigned int Texture2D::getFormat() const {
+    
+    return this->format;
+
+}
+
+unsigned char * Texture2D::ptr() const {
     return this->data;
 }
 
-void Texture::dispose(){
-    if( this->data != nullptr ) delete data;
-}
-
-
-// Texture2D
-
-
-// ImageTexture 
-
-ImageTexture::ImageTexture( int width , int height , int channel )
-    : channel( channel )
-{
-    this->width = width;
-    this->height = height;
-
-    srand( time( NULL ) );
-    // allocate memory to store the data of the picture
-    this->data = new unsigned char[ this->width * this->height * this->channel ];
-    for( int i = 0 ; i < this->width ; ++i ){
-        for( int j = 0 ; j < this->height ; ++ j ){
-
-            float c = 0.0f;
-            setColor( i , j , glm::vec3( c ) );
-
-        }
+void Texture2D::loadImageData( std::string path ){
+    
+    if( this->data != nullptr ){
+        this->dispose();
     }
-}
 
-ImageTexture::ImageTexture( std::string path ){
-    this->data = stbi_load(path.c_str() , &(this->width) , &(this->height) , &(this->channel) , 0);
-}
-
-ImageTexture::~ImageTexture(){
-
-}
-
-
-int ImageTexture::getChannel() const {
-
-    return this->channel;
-
-}
-
-bool ImageTexture::setColor( int x , int y , glm::vec3 color ){
-    if( x < 0 || y < 0 || x >= this->width || y >= this->height ) return false;
-
-    int index = y * this->width + x;
-    this->data[ index * 3 + 0 ] = (unsigned char) ( color.r * 255 );
-    this->data[ index * 3 + 1 ] = (unsigned char) ( color.g * 255 );
-    this->data[ index * 3 + 2 ] = (unsigned char) ( color.b * 255 );
-
-    return true;
-}
-
-glm::vec3 ImageTexture::getColor( int x , int y ){
-    if( x < 0 || y < 0 || x >= this->width || y >= this->height ) return glm::vec3( 0.0f );
-    int index = y * this->width + x;
-    unsigned char r = this->data[ index * 3 + 0 ];
-    unsigned char g = this->data[ index * 3 + 1 ];
-    unsigned char b = this->data[ index * 3 + 2 ];
-
-    return glm::vec3( r / 255.0f , g / 255.0f , b / 255.0f );
-}
-
-void ImageTexture::drawLine( int x0 , int y0 , int x1 , int y1 ){
-    // calculate the equation of the line
-    float slope = float( y1 - y0 ) / float( x1 - x0 );
-    float bias = float( y1 ) - slope * float( x1 );
-    int step = ( x1 - x0 ) / std::abs( x1 - x0 );
-
-
-    for( int i = 0 ; i < std::abs( x1 - x0 ) ; ++ i ){
-        int x = x0 + i * step ;
-        int y = slope * x + bias;
-        float c = ( rand() % 1000 ) / 1000.0f ;
-        setColor( x , y , glm::vec3( c ) );
+    this->data = stbi_load( this->path.c_str() , &( this->width ) , &( this->height ) , &( this->channel ) , 0 );
+    
+    if( this->data == nullptr ){
+        // error
+        return ;
     }
+
+    if( this->channel == 1 ){
+
+        this->format = R___;
+
+    }else if( this->channel == 2 ){
+
+        this->format = RG__;
+
+    }else if( this->channel == 3 ){
+
+        this->format == RGB_;
+
+    }else if( this->channel == 4 ){
+
+        this->format == RGBA;
+
+    }
+
 }
+
+void Texture2D::dispose(){
+
+    if( this->data != nullptr ){
+        stbi_image_free( this->data );
+        this->data = nullptr;
+    }
+
+}
+
+
+
+
+
+// TODO : texture data should be stored in Resource Manager to prevent the destructor calling automaticly in local variables;
+
+TextureBuffer::~TextureBuffer(){
+    this->dispose();
+}
+
+unsigned int TextureBuffer::ID() const{
+
+    return this->id;
+
+}
+
+bool TextureBuffer::isValid() const {
+    
+    return glIsTexture( this->id );
+
+}
+
+void TextureBuffer::init(){
+
+    glGenTextures( 1 , &( this->id ) );
+
+}
+
+void TextureBuffer::bind( unsigned int target ) {
+
+    glBindTexture( target , this->id );
+    this->target = target;
+    this->binded = true;
+
+}
+
+void TextureBuffer::unBind(){
+
+    if( !this->binded ) return ;
+    glBindTexture( this->target , 0 );
+    this->binded = false;
+
+}
+
+bool TextureBuffer::createBuffer( const Texture2D * texture ){
+
+    if( !this->binded ) return false;
+    // bind
+
+    // filter methods
+    glTexParameteri( GL_TEXTURE_2D , GL_TEXTURE_MIN_FILTER , texture->minFilter );
+    glTexParameteri( GL_TEXTURE_2D , GL_TEXTURE_MAG_FILTER , texture->magFilter );
+    
+    // edge;
+    glTexParameteri( GL_TEXTURE_2D , GL_TEXTURE_WRAP_S , texture->wrapS );
+    glTexParameteri( GL_TEXTURE_2D , GL_TEXTURE_WRAP_T , texture->wrapT );
+
+    glTexImage2D( GL_TEXTURE_2D , 0 , GL_RGBA , texture->getWidth() , texture->getHeight() , 0 , texture->getFormat() , GL_UNSIGNED_BYTE , texture->ptr() );
+
+}
+
+void TextureBuffer::dispose(){
+
+    if( this->isValid() ){
+        glDeleteTextures( 1 , &(this->id) );
+    }
+
+}
+
 
 

@@ -4,7 +4,7 @@
 #include <core/Ref.hpp>
 #include <vector>
 #include <glad/glad.h>
-#include <scene/Mesh.hpp>
+#include <iostream>
 
 
 // 1. create buffer : glGenBuffer
@@ -61,9 +61,7 @@ struct Buffer : Ref {
         // glDeleteBuffers()
         virtual void dispose();
 
-
 };
-
 
 template< typename T >
 bool Buffer::bufferSubData( std::vector< T > data , unsigned int offset ){
@@ -88,6 +86,11 @@ bool Buffer::bufferData( const std::vector< T > data , GLenum usage ){
 
 
 
+
+
+
+
+// Attribute Buffer
 struct AttributeBuffer : Buffer {
 
     private:
@@ -113,6 +116,12 @@ struct AttributeBuffer : Buffer {
 
 };
 
+
+
+
+
+
+// Index Buffer
 struct IndexBuffer : Buffer {
 
     public: 
@@ -121,13 +130,18 @@ struct IndexBuffer : Buffer {
 
 };
 
+
+
+
+
+
+// VertexArray Buffer 
 struct VertexArrayBuffer {
 
     private:
 
         unsigned int id;
         bool binded = false;
-        bool hasIndex = false;
         std::vector< AttributeBuffer * > buffer;
         IndexBuffer * index = nullptr ;
 
@@ -138,18 +152,19 @@ struct VertexArrayBuffer {
     public:
 
         unsigned int ID() const ;
+        bool hasIndex() const ;
 
     public:
 
         void init();
         void bind();
         void unBind();
+        void bindIndex();
 
     public:
 
-        bool addIndex( const std::vector< unsigned int > index );
-        bool addAttribute( const AttributeFloat * attribute );
-        void setAttribute( std::vector< AttributeFloat * > attributes );
+        bool setIndex( std::vector< unsigned int > index );
+        bool addAttribute( std::vector< float > attribute , int itemSize );
 
 
 };

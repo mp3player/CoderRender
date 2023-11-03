@@ -294,7 +294,11 @@ CMakeFiles/miracle.dir/src/Component.cpp.o: \
  /usr/include/c++/11/bits/unordered_map.h \
  /usr/include/c++/11/bits/erase_if.h \
  /home/coder/project/c++/engine/./include/core/Ref.hpp \
+ /home/coder/project/c++/engine/./include/core/MemoryManager.hpp \
  /home/coder/project/c++/engine/./include/scene/Material.hpp \
+ /home/coder/project/c++/engine/./include/scene/Texture.hpp \
+ /home/coder/project/c++/engine/./include/glad/glad.h \
+ /usr/include/KHR/khrplatform.h \
  /home/coder/project/c++/engine/./include/scene/Node.hpp \
  /home/coder/project/c++/engine/./include/scene/Layer.hpp \
  /usr/local/include/glm/gtc/matrix_transform.hpp \
@@ -341,4 +345,27 @@ CMakeFiles/miracle.dir/src/Component.cpp.o: \
  /usr/local/include/glm/detail/setup.hpp \
  /usr/local/include/glm/gtx/component_wise.inl \
  /usr/local/include/glm/gtx/norm.inl \
- /usr/local/include/glm/gtx/quaternion.inl
+ /usr/local/include/glm/gtx/quaternion.inl \
+ /home/coder/project/c++/engine/./include/core/Log.hpp \
+ /usr/include/c++/11/iostream /usr/include/c++/11/ostream \
+ /usr/include/c++/11/ios /usr/include/c++/11/exception \
+ /usr/include/c++/11/bits/exception_ptr.h \
+ /usr/include/c++/11/bits/cxxabi_init_exception.h \
+ /usr/include/c++/11/typeinfo /usr/include/c++/11/bits/nested_exception.h \
+ /usr/include/c++/11/bits/ios_base.h \
+ /usr/include/c++/11/bits/locale_classes.h \
+ /usr/include/c++/11/bits/locale_classes.tcc \
+ /usr/include/c++/11/system_error \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h \
+ /usr/include/c++/11/stdexcept /usr/include/c++/11/streambuf \
+ /usr/include/c++/11/bits/streambuf.tcc \
+ /usr/include/c++/11/bits/basic_ios.h \
+ /usr/include/c++/11/bits/locale_facets.h /usr/include/c++/11/cwctype \
+ /usr/include/wctype.h /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h \
+ /usr/include/c++/11/bits/streambuf_iterator.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h \
+ /usr/include/c++/11/bits/locale_facets.tcc \
+ /usr/include/c++/11/bits/basic_ios.tcc \
+ /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
+ /usr/include/c++/11/bits/istream.tcc

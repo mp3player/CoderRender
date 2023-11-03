@@ -68,7 +68,7 @@ struct Program  {
         Shader * vertexShader = nullptr ;
         Shader * fragmentShader = nullptr ;
 
-        unsigned int programID = 0;
+        unsigned int UIProgramID = 0;
         bool isReady;
 
     public:
@@ -79,6 +79,9 @@ struct Program  {
         bool compile();
         bool dispose();
 
+        unsigned int ID() const ;
+
+    public:
 
         void bind();
         

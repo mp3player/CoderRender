@@ -39,7 +39,7 @@
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 59,
+				"line" : 66,
 				"parent" : 0
 			},
 			{
@@ -133,7 +133,10 @@
 				17,
 				18,
 				19,
-				20
+				20,
+				21,
+				22,
+				23
 			]
 		}
 	],
@@ -285,7 +288,10 @@
 				17,
 				18,
 				19,
-				20
+				20,
+				21,
+				22,
+				23
 			]
 		}
 	],
@@ -300,6 +306,18 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 1,
+			"path" : "src/Geometry.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/Log.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
 			"path" : "src/Ref.cpp",
 			"sourceGroupIndex" : 0
 		},
@@ -307,6 +325,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 1,
 			"path" : "src/Buffer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/MemoryManager.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

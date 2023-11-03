@@ -295,7 +295,9 @@ CMakeFiles/miracle.dir/src/Node.cpp.o: \
  /usr/include/c++/11/bits/charconv.h \
  /usr/include/c++/11/bits/basic_string.tcc \
  /home/coder/project/c++/engine/./include/core/Ref.hpp \
+ /home/coder/project/c++/engine/./include/core/MemoryManager.hpp \
  /home/coder/project/c++/engine/./include/scene/Material.hpp \
- /home/coder/project/c++/engine/./include/scene/Layer.hpp \
+ /home/coder/project/c++/engine/./include/scene/Texture.hpp \
  /home/coder/project/c++/engine/./include/glad/glad.h \
- /usr/include/KHR/khrplatform.h
+ /usr/include/KHR/khrplatform.h \
+ /home/coder/project/c++/engine/./include/scene/Layer.hpp

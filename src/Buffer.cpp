@@ -144,6 +144,12 @@ unsigned int VertexArrayBuffer::ID() const {
     return this->id;
 }
 
+bool VertexArrayBuffer::hasIndex() const {
+    
+    return ( this->index != nullptr ) ;
+
+}
+
 void VertexArrayBuffer::init(){
 
     glGenVertexArrays( 1 , &this->id );
@@ -165,11 +171,12 @@ void VertexArrayBuffer::unBind(){
 
 }
 
-bool VertexArrayBuffer::addIndex( std::vector< unsigned int > index ){
+bool VertexArrayBuffer::setIndex( std::vector< unsigned int > index ){
 
     if( !this->binded ) return false;
 
     this->index = new IndexBuffer();
+    this->index->init();
     this->index->bind( GL_ELEMENT_ARRAY_BUFFER );
     this->index->bufferData( index , GL_STATIC_DRAW );
     this->index->unBind();
@@ -177,21 +184,28 @@ bool VertexArrayBuffer::addIndex( std::vector< unsigned int > index ){
 
 }
 
+void VertexArrayBuffer::bindIndex(){
+
+    if( this->index != nullptr )
+    this->index->bind( GL_ELEMENT_ARRAY_BUFFER );
+
+}
+
 // this method can be decomposed to two section : 1. create buffer + 2. buffer
 // split the two section can make the attribute global 
 
 //  ==> glSubBufferData();
-bool VertexArrayBuffer::addAttribute( const AttributeFloat * attribute ){
+bool VertexArrayBuffer::addAttribute( std::vector< float > data , int itemSize ){
 
     if( !this->binded ) return false ;
 
     this->bind();
 
-    AttributeBuffer * buffer = new AttributeBuffer( this->buffer.size() , attribute->itemSize , 0 );
+    AttributeBuffer * buffer = new AttributeBuffer( this->buffer.size() , itemSize , 0 );
 
     buffer->init();
     buffer->bind( GL_ARRAY_BUFFER );
-    buffer->bufferData( attribute->data , GL_STATIC_DRAW );
+    buffer->bufferData( data , GL_STATIC_DRAW );
     buffer->enable();
     buffer->unBind();
 
@@ -203,6 +217,3 @@ bool VertexArrayBuffer::addAttribute( const AttributeFloat * attribute ){
 
 }
 
-void VertexArrayBuffer::setAttribute( std::vector< AttributeFloat * > attributes ) {
-    
-}

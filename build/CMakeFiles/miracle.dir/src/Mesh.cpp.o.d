@@ -292,6 +292,7 @@ CMakeFiles/miracle.dir/src/Mesh.cpp.o: \
  /usr/include/c++/11/bits/unordered_map.h \
  /usr/include/c++/11/bits/erase_if.h \
  /home/coder/project/c++/engine/./include/core/Ref.hpp \
+ /home/coder/project/c++/engine/./include/core/MemoryManager.hpp \
  /usr/local/include/assimp/Importer.hpp /usr/local/include/assimp/types.h \
  /usr/include/string.h /usr/include/strings.h \
  /usr/local/include/assimp/defs.h /usr/local/include/assimp/config.h \
@@ -342,4 +343,5 @@ CMakeFiles/miracle.dir/src/Mesh.cpp.o: \
  /usr/include/c++/11/bits/locale_facets.tcc \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
- /usr/include/c++/11/bits/istream.tcc
+ /usr/include/c++/11/bits/istream.tcc \
+ /home/coder/project/c++/engine/./include/core/Log.hpp

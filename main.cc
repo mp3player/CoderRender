@@ -1,13 +1,14 @@
 
 #include <string>
 #include <Application.hpp>
-#include <core/Ref.hpp>
+#include <core/Log.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+
 
 
 int main()
 {
 
-    
     Application * application = Application::getInstance();
     application->run();
 

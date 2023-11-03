@@ -368,4 +368,5 @@ CMakeFiles/miracle.dir/src/Program.cpp.o: \
  /usr/local/include/glm/ext/vector_uint1.hpp \
  /usr/local/include/glm/ext/vector_uint1_sized.hpp \
  /usr/include/c++/11/cstring /usr/include/string.h /usr/include/strings.h \
- /usr/local/include/glm/gtc/type_ptr.inl
+ /usr/local/include/glm/gtc/type_ptr.inl \
+ /home/coder/project/c++/engine/./include/core/Log.hpp

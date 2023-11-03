@@ -6,6 +6,16 @@
 },
 {
   "directory": "/home/coder/project/c++/engine/build",
+  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -std=gnu++14 -o CMakeFiles/miracle.dir/src/Geometry.cpp.o -c /home/coder/project/c++/engine/src/Geometry.cpp",
+  "file": "/home/coder/project/c++/engine/src/Geometry.cpp"
+},
+{
+  "directory": "/home/coder/project/c++/engine/build",
+  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -std=gnu++14 -o CMakeFiles/miracle.dir/src/Log.cpp.o -c /home/coder/project/c++/engine/src/Log.cpp",
+  "file": "/home/coder/project/c++/engine/src/Log.cpp"
+},
+{
+  "directory": "/home/coder/project/c++/engine/build",
   "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -std=gnu++14 -o CMakeFiles/miracle.dir/src/Ref.cpp.o -c /home/coder/project/c++/engine/src/Ref.cpp",
   "file": "/home/coder/project/c++/engine/src/Ref.cpp"
 },
@@ -13,6 +23,11 @@
   "directory": "/home/coder/project/c++/engine/build",
   "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -std=gnu++14 -o CMakeFiles/miracle.dir/src/Buffer.cpp.o -c /home/coder/project/c++/engine/src/Buffer.cpp",
   "file": "/home/coder/project/c++/engine/src/Buffer.cpp"
+},
+{
+  "directory": "/home/coder/project/c++/engine/build",
+  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -std=gnu++14 -o CMakeFiles/miracle.dir/src/MemoryManager.cpp.o -c /home/coder/project/c++/engine/src/MemoryManager.cpp",
+  "file": "/home/coder/project/c++/engine/src/MemoryManager.cpp"
 },
 {
   "directory": "/home/coder/project/c++/engine/build",

@@ -6,14 +6,15 @@
 
 #include <functional>
 #include <iostream>
+#include <core/Log.hpp>
 
 
 
 
-Mesh::Mesh(){
+Mesh::Mesh()
+    : iVertexCount( 0 ) , iTriangleCount( 0 )
+{
     this->attributes = std::unordered_map< std::string , AttributeFloat * >();
-    this->vertexCount = 0;
-    this->triangleCount = 0;
 }
 
 Mesh::~Mesh(){
@@ -25,18 +26,31 @@ Mesh::~Mesh(){
     }
     this->attributes.clear();
 
-    std::cout << "release mesh" << std::endl;
+    Log::cout( __FILE__ , "release mesh" );
 
 }
 
-void Mesh::setAttribute( std::string name , AttributeFloat * attribute ){
+void Mesh::addAttribute( std::string name , AttributeFloat * attribute ){
     if( this->attributes.find( name ) == this->attributes.end() && attribute->data.size() > 0 ){
-        this->attributes.emplace( name , attribute );
         
+        if( this->iVertexCount == 0 ){
+            
+            this->iVertexCount = attribute->data.size() / attribute->itemSize;
+        
+        }else{
+
+            if( this->iVertexCount != attribute->data.size() / attribute->itemSize ){
+                throw std::exception();
+            }
+        
+        }
+
+        this->attributes.emplace( name , attribute );
+    
     }
 }
 
-AttributeFloat * Mesh::getAttribute( std::string name ){
+AttributeFloat * Mesh::getAttribute( std::string name ) {
     
     if( this->attributes.find( name ) != this->attributes.end() ){
         return this->attributes.find( name )->second;
@@ -54,6 +68,9 @@ std::vector< unsigned int > Mesh::getIndex( ){
 }
 // TODO : mesh data should be stored in Resource Manager
 
+int Mesh::vertexCount() const {
+    return this->iVertexCount;
+}
 
 Assimp::Importer importer;
 
@@ -76,6 +93,16 @@ Mesh * Mesh::ReadAttributeFromFile( std::string path ){
 
     std::function< void( aiMesh * , const aiScene * ) > parseMesh = [&]( aiMesh * mesh , const aiScene * scene ){
         
+        // merge multiple mesh will cause offset 
+        // the index must be read first
+        unsigned int offset = coordinate->data.size() / coordinate->itemSize;
+        for( int i = 0 ; i < mesh->mNumFaces ; ++ i ){
+            aiFace face = mesh->mFaces[i];
+            for( int j = 0 ; j < face.mNumIndices ; ++ j ){
+                index.push_back( face.mIndices[j] + offset );
+            }
+        }
+
         for( int i = 0 ; i < mesh->mNumVertices ; ++ i ){
             // coordinate
             float x = mesh->mVertices[i].x ;
@@ -117,14 +144,7 @@ Mesh * Mesh::ReadAttributeFromFile( std::string path ){
             
         }
 
-        // merge multiple mesh will cause offset 
-        unsigned int offset = coordinate->data.size() / coordinate->itemSize;
-        for( int i = 0 ; i < mesh->mNumFaces ; ++ i ){
-            aiFace face = mesh->mFaces[i];
-            for( int j = 0 ; j < face.mNumIndices ; ++ j ){
-                index.push_back( face.mIndices[j] + offset );
-            }
-        }
+        
 
     };
 
@@ -146,14 +166,13 @@ Mesh * Mesh::ReadAttributeFromFile( std::string path ){
     parseNode( scene->mRootNode , scene );
 
     Mesh * mesh = new Mesh();
-    mesh->setAttribute( "position" , coordinate );
-    mesh->setAttribute( "uv" , texCoordinate );
-    mesh->setAttribute( "normal" , normal );
-    mesh->setAttribute( "tangent" , tangent );
-    mesh->setAttribute( "biTangent" , biTangent );
+    mesh->addAttribute( "position" , coordinate );
+    mesh->addAttribute( "uv" , texCoordinate );
+    mesh->addAttribute( "normal" , normal );
+    mesh->addAttribute( "tangent" , tangent );
+    mesh->addAttribute( "biTangent" , biTangent );
+    mesh->setIndex( index );
     
     return mesh;
 }
-
-
 

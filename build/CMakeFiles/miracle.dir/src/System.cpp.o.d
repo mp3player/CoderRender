@@ -128,6 +128,11 @@ CMakeFiles/miracle.dir/src/System.cpp.o: \
  /usr/include/c++/11/bits/hash_bytes.h \
  /usr/include/c++/11/bits/basic_string.tcc \
  /home/coder/project/c++/engine/./include/scene/Scene.hpp \
+ /home/coder/project/c++/engine/./include/core/MemoryManager.hpp \
+ /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_uninitialized.h \
+ /usr/include/c++/11/bits/stl_vector.h \
+ /usr/include/c++/11/bits/stl_bvector.h \
+ /usr/include/c++/11/bits/vector.tcc \
  /home/coder/project/c++/engine/./include/scene/Node.hpp \
  /usr/include/c++/11/unordered_map \
  /usr/include/c++/11/ext/aligned_buffer.h \
@@ -293,12 +298,11 @@ CMakeFiles/miracle.dir/src/System.cpp.o: \
  /usr/local/include/glm/integer.hpp \
  /usr/local/include/glm/detail/func_integer.inl \
  /home/coder/project/c++/engine/./include/scene/Mesh.hpp \
- /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_uninitialized.h \
- /usr/include/c++/11/bits/stl_vector.h \
- /usr/include/c++/11/bits/stl_bvector.h \
- /usr/include/c++/11/bits/vector.tcc \
  /home/coder/project/c++/engine/./include/core/Ref.hpp \
  /home/coder/project/c++/engine/./include/scene/Material.hpp \
+ /home/coder/project/c++/engine/./include/scene/Texture.hpp \
+ /home/coder/project/c++/engine/./include/glad/glad.h \
+ /usr/include/KHR/khrplatform.h \
  /home/coder/project/c++/engine/./include/scene/Layer.hpp \
  /usr/include/c++/11/functional /usr/include/c++/11/bits/refwrap.h \
  /usr/include/c++/11/bits/std_function.h /usr/include/c++/11/typeinfo \

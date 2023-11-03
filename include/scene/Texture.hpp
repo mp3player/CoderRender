@@ -10,61 +10,98 @@
 
 struct Texture {
 
-    protected:
-        unsigned char * data = nullptr ;
-        int width;
-        int height;
+    public:
+
+        glm::vec2 v2Offset;
+        glm::vec2 v2Scale;
+        float v1Rotation;
 
     public:
+
         GLenum wrapS;
         GLenum wrapT;
         GLenum magFilter;
         GLenum minFilter;
 
+};
+
+
+struct Texture2D : Texture {
+
+    private:
+
+        std::string path;    
+        int width;
+        int height;
+        int channel;
+        unsigned int format;
+        unsigned char * data = nullptr;
+
     public:
-        Texture() = default;
-        virtual ~Texture() ;
+
+        Texture2D() = default;
+        Texture2D( std::string path );
+        ~Texture2D();
+
+    public:
 
         int getWidth() const ;
         int getHeight() const ;
+        int getChannel( ) const ;
+        unsigned int getFormat() const ;
 
-        void * ptr() const;
-        
-        virtual void dispose();
+        unsigned char * ptr() const;
+
+
+    public:
+
+        void loadImageData( std::string path );
+        void dispose();
+
 };
 
-struct ImageTexture : Texture {
-    
+
+struct Texture3D : Texture {
+
+};
+
+struct Texture2DArray : Texture {
+
+};
+
+struct TextureBuffer {
+
     private:
-        int channel;
+    
+        unsigned int id = 0;
+        unsigned int target;
+        bool binded;
 
     public:
-        ImageTexture( int width , int height , int channel );
-        ImageTexture( std::string path );
-        ~ImageTexture( );
+
+        TextureBuffer() = default;
+
+        ~TextureBuffer();
 
     public:
-        int getChannel() const ;
 
-        bool setColor( int x , int y , glm::vec3 color );
-        glm::vec3 getColor( int x , int y );
+        unsigned int ID() const;
 
-        void drawLine( int x0 , int y0 , int x1 , int y1 );
-        void drawCircle( int x , int y , int r );
-        void drawRect( int x0 , int y0 , int width , int height );
+        bool isValid() const ;
 
-        // void drawPolygon();
+    public:
+
+        void init();
+
+        void bind( unsigned int target );
+
+        void unBind();
+
+        bool createBuffer( const Texture2D * texture );
+
+        void dispose();
 
 };
-
-// VideoTexture
-// 
-
-ImageTexture noise( int width , int height , int octave );
-
-ImageTexture noise( int width , int height , std::vector< int > octave );
-
-
 
 
 #endif

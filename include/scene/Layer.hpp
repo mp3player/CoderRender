@@ -2,7 +2,12 @@
 #define _LAYER_HPP_
 
 struct Layer{
-    int index = 0;
+
+    public:
+        int index = 0;
+        Layer() = default;
+        Layer( int index );
+
 };
 
 

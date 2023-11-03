@@ -13,6 +13,7 @@ void CoordinateSystem::init(){
 }
     
 void CoordinateSystem::update( float deltaTime ){
+    
     System::createBuffer();
 
 
