@@ -9,49 +9,32 @@
 #include <component/Camera.hpp>
 #include <component/Light.hpp>
 
+#include <render/Renderer.hpp>
 
 
-typedef MemoryManager< Program > ShaderManager;
-typedef MemoryManager< Texture > TextureManager;
-typedef MemoryManager< TextureBuffer > TextureBufferManager;
-typedef MemoryManager< VertexArrayBuffer > VAOManager;
+
+
 
 
 struct RenderSystem : System {
 
     private:
-    
-        ShaderManager _shaders;
-        TextureManager _textures;
-        TextureBufferManager _textureBuffers;
-        VAOManager _vaoManager;
-        
 
-        std::unordered_map< Mesh * , VertexArrayBuffer * > shapeCaches;
-        std::unordered_map< Material * , Program * > _shaderCaches;
-        std::unordered_map< Texture * , TextureBuffer * > _textureCaches;
+        Renderer * renderer;
 
     public:
 
         Node * mainCamera = nullptr ;
         std::vector< Node * > cameras;
+        std::vector< Node * > nodes;
         std::vector< AmbientLight * > ambientLights;
         std::vector< DirectionalLight * > directionalLights;
         std::vector< SpotLight * > spotLights;
 
     public:
 
-        RenderSystem( Scene * scene , std::string name = "render");
+        RenderSystem( Scene * scene );
         ~RenderSystem();
-
-    public:
-
-        void createBuffer();
-
-    public:
-
-        VertexArrayBuffer * getVAO( Node * node ) ;
-        Program * getProgram( Node * node );
 
     public:
     

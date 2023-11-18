@@ -25,12 +25,17 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/coder/project/c++/engine/src/Node.cpp" "CMakeFiles/miracle.dir/src/Node.cpp.o" "gcc" "CMakeFiles/miracle.dir/src/Node.cpp.o.d"
   "/home/coder/project/c++/engine/src/Program.cpp" "CMakeFiles/miracle.dir/src/Program.cpp.o" "gcc" "CMakeFiles/miracle.dir/src/Program.cpp.o.d"
   "/home/coder/project/c++/engine/src/Ref.cpp" "CMakeFiles/miracle.dir/src/Ref.cpp.o" "gcc" "CMakeFiles/miracle.dir/src/Ref.cpp.o.d"
+  "/home/coder/project/c++/engine/src/RenderBuffer.cpp" "CMakeFiles/miracle.dir/src/RenderBuffer.cpp.o" "gcc" "CMakeFiles/miracle.dir/src/RenderBuffer.cpp.o.d"
+  "/home/coder/project/c++/engine/src/RenderPass.cpp" "CMakeFiles/miracle.dir/src/RenderPass.cpp.o" "gcc" "CMakeFiles/miracle.dir/src/RenderPass.cpp.o.d"
   "/home/coder/project/c++/engine/src/RenderSystem.cpp" "CMakeFiles/miracle.dir/src/RenderSystem.cpp.o" "gcc" "CMakeFiles/miracle.dir/src/RenderSystem.cpp.o.d"
   "/home/coder/project/c++/engine/src/Renderer.cpp" "CMakeFiles/miracle.dir/src/Renderer.cpp.o" "gcc" "CMakeFiles/miracle.dir/src/Renderer.cpp.o.d"
   "/home/coder/project/c++/engine/src/Scene.cpp" "CMakeFiles/miracle.dir/src/Scene.cpp.o" "gcc" "CMakeFiles/miracle.dir/src/Scene.cpp.o.d"
+  "/home/coder/project/c++/engine/src/Screen.cpp" "CMakeFiles/miracle.dir/src/Screen.cpp.o" "gcc" "CMakeFiles/miracle.dir/src/Screen.cpp.o.d"
   "/home/coder/project/c++/engine/src/System.cpp" "CMakeFiles/miracle.dir/src/System.cpp.o" "gcc" "CMakeFiles/miracle.dir/src/System.cpp.o.d"
   "/home/coder/project/c++/engine/src/Texture.cpp" "CMakeFiles/miracle.dir/src/Texture.cpp.o" "gcc" "CMakeFiles/miracle.dir/src/Texture.cpp.o.d"
+  "/home/coder/project/c++/engine/src/TextureBuffer.cpp" "CMakeFiles/miracle.dir/src/TextureBuffer.cpp.o" "gcc" "CMakeFiles/miracle.dir/src/TextureBuffer.cpp.o.d"
   "/home/coder/project/c++/engine/src/TimeSystem.cpp" "CMakeFiles/miracle.dir/src/TimeSystem.cpp.o" "gcc" "CMakeFiles/miracle.dir/src/TimeSystem.cpp.o.d"
+  "/home/coder/project/c++/engine/src/VertexBuffer.cpp" "CMakeFiles/miracle.dir/src/VertexBuffer.cpp.o" "gcc" "CMakeFiles/miracle.dir/src/VertexBuffer.cpp.o.d"
   "/home/coder/project/c++/engine/src/Window.cpp" "CMakeFiles/miracle.dir/src/Window.cpp.o" "gcc" "CMakeFiles/miracle.dir/src/Window.cpp.o.d"
   )
 

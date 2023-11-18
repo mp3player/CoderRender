@@ -6,10 +6,19 @@ static int entity_version = 0;
 // Entity
 Node::Node(  ) : name( "DefaultNode_" + std::to_string( entity_version ) ){
     entity_version += 1;
-    this->addComponent( new TransformComponent() );
+    this->addComponent( new Transform() );
 }
 
 Node::~Node(){
+    
+}
+
+
+void Node::addChild( Node * node ){
+
+    assert( node != nullptr );
+    this->children.push_back( node );
+    node->parent = this;
     
 }
 
@@ -23,24 +32,12 @@ std::string Node::getName() const {
 
 void Node::addComponent( Component * component ){
 
+    assert( component != nullptr );
     if( this->components.find( component->getName() ) == this->components.end() ){
         this->components.emplace( component->getName() , component );
         component->setNode( this );
     }
-
-}
-
-bool Node::hasComponent( std::string name ){
-    return ( this->components.find( name ) != this->components.end() );
-}
-
-Component * Node::findComponent( std::string name ){
-
-    if( this->components.find( name ) == this->components.end() ){
-        return nullptr;
-    }
-
-    return this->components.at( name );
+    
 
 }
 
@@ -74,6 +71,7 @@ void Node::update( float deltaTime ){
         begin++;
 
     }
+    
 
 }
 
@@ -88,3 +86,4 @@ void Node::dispose(){
     }
 
 }
+

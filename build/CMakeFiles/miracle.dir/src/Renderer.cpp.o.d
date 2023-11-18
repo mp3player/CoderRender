@@ -11,8 +11,9 @@ CMakeFiles/miracle.dir/src/Renderer.cpp.o: \
  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h \
- /usr/include/c++/11/ostream /usr/include/c++/11/ios \
- /usr/include/c++/11/iosfwd /usr/include/c++/11/bits/stringfwd.h \
+ /usr/include/c++/11/pstl/pstl_config.h /usr/include/c++/11/ostream \
+ /usr/include/c++/11/ios /usr/include/c++/11/iosfwd \
+ /usr/include/c++/11/bits/stringfwd.h \
  /usr/include/c++/11/bits/memoryfwd.h /usr/include/c++/11/bits/postypes.h \
  /usr/include/c++/11/cwchar /usr/include/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
@@ -104,7 +105,9 @@ CMakeFiles/miracle.dir/src/Renderer.cpp.o: \
  /usr/include/c++/11/bits/basic_string.h \
  /usr/include/c++/11/ext/alloc_traits.h \
  /usr/include/c++/11/bits/alloc_traits.h \
- /usr/include/c++/11/bits/stl_construct.h \
+ /usr/include/c++/11/bits/stl_construct.h /usr/include/c++/11/string_view \
+ /usr/include/c++/11/bits/functional_hash.h \
+ /usr/include/c++/11/bits/string_view.tcc \
  /usr/include/c++/11/ext/string_conversions.h /usr/include/c++/11/cstdlib \
  /usr/include/stdlib.h /usr/include/x86_64-linux-gnu/bits/waitflags.h \
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
@@ -127,7 +130,6 @@ CMakeFiles/miracle.dir/src/Renderer.cpp.o: \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/11/bits/charconv.h \
- /usr/include/c++/11/bits/functional_hash.h \
  /usr/include/c++/11/bits/basic_string.tcc \
  /usr/include/c++/11/bits/locale_classes.tcc \
  /usr/include/c++/11/system_error \
@@ -157,6 +159,19 @@ CMakeFiles/miracle.dir/src/Renderer.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+ /usr/include/c++/11/bits/specfun.h /usr/include/c++/11/limits \
+ /usr/include/c++/11/tr1/gamma.tcc \
+ /usr/include/c++/11/tr1/special_function_util.h \
+ /usr/include/c++/11/tr1/bessel_function.tcc \
+ /usr/include/c++/11/tr1/beta_function.tcc \
+ /usr/include/c++/11/tr1/ell_integral.tcc \
+ /usr/include/c++/11/tr1/exp_integral.tcc \
+ /usr/include/c++/11/tr1/hypergeometric.tcc \
+ /usr/include/c++/11/tr1/legendre_function.tcc \
+ /usr/include/c++/11/tr1/modified_bessel_func.tcc \
+ /usr/include/c++/11/tr1/poly_hermite.tcc \
+ /usr/include/c++/11/tr1/poly_laguerre.tcc \
+ /usr/include/c++/11/tr1/riemann_zeta.tcc \
  /usr/local/include/glm/detail/setup.hpp /usr/include/c++/11/cassert \
  /usr/include/assert.h /usr/include/c++/11/cstddef \
  /usr/local/include/glm/simd/platform.h /usr/include/c++/11/climits \
@@ -169,7 +184,7 @@ CMakeFiles/miracle.dir/src/Renderer.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h /usr/include/c++/11/cfloat \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h \
- /usr/include/c++/11/limits /usr/local/include/glm/fwd.hpp \
+ /usr/local/include/glm/fwd.hpp \
  /usr/local/include/glm/detail/qualifier.hpp \
  /usr/local/include/glm/detail/setup.hpp /usr/local/include/glm/vec2.hpp \
  /usr/local/include/glm/ext/vector_bool2.hpp \
@@ -306,6 +321,7 @@ CMakeFiles/miracle.dir/src/Renderer.cpp.o: \
  /usr/include/c++/11/array /usr/include/c++/11/bits/uses_allocator.h \
  /usr/include/c++/11/bits/invoke.h \
  /usr/include/c++/11/bits/enable_special_members.h \
+ /usr/include/c++/11/bits/node_handle.h \
  /usr/include/c++/11/bits/unordered_map.h \
  /usr/include/c++/11/bits/erase_if.h /usr/include/c++/11/vector \
  /usr/include/c++/11/bits/stl_uninitialized.h \
@@ -319,4 +335,17 @@ CMakeFiles/miracle.dir/src/Renderer.cpp.o: \
  /usr/include/c++/11/bits/sstream.tcc \
  /home/coder/project/c++/engine/./include/scene/Material.hpp \
  /home/coder/project/c++/engine/./include/scene/Texture.hpp \
- /home/coder/project/c++/engine/./include/render/Renderer.hpp
+ /home/coder/project/c++/engine/./include/render/Renderer.hpp \
+ /home/coder/project/c++/engine/./include/core/VertexBuffer.hpp \
+ /home/coder/project/c++/engine/./include/core/Buffer.hpp \
+ /home/coder/project/c++/engine/./include/core/Ref.hpp \
+ /home/coder/project/c++/engine/./include/core/TextureBuffer.hpp \
+ /home/coder/project/c++/engine/./include/scene/Node.hpp \
+ /home/coder/project/c++/engine/./include/component/Component.hpp \
+ /home/coder/project/c++/engine/./include/scene/Mesh.hpp \
+ /home/coder/project/c++/engine/./include/core/MemoryManager.hpp \
+ /home/coder/project/c++/engine/./include/scene/Layer.hpp \
+ /home/coder/project/c++/engine/./include/core/Log.hpp \
+ /home/coder/project/c++/engine/./include/scene/Scene.hpp \
+ /home/coder/project/c++/engine/./include/component/Camera.hpp \
+ /home/coder/project/c++/engine/./include/component/Light.hpp

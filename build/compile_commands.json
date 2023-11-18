@@ -6,117 +6,142 @@
 },
 {
   "directory": "/home/coder/project/c++/engine/build",
-  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -std=gnu++14 -o CMakeFiles/miracle.dir/src/Geometry.cpp.o -c /home/coder/project/c++/engine/src/Geometry.cpp",
+  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -o CMakeFiles/miracle.dir/src/Geometry.cpp.o -c /home/coder/project/c++/engine/src/Geometry.cpp",
   "file": "/home/coder/project/c++/engine/src/Geometry.cpp"
 },
 {
   "directory": "/home/coder/project/c++/engine/build",
-  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -std=gnu++14 -o CMakeFiles/miracle.dir/src/Log.cpp.o -c /home/coder/project/c++/engine/src/Log.cpp",
+  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -o CMakeFiles/miracle.dir/src/Log.cpp.o -c /home/coder/project/c++/engine/src/Log.cpp",
   "file": "/home/coder/project/c++/engine/src/Log.cpp"
 },
 {
   "directory": "/home/coder/project/c++/engine/build",
-  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -std=gnu++14 -o CMakeFiles/miracle.dir/src/Ref.cpp.o -c /home/coder/project/c++/engine/src/Ref.cpp",
+  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -o CMakeFiles/miracle.dir/src/Ref.cpp.o -c /home/coder/project/c++/engine/src/Ref.cpp",
   "file": "/home/coder/project/c++/engine/src/Ref.cpp"
 },
 {
   "directory": "/home/coder/project/c++/engine/build",
-  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -std=gnu++14 -o CMakeFiles/miracle.dir/src/Buffer.cpp.o -c /home/coder/project/c++/engine/src/Buffer.cpp",
+  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -o CMakeFiles/miracle.dir/src/Buffer.cpp.o -c /home/coder/project/c++/engine/src/Buffer.cpp",
   "file": "/home/coder/project/c++/engine/src/Buffer.cpp"
 },
 {
   "directory": "/home/coder/project/c++/engine/build",
-  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -std=gnu++14 -o CMakeFiles/miracle.dir/src/MemoryManager.cpp.o -c /home/coder/project/c++/engine/src/MemoryManager.cpp",
+  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -o CMakeFiles/miracle.dir/src/VertexBuffer.cpp.o -c /home/coder/project/c++/engine/src/VertexBuffer.cpp",
+  "file": "/home/coder/project/c++/engine/src/VertexBuffer.cpp"
+},
+{
+  "directory": "/home/coder/project/c++/engine/build",
+  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -o CMakeFiles/miracle.dir/src/RenderBuffer.cpp.o -c /home/coder/project/c++/engine/src/RenderBuffer.cpp",
+  "file": "/home/coder/project/c++/engine/src/RenderBuffer.cpp"
+},
+{
+  "directory": "/home/coder/project/c++/engine/build",
+  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -o CMakeFiles/miracle.dir/src/TextureBuffer.cpp.o -c /home/coder/project/c++/engine/src/TextureBuffer.cpp",
+  "file": "/home/coder/project/c++/engine/src/TextureBuffer.cpp"
+},
+{
+  "directory": "/home/coder/project/c++/engine/build",
+  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -o CMakeFiles/miracle.dir/src/MemoryManager.cpp.o -c /home/coder/project/c++/engine/src/MemoryManager.cpp",
   "file": "/home/coder/project/c++/engine/src/MemoryManager.cpp"
 },
 {
   "directory": "/home/coder/project/c++/engine/build",
-  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -std=gnu++14 -o CMakeFiles/miracle.dir/src/Layer.cpp.o -c /home/coder/project/c++/engine/src/Layer.cpp",
+  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -o CMakeFiles/miracle.dir/src/RenderPass.cpp.o -c /home/coder/project/c++/engine/src/RenderPass.cpp",
+  "file": "/home/coder/project/c++/engine/src/RenderPass.cpp"
+},
+{
+  "directory": "/home/coder/project/c++/engine/build",
+  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -o CMakeFiles/miracle.dir/src/Layer.cpp.o -c /home/coder/project/c++/engine/src/Layer.cpp",
   "file": "/home/coder/project/c++/engine/src/Layer.cpp"
 },
 {
   "directory": "/home/coder/project/c++/engine/build",
-  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -std=gnu++14 -o CMakeFiles/miracle.dir/src/Component.cpp.o -c /home/coder/project/c++/engine/src/Component.cpp",
+  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -o CMakeFiles/miracle.dir/src/Component.cpp.o -c /home/coder/project/c++/engine/src/Component.cpp",
   "file": "/home/coder/project/c++/engine/src/Component.cpp"
 },
 {
   "directory": "/home/coder/project/c++/engine/build",
-  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -std=gnu++14 -o CMakeFiles/miracle.dir/src/Light.cpp.o -c /home/coder/project/c++/engine/src/Light.cpp",
+  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -o CMakeFiles/miracle.dir/src/Light.cpp.o -c /home/coder/project/c++/engine/src/Light.cpp",
   "file": "/home/coder/project/c++/engine/src/Light.cpp"
 },
 {
   "directory": "/home/coder/project/c++/engine/build",
-  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -std=gnu++14 -o CMakeFiles/miracle.dir/src/Camera.cpp.o -c /home/coder/project/c++/engine/src/Camera.cpp",
+  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -o CMakeFiles/miracle.dir/src/Camera.cpp.o -c /home/coder/project/c++/engine/src/Camera.cpp",
   "file": "/home/coder/project/c++/engine/src/Camera.cpp"
 },
 {
   "directory": "/home/coder/project/c++/engine/build",
-  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -std=gnu++14 -o CMakeFiles/miracle.dir/src/Mesh.cpp.o -c /home/coder/project/c++/engine/src/Mesh.cpp",
+  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -o CMakeFiles/miracle.dir/src/Mesh.cpp.o -c /home/coder/project/c++/engine/src/Mesh.cpp",
   "file": "/home/coder/project/c++/engine/src/Mesh.cpp"
 },
 {
   "directory": "/home/coder/project/c++/engine/build",
-  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -std=gnu++14 -o CMakeFiles/miracle.dir/src/Renderer.cpp.o -c /home/coder/project/c++/engine/src/Renderer.cpp",
+  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -o CMakeFiles/miracle.dir/src/Renderer.cpp.o -c /home/coder/project/c++/engine/src/Renderer.cpp",
   "file": "/home/coder/project/c++/engine/src/Renderer.cpp"
 },
 {
   "directory": "/home/coder/project/c++/engine/build",
-  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -std=gnu++14 -o CMakeFiles/miracle.dir/src/Material.cpp.o -c /home/coder/project/c++/engine/src/Material.cpp",
+  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -o CMakeFiles/miracle.dir/src/Material.cpp.o -c /home/coder/project/c++/engine/src/Material.cpp",
   "file": "/home/coder/project/c++/engine/src/Material.cpp"
 },
 {
   "directory": "/home/coder/project/c++/engine/build",
-  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -std=gnu++14 -o CMakeFiles/miracle.dir/src/Texture.cpp.o -c /home/coder/project/c++/engine/src/Texture.cpp",
+  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -o CMakeFiles/miracle.dir/src/Texture.cpp.o -c /home/coder/project/c++/engine/src/Texture.cpp",
   "file": "/home/coder/project/c++/engine/src/Texture.cpp"
 },
 {
   "directory": "/home/coder/project/c++/engine/build",
-  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -std=gnu++14 -o CMakeFiles/miracle.dir/src/Window.cpp.o -c /home/coder/project/c++/engine/src/Window.cpp",
+  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -o CMakeFiles/miracle.dir/src/Screen.cpp.o -c /home/coder/project/c++/engine/src/Screen.cpp",
+  "file": "/home/coder/project/c++/engine/src/Screen.cpp"
+},
+{
+  "directory": "/home/coder/project/c++/engine/build",
+  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -o CMakeFiles/miracle.dir/src/Window.cpp.o -c /home/coder/project/c++/engine/src/Window.cpp",
   "file": "/home/coder/project/c++/engine/src/Window.cpp"
 },
 {
   "directory": "/home/coder/project/c++/engine/build",
-  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -std=gnu++14 -o CMakeFiles/miracle.dir/src/Program.cpp.o -c /home/coder/project/c++/engine/src/Program.cpp",
+  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -o CMakeFiles/miracle.dir/src/Program.cpp.o -c /home/coder/project/c++/engine/src/Program.cpp",
   "file": "/home/coder/project/c++/engine/src/Program.cpp"
 },
 {
   "directory": "/home/coder/project/c++/engine/build",
-  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -std=gnu++14 -o CMakeFiles/miracle.dir/src/Node.cpp.o -c /home/coder/project/c++/engine/src/Node.cpp",
+  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -o CMakeFiles/miracle.dir/src/Node.cpp.o -c /home/coder/project/c++/engine/src/Node.cpp",
   "file": "/home/coder/project/c++/engine/src/Node.cpp"
 },
 {
   "directory": "/home/coder/project/c++/engine/build",
-  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -std=gnu++14 -o CMakeFiles/miracle.dir/src/Scene.cpp.o -c /home/coder/project/c++/engine/src/Scene.cpp",
+  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -o CMakeFiles/miracle.dir/src/Scene.cpp.o -c /home/coder/project/c++/engine/src/Scene.cpp",
   "file": "/home/coder/project/c++/engine/src/Scene.cpp"
 },
 {
   "directory": "/home/coder/project/c++/engine/build",
-  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -std=gnu++14 -o CMakeFiles/miracle.dir/src/System.cpp.o -c /home/coder/project/c++/engine/src/System.cpp",
+  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -o CMakeFiles/miracle.dir/src/System.cpp.o -c /home/coder/project/c++/engine/src/System.cpp",
   "file": "/home/coder/project/c++/engine/src/System.cpp"
 },
 {
   "directory": "/home/coder/project/c++/engine/build",
-  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -std=gnu++14 -o CMakeFiles/miracle.dir/src/CoordinateSystem.cpp.o -c /home/coder/project/c++/engine/src/CoordinateSystem.cpp",
+  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -o CMakeFiles/miracle.dir/src/CoordinateSystem.cpp.o -c /home/coder/project/c++/engine/src/CoordinateSystem.cpp",
   "file": "/home/coder/project/c++/engine/src/CoordinateSystem.cpp"
 },
 {
   "directory": "/home/coder/project/c++/engine/build",
-  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -std=gnu++14 -o CMakeFiles/miracle.dir/src/RenderSystem.cpp.o -c /home/coder/project/c++/engine/src/RenderSystem.cpp",
+  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -o CMakeFiles/miracle.dir/src/RenderSystem.cpp.o -c /home/coder/project/c++/engine/src/RenderSystem.cpp",
   "file": "/home/coder/project/c++/engine/src/RenderSystem.cpp"
 },
 {
   "directory": "/home/coder/project/c++/engine/build",
-  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -std=gnu++14 -o CMakeFiles/miracle.dir/src/TimeSystem.cpp.o -c /home/coder/project/c++/engine/src/TimeSystem.cpp",
+  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -o CMakeFiles/miracle.dir/src/TimeSystem.cpp.o -c /home/coder/project/c++/engine/src/TimeSystem.cpp",
   "file": "/home/coder/project/c++/engine/src/TimeSystem.cpp"
 },
 {
   "directory": "/home/coder/project/c++/engine/build",
-  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -std=gnu++14 -o CMakeFiles/miracle.dir/src/Application.cpp.o -c /home/coder/project/c++/engine/src/Application.cpp",
+  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -o CMakeFiles/miracle.dir/src/Application.cpp.o -c /home/coder/project/c++/engine/src/Application.cpp",
   "file": "/home/coder/project/c++/engine/src/Application.cpp"
 },
 {
   "directory": "/home/coder/project/c++/engine/build",
-  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -std=gnu++14 -o CMakeFiles/miracle.dir/main.cc.o -c /home/coder/project/c++/engine/main.cc",
+  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -o CMakeFiles/miracle.dir/main.cc.o -c /home/coder/project/c++/engine/main.cc",
   "file": "/home/coder/project/c++/engine/main.cc"
 }
 ]

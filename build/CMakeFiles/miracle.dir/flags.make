@@ -13,5 +13,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4
 
-CXX_FLAGS = -g -std=gnu++14
+CXX_FLAGS = -g
 

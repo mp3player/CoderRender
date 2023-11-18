@@ -1,3 +1,6 @@
+# split resource and buffer 
+
+
 # resource manager 
 - 1. mesh data
 - 2. texture 

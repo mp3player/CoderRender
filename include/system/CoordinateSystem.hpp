@@ -10,7 +10,7 @@ struct CoordinateSystem : System {
         Scene * scene ;
 
     public:
-        explicit CoordinateSystem( Scene * scene , std::string name = "coordinate" );
+        explicit CoordinateSystem( Scene * scene );
     
     public :
 

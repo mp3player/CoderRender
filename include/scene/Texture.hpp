@@ -69,39 +69,5 @@ struct Texture2DArray : Texture {
 
 };
 
-struct TextureBuffer {
-
-    private:
-    
-        unsigned int id = 0;
-        unsigned int target;
-        bool binded;
-
-    public:
-
-        TextureBuffer() = default;
-
-        ~TextureBuffer();
-
-    public:
-
-        unsigned int ID() const;
-
-        bool isValid() const ;
-
-    public:
-
-        void init();
-
-        void bind( unsigned int target );
-
-        void unBind();
-
-        bool createBuffer( const Texture2D * texture );
-
-        void dispose();
-
-};
-
 
 #endif

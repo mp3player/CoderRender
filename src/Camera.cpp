@@ -14,8 +14,10 @@ Camera::Camera( )
 Camera::~Camera(){}
 
 
-glm::mat4 Camera::getProjectionMatrix(){
+glm::mat4 Camera::getProjectionMatrix() const {
+
     return this->m4ProjectionMatrix;
+
 }
 
 // PerspectiveCamera

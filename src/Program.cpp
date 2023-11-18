@@ -490,7 +490,7 @@ void Program::regist( ){
     for( int i = 0 ; i < uniformCount ; ++ i ){
         glGetActiveUniform( this->UIProgramID , i , maxLength , &length , &size , &type , name );
         this->uniforms.emplace( name , i );
-        Log::cout( __FILE__ , "regist : " , name );
+        Log::cout( __FILE__ , "regist : uniform " , name );
     }
 
     // active attribute
@@ -500,6 +500,7 @@ void Program::regist( ){
     for( int i = 0 ; i < attribCount ; ++ i ){
         glGetActiveAttrib( this->UIProgramID , i , maxLength , &length , &size , &type , name );
         this->attributes.emplace( name , i );
+        Log::cout( __FILE__ , "regist : attribute " , name );
     }
 
 }

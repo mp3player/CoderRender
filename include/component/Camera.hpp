@@ -22,7 +22,7 @@ struct Camera : Component {
         virtual void updateFrustum() = 0;
         virtual void updateProjectionMatrix() = 0;
 
-        virtual glm::mat4 getProjectionMatrix();
+        virtual glm::mat4 getProjectionMatrix() const ;
     
     public:
 

@@ -22,6 +22,10 @@ std::string Component::getName() const {
     return this->name;
 }
 
+void Component::update(){
+    this->update( 0.0f );
+}
+
 bool Component::isUpdated(){
     return !this->needUpdate;
 }
@@ -31,13 +35,14 @@ bool Component::isUpdated(){
 
 
 // Transform
-TransformComponent::TransformComponent( )
+Transform::Transform( )
     : Component()
 {
     this->name = "transform";
+    this->updateTransform();
 }
 
-void TransformComponent::setTranslation( glm::vec3 translation ){
+void Transform::setTranslation( glm::vec3 translation ){
 
     if( this->v3Translation == translation ) return ;
     this->v3Translation = translation;
@@ -45,7 +50,7 @@ void TransformComponent::setTranslation( glm::vec3 translation ){
 
 }
 
-void TransformComponent::setScale( glm::vec3 scale ){
+void Transform::setScale( glm::vec3 scale ){
 
     if( this->v3Scale == scale ) return ;
     this->v3Scale = scale;
@@ -53,7 +58,7 @@ void TransformComponent::setScale( glm::vec3 scale ){
 
 }
 
-void TransformComponent::setRotation( glm::vec3 rotation ){
+void Transform::setRotation( glm::vec3 rotation ){
 
     if( this->v3Rotation == rotation ) return ;
     this->v3Rotation = rotation;
@@ -61,7 +66,7 @@ void TransformComponent::setRotation( glm::vec3 rotation ){
 
 }
 
-void TransformComponent::translate( float x , float y , float z ){
+void Transform::translate( float x , float y , float z ){
     
     if( x == 0 && y == 0 && z == 0 ) return ;
 
@@ -70,7 +75,7 @@ void TransformComponent::translate( float x , float y , float z ){
 
 }
 
-void TransformComponent::rotate( float x , float y , float z ){
+void Transform::rotate( float x , float y , float z ){
 
     if( x == 0 && y == 0 && z == 0 ) return ;
     this->v3Rotation += glm::vec3( x , y , z );
@@ -78,7 +83,7 @@ void TransformComponent::rotate( float x , float y , float z ){
 
 }
 
-void TransformComponent::scale( float x , float y , float z ){
+void Transform::scale( float x , float y , float z ){
 
     if( x == 1 && y == 1 && z == 1 ) return ;
     
@@ -87,7 +92,7 @@ void TransformComponent::scale( float x , float y , float z ){
     
 }
 
-void TransformComponent::setWorldTransform( glm::mat4 worldTransform , glm::mat4 inverseWorldTransform ){
+void Transform::setWorldTransform( glm::mat4 worldTransform , glm::mat4 inverseWorldTransform ){
     
     this->m4WorldTransform = worldTransform ;
     this->m4InverseWorldTransform = inverseWorldTransform;
@@ -95,7 +100,7 @@ void TransformComponent::setWorldTransform( glm::mat4 worldTransform , glm::mat4
 
 }
 
-void TransformComponent::updateTransform(){
+void Transform::updateTransform(){
 
     this->m4ModelTransform = glm::translate( glm::mat4( 1.0f ) , this->v3Translation )
         * glm::toMat4( glm::quat( this->v3Rotation ) )
@@ -103,20 +108,24 @@ void TransformComponent::updateTransform(){
     
     this->m4InverseModelTransform = glm::inverse( this->m4ModelTransform );
 
+    this->m3NormalMatrix = glm::mat3( glm::transpose( m4InverseModelTransform ) );
+
 }
 
-void TransformComponent::updateModelWorldTransform(){
+void Transform::updateModelWorldTransform(){
 
     this->m4ModelWorldTransform = this->m4WorldTransform * this->m4ModelTransform;
     this->m4InverseModelWorldTransform = this->m4InverseModelTransform * this->m4InverseWorldTransform;
 
-}
-
-void TransformComponent::init(){
+    this->m3NormalWorldMatrix = glm::mat3( glm::transpose( this->m4InverseModelWorldTransform ) );
 
 }
 
-void TransformComponent::update( float deltaTime ){
+void Transform::init(){
+
+}
+
+void Transform::update( float deltaTime ){
 
     if( !this->needUpdate )
         return ;
@@ -134,11 +143,11 @@ void TransformComponent::update( float deltaTime ){
         // update worldMatrix
         this->updateModelWorldTransform();
 
-        Log::cout( __FILE__ , this->node->getName() );
-
         // update children
         for( Node * node : this->node->children ){
-            ( ( TransformComponent * )node->findComponent( "transform" ) )->setWorldTransform( this->m4ModelWorldTransform , this->m4InverseModelWorldTransform );
+            Transform * transform = node->getComponent<Transform>();
+            if( transform == nullptr ) continue;
+            transform->setWorldTransform( this->m4ModelWorldTransform , this->m4InverseModelWorldTransform );
         }
 
         this->needUpdate = false;
@@ -181,6 +190,10 @@ void MeshComponent::update( float deltaTime ){
 
 RenderComponent::RenderComponent( ){
     this->name = "render";
+}
+
+RenderComponent::~RenderComponent(){
+    delete this->material;
 }
 
 void RenderComponent::init (){

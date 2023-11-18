@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 project(miracle)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 
 link_directories(/usr/local/lib)
 
@@ -22,7 +22,13 @@ src/Geometry.cpp
 src/Log.cpp
 src/Ref.cpp
 src/Buffer.cpp
+src/VertexBuffer.cpp
+src/RenderBuffer.cpp
+src/TextureBuffer.cpp
 src/MemoryManager.cpp
+
+# render 
+src/RenderPass.cpp
 
 # util 
 src/Layer.cpp
@@ -38,6 +44,7 @@ src/Material.cpp
 
 # scene
 src/Texture.cpp
+src/Screen.cpp
 
 # window 
 src/Window.cpp

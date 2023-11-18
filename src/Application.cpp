@@ -4,14 +4,20 @@
 #include <component/Camera.hpp>
 #include <component/Light.hpp>
 
+#define WIDTH 800
+#define HEIGHT 800
+
+Node * node = nullptr ;
 
 Application::~Application(){
 
-    delete this->window;
     delete this->scene;
     delete this->renderSystem;
     delete this->coordinateSystem;
     delete this->timeSystem;
+    delete this->screen;
+    delete this->pass;
+    delete this->window;
 
 }
 
@@ -23,18 +29,29 @@ void Application::registSystem( System * system ){
 
 void Application::init(){
 
-    this->window = new Window( 800 , 600 , "OpenGL" );
+    this->window = new Window( WIDTH , HEIGHT , "OpenGL" );
+
+
     this->scene = new Scene();
     
     this->renderSystem = new RenderSystem( this->scene );
     this->coordinateSystem = new CoordinateSystem( this->scene );
     this->timeSystem = new TimeSystem( this->scene );
-    Node * node = this->addNode( "/home/coder/project/c++/engine/monkey.obj" );
+    Node * monkey = this->addNode( "/home/coder/project/c++/engine/monkey.obj" );
     Node * cube = this->addNode( "/home/coder/project/c++/engine/cube.obj" );
+
+    cube->getComponent<Transform>()->translate( 2 , 0, 0 );
 
     Node * camera = this->addCamera();
 
     Node * light = this->addLight();
+
+    node = cube;
+
+
+    // render pass
+    // this->screen = new Screen();
+    // this->pass = new RenderPass( WIDTH , HEIGHT );
 
 
 }
@@ -43,10 +60,22 @@ void Application::run(){
 
     while( !window->shouldClose() ){
 
+
         float deltaTime = this->timeSystem->getDeltaTime();
+
+        // this->pass->render( this->scene );
+
+        // this->screen->render();
 
         this->coordinateSystem->update( deltaTime );
         this->renderSystem->update( deltaTime );
+
+
+
+        if( node == nullptr ) continue;
+        node->getComponent<Transform>()->rotate( .01f , .01f  );
+
+
 
         this->update( deltaTime );
 
@@ -73,7 +102,9 @@ Node * Application::addNode( std::string path ){
     node->addComponent( meshComponent );
     node->addComponent( renderComponent );
 
-    this->scene->children.push_back( node );
+    this->scene->addChild( node );
+
+    return node;
 
 }
 
@@ -84,13 +115,15 @@ Node * Application::addCamera(){
     node->addComponent( camera );
     node->setName( "mainCamera" );
 
-    TransformComponent * transform = ( TransformComponent * )node->findComponent( "transform" );
+    Transform * transform = node->getComponent< Transform >();
 
-    transform->setTranslation( glm::vec3( 0 , 10 , 10 ) );
+    transform->setTranslation( glm::vec3( 0 , 5 , 5 ) );
     transform->rotate( -45 * M_PI / 180.0f , 0 , 0 );
-    transform->scale( .1f , .1f , .1f );
+    // transform->scale( .1f , .1f , .1f );
 
-    this->scene->children.push_back( node );
+    this->scene->addChild( node );
+
+    return node;
     
 }
 
@@ -101,7 +134,7 @@ Node * Application::addLight(){
 
     node->addComponent( light );
 
-    this->scene->children.push_back( node );
+    this->scene->addChild( node );
 
     return node;
 
@@ -125,11 +158,7 @@ Application * Application::getInstance(){
 
 void * Application::release(){
 
-    if( Application::application == nullptr ){
-
-        delete Application::application;
-        Application::application == nullptr ;
-
-    }
+    delete Application::application;
+    Application::application == nullptr ;
 
 }

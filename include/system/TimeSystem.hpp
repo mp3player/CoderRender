@@ -10,7 +10,7 @@ struct TimeSystem : System {
         float tick;
 
     public:
-        explicit TimeSystem( Scene * scene , std::string name = "time" );
+        explicit TimeSystem( Scene * scene );
 
     public:
 

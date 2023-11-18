@@ -513,6 +513,54 @@ src/Ref.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/Ref.cpp.s
 .PHONY : src/Ref.cpp.s
 
+src/RenderBuffer.o: src/RenderBuffer.cpp.o
+.PHONY : src/RenderBuffer.o
+
+# target to build an object file
+src/RenderBuffer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/RenderBuffer.cpp.o
+.PHONY : src/RenderBuffer.cpp.o
+
+src/RenderBuffer.i: src/RenderBuffer.cpp.i
+.PHONY : src/RenderBuffer.i
+
+# target to preprocess a source file
+src/RenderBuffer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/RenderBuffer.cpp.i
+.PHONY : src/RenderBuffer.cpp.i
+
+src/RenderBuffer.s: src/RenderBuffer.cpp.s
+.PHONY : src/RenderBuffer.s
+
+# target to generate assembly for a file
+src/RenderBuffer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/RenderBuffer.cpp.s
+.PHONY : src/RenderBuffer.cpp.s
+
+src/RenderPass.o: src/RenderPass.cpp.o
+.PHONY : src/RenderPass.o
+
+# target to build an object file
+src/RenderPass.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/RenderPass.cpp.o
+.PHONY : src/RenderPass.cpp.o
+
+src/RenderPass.i: src/RenderPass.cpp.i
+.PHONY : src/RenderPass.i
+
+# target to preprocess a source file
+src/RenderPass.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/RenderPass.cpp.i
+.PHONY : src/RenderPass.cpp.i
+
+src/RenderPass.s: src/RenderPass.cpp.s
+.PHONY : src/RenderPass.s
+
+# target to generate assembly for a file
+src/RenderPass.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/RenderPass.cpp.s
+.PHONY : src/RenderPass.cpp.s
+
 src/RenderSystem.o: src/RenderSystem.cpp.o
 .PHONY : src/RenderSystem.o
 
@@ -585,6 +633,30 @@ src/Scene.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/Scene.cpp.s
 .PHONY : src/Scene.cpp.s
 
+src/Screen.o: src/Screen.cpp.o
+.PHONY : src/Screen.o
+
+# target to build an object file
+src/Screen.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/Screen.cpp.o
+.PHONY : src/Screen.cpp.o
+
+src/Screen.i: src/Screen.cpp.i
+.PHONY : src/Screen.i
+
+# target to preprocess a source file
+src/Screen.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/Screen.cpp.i
+.PHONY : src/Screen.cpp.i
+
+src/Screen.s: src/Screen.cpp.s
+.PHONY : src/Screen.s
+
+# target to generate assembly for a file
+src/Screen.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/Screen.cpp.s
+.PHONY : src/Screen.cpp.s
+
 src/System.o: src/System.cpp.o
 .PHONY : src/System.o
 
@@ -633,6 +705,30 @@ src/Texture.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/Texture.cpp.s
 .PHONY : src/Texture.cpp.s
 
+src/TextureBuffer.o: src/TextureBuffer.cpp.o
+.PHONY : src/TextureBuffer.o
+
+# target to build an object file
+src/TextureBuffer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/TextureBuffer.cpp.o
+.PHONY : src/TextureBuffer.cpp.o
+
+src/TextureBuffer.i: src/TextureBuffer.cpp.i
+.PHONY : src/TextureBuffer.i
+
+# target to preprocess a source file
+src/TextureBuffer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/TextureBuffer.cpp.i
+.PHONY : src/TextureBuffer.cpp.i
+
+src/TextureBuffer.s: src/TextureBuffer.cpp.s
+.PHONY : src/TextureBuffer.s
+
+# target to generate assembly for a file
+src/TextureBuffer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/TextureBuffer.cpp.s
+.PHONY : src/TextureBuffer.cpp.s
+
 src/TimeSystem.o: src/TimeSystem.cpp.o
 .PHONY : src/TimeSystem.o
 
@@ -656,6 +752,30 @@ src/TimeSystem.s: src/TimeSystem.cpp.s
 src/TimeSystem.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/TimeSystem.cpp.s
 .PHONY : src/TimeSystem.cpp.s
+
+src/VertexBuffer.o: src/VertexBuffer.cpp.o
+.PHONY : src/VertexBuffer.o
+
+# target to build an object file
+src/VertexBuffer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/VertexBuffer.cpp.o
+.PHONY : src/VertexBuffer.cpp.o
+
+src/VertexBuffer.i: src/VertexBuffer.cpp.i
+.PHONY : src/VertexBuffer.i
+
+# target to preprocess a source file
+src/VertexBuffer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/VertexBuffer.cpp.i
+.PHONY : src/VertexBuffer.cpp.i
+
+src/VertexBuffer.s: src/VertexBuffer.cpp.s
+.PHONY : src/VertexBuffer.s
+
+# target to generate assembly for a file
+src/VertexBuffer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/VertexBuffer.cpp.s
+.PHONY : src/VertexBuffer.cpp.s
 
 src/Window.o: src/Window.cpp.o
 .PHONY : src/Window.o
@@ -762,6 +882,12 @@ help:
 	@echo "... src/Ref.o"
 	@echo "... src/Ref.i"
 	@echo "... src/Ref.s"
+	@echo "... src/RenderBuffer.o"
+	@echo "... src/RenderBuffer.i"
+	@echo "... src/RenderBuffer.s"
+	@echo "... src/RenderPass.o"
+	@echo "... src/RenderPass.i"
+	@echo "... src/RenderPass.s"
 	@echo "... src/RenderSystem.o"
 	@echo "... src/RenderSystem.i"
 	@echo "... src/RenderSystem.s"
@@ -771,15 +897,24 @@ help:
 	@echo "... src/Scene.o"
 	@echo "... src/Scene.i"
 	@echo "... src/Scene.s"
+	@echo "... src/Screen.o"
+	@echo "... src/Screen.i"
+	@echo "... src/Screen.s"
 	@echo "... src/System.o"
 	@echo "... src/System.i"
 	@echo "... src/System.s"
 	@echo "... src/Texture.o"
 	@echo "... src/Texture.i"
 	@echo "... src/Texture.s"
+	@echo "... src/TextureBuffer.o"
+	@echo "... src/TextureBuffer.i"
+	@echo "... src/TextureBuffer.s"
 	@echo "... src/TimeSystem.o"
 	@echo "... src/TimeSystem.i"
 	@echo "... src/TimeSystem.s"
+	@echo "... src/VertexBuffer.o"
+	@echo "... src/VertexBuffer.i"
+	@echo "... src/VertexBuffer.s"
 	@echo "... src/Window.o"
 	@echo "... src/Window.i"
 	@echo "... src/Window.s"

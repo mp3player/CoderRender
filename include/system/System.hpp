@@ -7,17 +7,17 @@
 struct System {
 
     protected :
+
         std::string name;
         Scene * scene;
-        std::vector< Node * > buffer ;
 
     public:
-        explicit System( Scene * scene , std::string name = "System" );
 
-    protected:
-        void createBuffer();
+        explicit System( Scene * scene );
+
 
     public:
+    
         virtual void init() = 0;
 
         virtual void update( float deltaTime ) = 0;

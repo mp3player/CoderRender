@@ -2,10 +2,10 @@
 
 const float F_CLOCKS_PER_SEC = float( CLOCKS_PER_SEC );
 
-TimeSystem::TimeSystem( Scene * scene , std::string name )
-    : System( scene , name )
+TimeSystem::TimeSystem( Scene * scene )
+    : System( scene )
 {
-
+    this->name = "time";
 }
 
 void TimeSystem::init() {

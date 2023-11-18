@@ -39,6 +39,8 @@ struct Component {
 
         virtual void update( float deltaTime ) = 0 ;
 
+        virtual void update();
+
     public :
         bool isUpdated() ;
 
@@ -48,8 +50,10 @@ const glm::vec3 O = glm::vec3( 0.0f , 0.0f , 0.0f );
 const glm::vec3 X = glm::vec3( 1.0f , 0.0f , 0.0f );
 const glm::vec3 Y = glm::vec3( 0.0f , 1.0f , 0.0f );
 const glm::vec3 Z = glm::vec3( 0.0f , 0.0f , 1.0f );
+const glm::mat3 M3ID = glm::mat3( 1.0f );
+const glm::mat4 M4ID = glm::mat4( 1.0f );
 
-struct TransformComponent : Component {
+struct Transform : Component {
 
     public:
         
@@ -64,16 +68,22 @@ struct TransformComponent : Component {
 
     public:
         
-        glm::mat4 m4ModelTransform;
-        glm::mat4 m4InverseModelTransform;
-        glm::mat4 m4WorldTransform;
-        glm::mat4 m4InverseWorldTransform;
-        glm::mat4 m4ModelWorldTransform;
-        glm::mat4 m4InverseModelWorldTransform;
+        glm::mat4 m4ModelTransform = M4ID;
+        glm::mat4 m4InverseModelTransform = M4ID;
+
+        glm::mat4 m4WorldTransform = M4ID;
+        glm::mat4 m4InverseWorldTransform = M4ID;
+
+        glm::mat4 m4ModelWorldTransform = M4ID;
+        glm::mat4 m4InverseModelWorldTransform = M4ID;
+
+        glm::mat3 m3NormalMatrix = M3ID;
+
+        glm::mat3 m3NormalWorldMatrix = M3ID;
 
     public:
 
-        TransformComponent(  );
+        Transform(  );
 
     public:
 
@@ -120,11 +130,12 @@ struct RenderComponent : Component {
 
     public:
 
-        Material * material = nullptr ;
+        Material * material = new Material() ;
 
     public:
 
         explicit RenderComponent( );
+        ~RenderComponent();
 
     public:
 
