@@ -1,14 +1,7 @@
 #ifndef _PROGRAM_HPP_
 #define _PROGRAM_HPP_
 
-#include <glad/glad.h>
-#include <glm/glm.hpp>
-#include <string>
-#include <unordered_map>
-#include <vector>
-#include <fstream>
-#include <sstream>
-#include <iostream>
+#include <opengl/shader/OpenGLShader.hpp>
 
 // lazy compiling
 // check out whether the material 
@@ -20,43 +13,9 @@
 
 // bool compile( unsigned int & program );
 
-static std::string trim( std::string str , int mode = 0 );
-static std::vector< std::string > parseCommand( std::string line );
-static std::string readFile( std::string fileName );
-static std::string execCommand( std::vector< std::string > commands );
 
-struct Shader {
 
-    public:
-        GLenum shaderType;
-        std::string shaderCode;
-        unsigned int shaderID = 0;
-        bool isReady;
-        std::string version = "450 core";
-        std::string precision = "mediump";
 
-        std::unordered_map< std::string , std::string > defines;
-    
-    public:
-        Shader( std::string shaderCode , GLenum shaderType );
-        ~Shader();
-
-    public:
-        void setVersion( std::string version );
-        void setPrecision( std::string precision );
-
-        std::string getPreProcessedShadercode();
-
-    public:
-        bool compile();
-        bool dispose();
-
-        void setCommand( std::string command , std::string args = "" );
-    public:
-
-        static Shader * FromFile( std::string path , GLenum shaderType );
-
-};
 
 struct Program  {
 
@@ -69,16 +28,22 @@ struct Program  {
         Shader * fragmentShader = nullptr ;
 
         unsigned int UIProgramID = 0;
-        bool isReady;
+
+        bool isValid = false;
+        
 
     public:
+        Program();
         Program( std::string vertexCode , std::string fragmentCode );
+        Program( Shader * vertexShader , Shader * fragmentShader );
         ~Program(); 
 
     public:
         bool compile();
-        bool dispose();
+        void dispose();
+        void update();
 
+        bool needUpdate() const ;
         unsigned int ID() const ;
 
     public:
@@ -100,6 +65,11 @@ struct Program  {
         void setUniformValue( std::string name , glm::mat4 value );
 
         void setDefine( std::string name , std::string value = "" );
+
+    public:
+        Program * clone();
+
+    public:
 
         static Program * FromFile( std::string vertexPath , std::string fragmentPath );
 

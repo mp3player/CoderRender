@@ -91,9 +91,15 @@ struct AttributeBuffer : VertexBuffer {
 // Index Buffer
 struct IndexBuffer : VertexBuffer {
 
+
+    public:
+        int pointSize = 0;
+
     public: 
 
         bool bufferData( const std::vector< unsigned int > data , GLenum usage );
+
+        int size() const; 
 
 };
 
@@ -108,6 +114,7 @@ struct VertexArrayBuffer {
     private:
 
         unsigned int id;
+        int pointSize = 0;
         std::vector< AttributeBuffer * > buffer;
         IndexBuffer * index = nullptr ;
 
@@ -131,6 +138,9 @@ struct VertexArrayBuffer {
 
         bool setIndex( std::vector< unsigned int > index );
         bool addAttribute( std::vector< float > attribute , int itemSize );
+
+    public:
+        int size() const ;
 
 };
 

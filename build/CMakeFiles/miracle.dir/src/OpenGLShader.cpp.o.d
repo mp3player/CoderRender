@@ -1,7 +1,7 @@
-CMakeFiles/miracle.dir/src/Program.cpp.o: \
- /home/coder/project/c++/engine/src/Program.cpp \
+CMakeFiles/miracle.dir/src/OpenGLShader.cpp.o: \
+ /home/coder/project/c++/engine/src/OpenGLShader.cpp \
  /usr/include/stdc-predef.h \
- /home/coder/project/c++/engine/./include/opengl/shader/Program.hpp \
+ /home/coder/project/c++/engine/./include/opengl/shader/OpenGLShader.hpp \
  /home/coder/project/c++/engine/./include/glad/glad.h \
  /usr/include/KHR/khrplatform.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h \
@@ -336,54 +336,6 @@ CMakeFiles/miracle.dir/src/Program.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
  /usr/include/c++/11/bits/fstream.tcc /usr/include/c++/11/sstream \
  /usr/include/c++/11/bits/sstream.tcc /usr/include/c++/11/iostream \
- /usr/local/include/glm/gtc/type_ptr.hpp \
- /usr/local/include/glm/gtc/quaternion.hpp \
- /usr/local/include/glm/gtc/constants.hpp \
- /usr/local/include/glm/ext/scalar_constants.hpp \
- /usr/local/include/glm/ext/scalar_constants.inl \
- /usr/local/include/glm/gtc/constants.inl \
- /usr/local/include/glm/gtc/matrix_transform.hpp \
- /usr/local/include/glm/ext/matrix_projection.hpp \
- /usr/local/include/glm/ext/matrix_projection.inl \
- /usr/local/include/glm/ext/matrix_clip_space.hpp \
- /usr/local/include/glm/ext/matrix_clip_space.inl \
- /usr/local/include/glm/ext/matrix_transform.hpp \
- /usr/local/include/glm/ext/matrix_transform.inl \
- /usr/local/include/glm/gtc/matrix_transform.inl \
- /usr/local/include/glm/ext/vector_relational.hpp \
- /usr/local/include/glm/ext/vector_relational.inl \
- /usr/local/include/glm/detail/type_float.hpp \
- /usr/local/include/glm/ext/quaternion_common.hpp \
- /usr/local/include/glm/ext/quaternion_geometric.hpp \
- /usr/local/include/glm/ext/quaternion_geometric.inl \
- /usr/local/include/glm/ext/quaternion_common.inl \
- /usr/local/include/glm/ext/quaternion_float.hpp \
- /usr/local/include/glm/detail/type_quat.hpp \
- /usr/local/include/glm/ext/quaternion_relational.hpp \
- /usr/local/include/glm/ext/quaternion_relational.inl \
- /usr/local/include/glm/detail/type_quat.inl \
- /usr/local/include/glm/ext/quaternion_float_precision.hpp \
- /usr/local/include/glm/ext/quaternion_double.hpp \
- /usr/local/include/glm/ext/quaternion_double_precision.hpp \
- /usr/local/include/glm/ext/quaternion_trigonometric.hpp \
- /usr/local/include/glm/ext/quaternion_trigonometric.inl \
- /usr/local/include/glm/ext/quaternion_transform.hpp \
- /usr/local/include/glm/ext/quaternion_transform.inl \
- /usr/local/include/glm/gtc/quaternion.inl \
- /usr/local/include/glm/gtc/epsilon.hpp \
- /usr/local/include/glm/detail/setup.hpp \
- /usr/local/include/glm/gtc/epsilon.inl \
- /usr/local/include/glm/gtc/vec1.hpp \
- /usr/local/include/glm/ext/vector_bool1.hpp \
- /usr/local/include/glm/ext/vector_bool1_precision.hpp \
- /usr/local/include/glm/ext/vector_float1.hpp \
- /usr/local/include/glm/ext/vector_float1_precision.hpp \
- /usr/local/include/glm/ext/vector_double1.hpp \
- /usr/local/include/glm/ext/vector_double1_precision.hpp \
- /usr/local/include/glm/ext/vector_int1.hpp \
- /usr/local/include/glm/ext/vector_int1_sized.hpp \
- /usr/local/include/glm/ext/vector_uint1.hpp \
- /usr/local/include/glm/ext/vector_uint1_sized.hpp \
- /usr/include/c++/11/cstring /usr/include/string.h /usr/include/strings.h \
- /usr/local/include/glm/gtc/type_ptr.inl \
- /home/coder/project/c++/engine/./include/core/Log.hpp
+ /home/coder/project/c++/engine/./include/core/Log.hpp \
+ /home/coder/project/c++/engine/./include/core/io/IO.hpp \
+ /home/coder/project/c++/engine/./include/opengl/shader/ShaderPreProcessor.hpp

@@ -4,7 +4,7 @@
 
 void VertexBuffer::init(){
 
-    glGenBuffers( 1 , &(this->id) );
+    glCreateBuffers( 1 , &( this->id ) );
 
 }
 
@@ -89,14 +89,18 @@ void AttributeBuffer::disable(){
 
 // IndexBuffer
 bool IndexBuffer::bufferData( const std::vector< unsigned int > data , GLenum usage ){
+    this->pointSize = data.size();
     return VertexBuffer::bufferData< unsigned int >( data , usage );
 }
 
+int IndexBuffer::size() const {
+    return this->pointSize;
+}
 
 
 // VertexArrayBuffer 
 
-// If array is a name returned by glGenVertexArrays, 
+// If array is a name returned by glCreateVertexArrays, 
 // by that has not yet been bound through a call to glBindVertexArray, 
 // then the name is not a vertex array object and glIsVertexArray returns GL_FALSE
 
@@ -129,7 +133,7 @@ bool VertexArrayBuffer::hasIndex() const {
 
 void VertexArrayBuffer::init(){
 
-    glGenVertexArrays( 1 , &this->id );
+    glCreateVertexArrays( 1 , &( this->id ) );
 
 }
 
@@ -173,6 +177,8 @@ void VertexArrayBuffer::bindIndex(){
 //  ==> glSubBufferData();
 bool VertexArrayBuffer::addAttribute( std::vector< float > data , int itemSize ){
 
+    this->pointSize = data.size() / itemSize;
+
     this->bind();
 
     AttributeBuffer * buffer = new AttributeBuffer( this->buffer.size() , itemSize , 0 );
@@ -190,4 +196,14 @@ bool VertexArrayBuffer::addAttribute( std::vector< float > data , int itemSize )
     return true;
 
 }
+
+int VertexArrayBuffer::size() const {
+    
+    if( this->hasIndex() ){
+        return this->index->size();
+    }
+    return this->pointSize;
+
+}
+
 

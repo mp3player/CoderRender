@@ -89,5 +89,6 @@
         "queue": "cpp",
         "cstdbool": "cpp",
         "version": "cpp"
-    }
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }

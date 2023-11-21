@@ -1,8 +1,13 @@
 #include <core/TextureBuffer.hpp>
 
 
+
+float defaultColor[ ] = { 1.0f , 1.0f , 1.0f };
+
+
+
 void TextureBuffer::init() {
-    glGenTextures( 1 , &( this->id ) );
+    this->init( GL_TEXTURE_2D );
 }
 
 void TextureBuffer::bind( GLenum target ) {
@@ -18,7 +23,30 @@ void TextureBuffer::dispose() {
         glDeleteTextures( 1 , &(this->id) );
 }
 
+void TextureBuffer::init( GLenum target ){
+    this->target = target;
+    glCreateTextures( this->target , 1 , &( this->id ) );
+}
 
 void TextureBuffer::bind(){
-    this->bind( GL_TEXTURE );
+    this->bind( GL_TEXTURE_2D );
+}
+
+
+
+
+template<>
+void TextureBuffer::bufferData( Texture * img ){
+
+    TextureImage * texture = ( TextureImage *)img;
+
+    GLenum format = formats.at( texture->getChannel() );
+
+    glTexParameteri( this->target , GL_TEXTURE_MIN_FILTER , texture->minFilter );
+    glTexParameteri( this->target , GL_TEXTURE_MAG_FILTER , texture->magFilter );
+    glTexParameteri( this->target , GL_TEXTURE_WRAP_S , texture->wrapS );
+    glTexParameteri( this->target , GL_TEXTURE_WRAP_T , texture->wrapT );
+
+    glTexImage2D( this->target , 0 , format , texture->getWidth() , texture->getHeight() , 0 , format , GL_UNSIGNED_BYTE , (void*)( texture->ptr() ) );
+
 }

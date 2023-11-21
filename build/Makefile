@@ -297,6 +297,30 @@ src/Geometry.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/Geometry.cpp.s
 .PHONY : src/Geometry.cpp.s
 
+src/IO.o: src/IO.cpp.o
+.PHONY : src/IO.o
+
+# target to build an object file
+src/IO.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/IO.cpp.o
+.PHONY : src/IO.cpp.o
+
+src/IO.i: src/IO.cpp.i
+.PHONY : src/IO.i
+
+# target to preprocess a source file
+src/IO.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/IO.cpp.i
+.PHONY : src/IO.cpp.i
+
+src/IO.s: src/IO.cpp.s
+.PHONY : src/IO.s
+
+# target to generate assembly for a file
+src/IO.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/IO.cpp.s
+.PHONY : src/IO.cpp.s
+
 src/Layer.o: src/Layer.cpp.o
 .PHONY : src/Layer.o
 
@@ -465,29 +489,77 @@ src/Node.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/Node.cpp.s
 .PHONY : src/Node.cpp.s
 
-src/Program.o: src/Program.cpp.o
-.PHONY : src/Program.o
+src/OpenGLProgram.o: src/OpenGLProgram.cpp.o
+.PHONY : src/OpenGLProgram.o
 
 # target to build an object file
-src/Program.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/Program.cpp.o
-.PHONY : src/Program.cpp.o
+src/OpenGLProgram.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/OpenGLProgram.cpp.o
+.PHONY : src/OpenGLProgram.cpp.o
 
-src/Program.i: src/Program.cpp.i
-.PHONY : src/Program.i
+src/OpenGLProgram.i: src/OpenGLProgram.cpp.i
+.PHONY : src/OpenGLProgram.i
 
 # target to preprocess a source file
-src/Program.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/Program.cpp.i
-.PHONY : src/Program.cpp.i
+src/OpenGLProgram.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/OpenGLProgram.cpp.i
+.PHONY : src/OpenGLProgram.cpp.i
 
-src/Program.s: src/Program.cpp.s
-.PHONY : src/Program.s
+src/OpenGLProgram.s: src/OpenGLProgram.cpp.s
+.PHONY : src/OpenGLProgram.s
 
 # target to generate assembly for a file
-src/Program.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/Program.cpp.s
-.PHONY : src/Program.cpp.s
+src/OpenGLProgram.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/OpenGLProgram.cpp.s
+.PHONY : src/OpenGLProgram.cpp.s
+
+src/OpenGLRenderer.o: src/OpenGLRenderer.cpp.o
+.PHONY : src/OpenGLRenderer.o
+
+# target to build an object file
+src/OpenGLRenderer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/OpenGLRenderer.cpp.o
+.PHONY : src/OpenGLRenderer.cpp.o
+
+src/OpenGLRenderer.i: src/OpenGLRenderer.cpp.i
+.PHONY : src/OpenGLRenderer.i
+
+# target to preprocess a source file
+src/OpenGLRenderer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/OpenGLRenderer.cpp.i
+.PHONY : src/OpenGLRenderer.cpp.i
+
+src/OpenGLRenderer.s: src/OpenGLRenderer.cpp.s
+.PHONY : src/OpenGLRenderer.s
+
+# target to generate assembly for a file
+src/OpenGLRenderer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/OpenGLRenderer.cpp.s
+.PHONY : src/OpenGLRenderer.cpp.s
+
+src/OpenGLShader.o: src/OpenGLShader.cpp.o
+.PHONY : src/OpenGLShader.o
+
+# target to build an object file
+src/OpenGLShader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/OpenGLShader.cpp.o
+.PHONY : src/OpenGLShader.cpp.o
+
+src/OpenGLShader.i: src/OpenGLShader.cpp.i
+.PHONY : src/OpenGLShader.i
+
+# target to preprocess a source file
+src/OpenGLShader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/OpenGLShader.cpp.i
+.PHONY : src/OpenGLShader.cpp.i
+
+src/OpenGLShader.s: src/OpenGLShader.cpp.s
+.PHONY : src/OpenGLShader.s
+
+# target to generate assembly for a file
+src/OpenGLShader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/OpenGLShader.cpp.s
+.PHONY : src/OpenGLShader.cpp.s
 
 src/Ref.o: src/Ref.cpp.o
 .PHONY : src/Ref.o
@@ -657,6 +729,30 @@ src/Screen.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/Screen.cpp.s
 .PHONY : src/Screen.cpp.s
 
+src/ShaderPreProcessor.o: src/ShaderPreProcessor.cpp.o
+.PHONY : src/ShaderPreProcessor.o
+
+# target to build an object file
+src/ShaderPreProcessor.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/ShaderPreProcessor.cpp.o
+.PHONY : src/ShaderPreProcessor.cpp.o
+
+src/ShaderPreProcessor.i: src/ShaderPreProcessor.cpp.i
+.PHONY : src/ShaderPreProcessor.i
+
+# target to preprocess a source file
+src/ShaderPreProcessor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/ShaderPreProcessor.cpp.i
+.PHONY : src/ShaderPreProcessor.cpp.i
+
+src/ShaderPreProcessor.s: src/ShaderPreProcessor.cpp.s
+.PHONY : src/ShaderPreProcessor.s
+
+# target to generate assembly for a file
+src/ShaderPreProcessor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/ShaderPreProcessor.cpp.s
+.PHONY : src/ShaderPreProcessor.cpp.s
+
 src/System.o: src/System.cpp.o
 .PHONY : src/System.o
 
@@ -752,6 +848,30 @@ src/TimeSystem.s: src/TimeSystem.cpp.s
 src/TimeSystem.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/TimeSystem.cpp.s
 .PHONY : src/TimeSystem.cpp.s
+
+src/Transform.o: src/Transform.cpp.o
+.PHONY : src/Transform.o
+
+# target to build an object file
+src/Transform.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/Transform.cpp.o
+.PHONY : src/Transform.cpp.o
+
+src/Transform.i: src/Transform.cpp.i
+.PHONY : src/Transform.i
+
+# target to preprocess a source file
+src/Transform.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/Transform.cpp.i
+.PHONY : src/Transform.cpp.i
+
+src/Transform.s: src/Transform.cpp.s
+.PHONY : src/Transform.s
+
+# target to generate assembly for a file
+src/Transform.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/Transform.cpp.s
+.PHONY : src/Transform.cpp.s
 
 src/VertexBuffer.o: src/VertexBuffer.cpp.o
 .PHONY : src/VertexBuffer.o
@@ -855,6 +975,9 @@ help:
 	@echo "... src/Geometry.o"
 	@echo "... src/Geometry.i"
 	@echo "... src/Geometry.s"
+	@echo "... src/IO.o"
+	@echo "... src/IO.i"
+	@echo "... src/IO.s"
 	@echo "... src/Layer.o"
 	@echo "... src/Layer.i"
 	@echo "... src/Layer.s"
@@ -876,9 +999,15 @@ help:
 	@echo "... src/Node.o"
 	@echo "... src/Node.i"
 	@echo "... src/Node.s"
-	@echo "... src/Program.o"
-	@echo "... src/Program.i"
-	@echo "... src/Program.s"
+	@echo "... src/OpenGLProgram.o"
+	@echo "... src/OpenGLProgram.i"
+	@echo "... src/OpenGLProgram.s"
+	@echo "... src/OpenGLRenderer.o"
+	@echo "... src/OpenGLRenderer.i"
+	@echo "... src/OpenGLRenderer.s"
+	@echo "... src/OpenGLShader.o"
+	@echo "... src/OpenGLShader.i"
+	@echo "... src/OpenGLShader.s"
 	@echo "... src/Ref.o"
 	@echo "... src/Ref.i"
 	@echo "... src/Ref.s"
@@ -900,6 +1029,9 @@ help:
 	@echo "... src/Screen.o"
 	@echo "... src/Screen.i"
 	@echo "... src/Screen.s"
+	@echo "... src/ShaderPreProcessor.o"
+	@echo "... src/ShaderPreProcessor.i"
+	@echo "... src/ShaderPreProcessor.s"
 	@echo "... src/System.o"
 	@echo "... src/System.i"
 	@echo "... src/System.s"
@@ -912,6 +1044,9 @@ help:
 	@echo "... src/TimeSystem.o"
 	@echo "... src/TimeSystem.i"
 	@echo "... src/TimeSystem.s"
+	@echo "... src/Transform.o"
+	@echo "... src/Transform.i"
+	@echo "... src/Transform.s"
 	@echo "... src/VertexBuffer.o"
 	@echo "... src/VertexBuffer.i"
 	@echo "... src/VertexBuffer.s"

@@ -18,39 +18,42 @@ struct Texture {
 
     public:
 
-        GLenum wrapS;
-        GLenum wrapT;
-        GLenum magFilter;
-        GLenum minFilter;
+        GLenum wrapS = GL_NEAREST;
+        GLenum wrapT = GL_NEAREST;
+        GLenum wrapR = GL_NEAREST;
+        GLenum magFilter = GL_NEAREST;
+        GLenum minFilter = GL_NEAREST;
+
+    public:
+        virtual void * ptr() const = 0;
+        virtual ~Texture();
 
 };
 
 
-struct Texture2D : Texture {
+struct TextureImage : Texture {
 
     private:
 
-        std::string path;    
+        std::string path;
         int width;
         int height;
         int channel;
-        unsigned int format;
         unsigned char * data = nullptr;
 
     public:
 
-        Texture2D() = default;
-        Texture2D( std::string path );
-        ~Texture2D();
+        TextureImage() = default;
+        TextureImage( std::string path );
+        ~TextureImage() override;
 
     public:
 
         int getWidth() const ;
         int getHeight() const ;
         int getChannel( ) const ;
-        unsigned int getFormat() const ;
 
-        unsigned char * ptr() const;
+        void * ptr() const override;
 
 
     public:
@@ -60,14 +63,31 @@ struct Texture2D : Texture {
 
 };
 
+struct TextureCube : Texture {
 
-struct Texture3D : Texture {
+    public:
+
+        Texture * nx = nullptr ;
+        Texture * px = nullptr ;
+
+        Texture * ny = nullptr ;
+        Texture * py = nullptr ;
+
+        Texture * nz = nullptr ;
+        Texture * pz = nullptr ;
+
+    public:
+
+        TextureCube();
+        ~TextureCube();
+
+    
+
+
 
 };
 
-struct Texture2DArray : Texture {
 
-};
 
 
 #endif

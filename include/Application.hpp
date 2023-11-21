@@ -53,7 +53,9 @@ struct Application {
 
         Node * addCamera();
 
-        Node * addLight();
+        Node * addAmbientLight();
+        
+        Node * addDirectionalLight();
 
 
     private:

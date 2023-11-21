@@ -6,7 +6,7 @@ RenderBuffer::RenderBuffer( int width , int height )
 {}
 
 void RenderBuffer::init(){
-    glGenRenderbuffers( 1 , &( this->id ) );
+    glCreateRenderbuffers( 1 , &( this->id ) );
 }
 
 void RenderBuffer::bind( GLenum target ){
@@ -44,7 +44,7 @@ RenderTexture::RenderTexture( int width , int height )
 {}
 
 void RenderTexture::init(){
-    glGenTextures( 1 , &( this->id ) );
+    glCreateTextures( GL_TEXTURE_2D , 1 , &( this->id ) );
 }
 
 void RenderTexture::bind( GLenum target ){
@@ -74,8 +74,7 @@ FrameBuffer::FrameBuffer( int width , int height )
 {}
 
 void FrameBuffer::init() {
-    glGenFramebuffers( 1 , &( this->id ) );
-
+    glCreateFramebuffers( 1 , &( this->id ) );
 }
 
 void FrameBuffer::bind( GLenum target ){

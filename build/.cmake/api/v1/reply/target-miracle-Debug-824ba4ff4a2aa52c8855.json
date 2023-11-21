@@ -39,7 +39,7 @@
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 73,
+				"line" : 80,
 				"parent" : 0
 			},
 			{
@@ -138,7 +138,12 @@
 				25,
 				26,
 				27,
-				28
+				28,
+				29,
+				30,
+				31,
+				32,
+				33
 			]
 		}
 	],
@@ -298,7 +303,12 @@
 				25,
 				26,
 				27,
-				28
+				28,
+				29,
+				30,
+				31,
+				32,
+				33
 			]
 		}
 	],
@@ -361,7 +371,31 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 1,
+			"path" : "src/IO.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/ShaderPreProcessor.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
 			"path" : "src/RenderPass.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/Renderer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/OpenGLRenderer.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -397,7 +431,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 1,
-			"path" : "src/Renderer.cpp",
+			"path" : "src/Transform.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -427,7 +461,13 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 1,
-			"path" : "src/Program.cpp",
+			"path" : "src/OpenGLShader.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/OpenGLProgram.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

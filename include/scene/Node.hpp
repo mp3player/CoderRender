@@ -21,7 +21,7 @@ struct Node : Ref {
     private:
 
         std::string name;
-        std::unordered_map< std::string , Component *> components;
+        std::vector< Component *> components;
 
     public:
 
@@ -36,11 +36,20 @@ struct Node : Ref {
 
         std::string getName() const ;
 
+    private:
+
+        void dispose();
+
+    public:
+
+        void update( float deltaTime );
+
     public:
 
         void addComponent( Component * component );
         
-        Component * removeComponent( std::string name );
+        template< typename T >
+        T * removeComponent( );
 
         template< typename T >
         bool hasComponent();
@@ -59,16 +68,31 @@ struct Node : Ref {
         template< typename T >
         std::vector< Node * > findChildrenWithComponent();
 
-    private:
-
-        void dispose();
-
-    public:
-
-        void update( float deltaTime );
-
 };
 
+
+template< typename T >
+T * Node::removeComponent( ){
+
+    int deletedIndex = -1;
+    T * result;
+    for( int i = 0 ; i < this->components.size() ; ++ i ){
+        
+        Component * component = this->components.at( i );
+        result = dynamic_cast< T * > ( component );
+
+        if( result ){
+            deletedIndex = i;
+            break;
+        }
+    }
+
+    if( deletedIndex >= 0 ){
+        this->components.erase( this->components.begin() + deletedIndex );
+        return result;
+    }
+
+}
 
 template< typename T >
 bool Node::hasComponent(){
@@ -83,9 +107,9 @@ T * Node::getComponent( ){
 
     auto begin = this->components.begin() , end = this->components.end();
 
-    while( begin != end ){
+    while( begin < end ){
 
-        T * comp = dynamic_cast< T * >( begin->second );
+        T * comp = dynamic_cast< T * >( *begin );
         if( comp ){
             return comp;
         }
@@ -104,9 +128,9 @@ std::vector< T * > Node::getComponents(){
     
     auto begin = this->components.begin() , end = this->components.end();
 
-    while( begin != end ){
+    while( begin < end ){
 
-        T * comp = dynamic_cast< T * >( begin->second );
+        T * comp = dynamic_cast< T * >( *begin );
 
         if( comp ){
             comps.push_back( comps );
@@ -144,8 +168,6 @@ std::vector< Node * > Node::findChildrenWithComponent(){
         nodes.insert( nodes.end() , _nodes.begin() , _nodes.end() );
 
     }
-
-    // Log::cout( __FILE__ , nodes.size() );
     
     return nodes;
 

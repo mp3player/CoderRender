@@ -1,3 +1,10 @@
+# shader compiler 
+    - compile shader
+    - shader analysis 
+    - generate material 
+
+
+
 # split resource and buffer 
 
 

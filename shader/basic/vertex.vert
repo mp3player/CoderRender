@@ -1,21 +1,27 @@
+#include<camera>
+
 
 layout (location = 0) in vec3 position;
 layout (location = 1) in vec2 uv;
+layout (location = 2) in vec3 normal;
 
-out vec3 v3Position;
-out vec2 v2Uv;
+out vec3 attr_VertexPosition;
+out vec2 attr_VertexUV;
+out vec3 attr_VertexNormal;
 
-
-uniform mat4 projectionMatrix;
-uniform mat4 viewMatrix;
-uniform mat4 viewProjectionMatrix;
+uniform Camera mainCamera;
 uniform mat4 modelMatrix;
 
+uniform mat3 UVMatrix;
 uniform mat3 normalMatrix;
 uniform mat4 mvp;
 
 
 void main(){
-    gl_Position =  viewProjectionMatrix * modelMatrix * vec4( position, 1.0f );
-    v2Uv = uv;
+    gl_Position = mainCamera.viewProjectionMatrix * modelMatrix * vec4( position , 1.0f );
+
+
+    attr_VertexPosition = position;
+    attr_VertexUV = uv;
+    attr_VertexNormal = normalMatrix * normal;
 }

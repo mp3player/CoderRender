@@ -346,7 +346,8 @@ CMakeFiles/miracle.dir/main.cc.o: /home/coder/project/c++/engine/main.cc \
  /home/coder/project/c++/engine/./include/system/System.hpp \
  /home/coder/project/c++/engine/./include/system/CoordinateSystem.hpp \
  /home/coder/project/c++/engine/./include/system/RenderSystem.hpp \
- /home/coder/project/c++/engine/./include/opengl/shader/Program.hpp \
+ /home/coder/project/c++/engine/./include/opengl/shader/OpenGLProgram.hpp \
+ /home/coder/project/c++/engine/./include/opengl/shader/OpenGLShader.hpp \
  /usr/include/c++/11/fstream /usr/include/c++/11/bits/codecvt.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
@@ -355,6 +356,7 @@ CMakeFiles/miracle.dir/main.cc.o: /home/coder/project/c++/engine/main.cc \
  /home/coder/project/c++/engine/./include/core/Buffer.hpp \
  /home/coder/project/c++/engine/./include/component/Camera.hpp \
  /home/coder/project/c++/engine/./include/component/Light.hpp \
+ /home/coder/project/c++/engine/./include/render/OpenGLRenderer.hpp \
  /home/coder/project/c++/engine/./include/render/Renderer.hpp \
  /home/coder/project/c++/engine/./include/core/VertexBuffer.hpp \
  /home/coder/project/c++/engine/./include/core/TextureBuffer.hpp \
@@ -374,4 +376,6 @@ CMakeFiles/miracle.dir/main.cc.o: /home/coder/project/c++/engine/main.cc \
  /usr/local/include/glm/ext/matrix_clip_space.inl \
  /usr/local/include/glm/ext/matrix_transform.hpp \
  /usr/local/include/glm/ext/matrix_transform.inl \
- /usr/local/include/glm/gtc/matrix_transform.inl
+ /usr/local/include/glm/gtc/matrix_transform.inl \
+ /home/coder/project/c++/engine/./include/opengl/shader/ShaderPreProcessor.hpp \
+ /home/coder/project/c++/engine/./include/core/io/IO.hpp

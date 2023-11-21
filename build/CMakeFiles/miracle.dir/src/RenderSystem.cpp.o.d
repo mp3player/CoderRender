@@ -345,7 +345,8 @@ CMakeFiles/miracle.dir/src/RenderSystem.cpp.o: \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc \
- /home/coder/project/c++/engine/./include/opengl/shader/Program.hpp \
+ /home/coder/project/c++/engine/./include/opengl/shader/OpenGLProgram.hpp \
+ /home/coder/project/c++/engine/./include/opengl/shader/OpenGLShader.hpp \
  /usr/include/c++/11/fstream /usr/include/c++/11/bits/codecvt.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
@@ -354,6 +355,8 @@ CMakeFiles/miracle.dir/src/RenderSystem.cpp.o: \
  /home/coder/project/c++/engine/./include/core/Buffer.hpp \
  /home/coder/project/c++/engine/./include/component/Camera.hpp \
  /home/coder/project/c++/engine/./include/component/Light.hpp \
+ /home/coder/project/c++/engine/./include/render/OpenGLRenderer.hpp \
  /home/coder/project/c++/engine/./include/render/Renderer.hpp \
  /home/coder/project/c++/engine/./include/core/VertexBuffer.hpp \
- /home/coder/project/c++/engine/./include/core/TextureBuffer.hpp
+ /home/coder/project/c++/engine/./include/core/TextureBuffer.hpp \
+ /home/coder/project/c++/engine/./include/component/Transform.hpp

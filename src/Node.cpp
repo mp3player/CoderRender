@@ -1,5 +1,6 @@
 #include <scene/Node.hpp>
 #include <glad/glad.h>
+#include <component/Transform.hpp>
 
 static int entity_version = 0;
 
@@ -10,9 +11,8 @@ Node::Node(  ) : name( "DefaultNode_" + std::to_string( entity_version ) ){
 }
 
 Node::~Node(){
-    
+    this->dispose();
 }
-
 
 void Node::addChild( Node * node ){
 
@@ -33,40 +33,20 @@ std::string Node::getName() const {
 void Node::addComponent( Component * component ){
 
     assert( component != nullptr );
-    if( this->components.find( component->getName() ) == this->components.end() ){
-        this->components.emplace( component->getName() , component );
-        component->setNode( this );
-    }
-    
-
-}
-
-Component * Node::removeComponent( std::string name ){
-
-    if( this->components.find( name ) == this->components.end() ){
-        return nullptr;
-    }
-    auto iter = this->components.find( name );
-    Component * component = iter->second;
-
-    // this function will cause the iter become invalid => the content need to store
-    this->components.erase( iter );
-
-    return component;
+    this->components.push_back( component );
+    component->setNode( this );
 
 }
 
 void Node::update( float deltaTime ){
 
 
-#define Iterator std::unordered_map< std::string , Component * >::iterator 
+    std::vector< Component * >::iterator begin = this->components.begin(),
+    end = this->components.end();
 
-    Iterator begin = this->components.begin();
-    Iterator end = this->components.end();
-
-    while( begin != end ){
+    while( begin < end ){
         
-        Component * component = begin->second;
+        Component * component = *begin;
         component->update( deltaTime );
         begin++;
 
@@ -76,14 +56,21 @@ void Node::update( float deltaTime ){
 }
 
 void Node::dispose(){
-    
-    // delete component
+
+    int k = 0;
     auto begin = this->components.begin() , end = this->components.end();
-    while( begin != end ){
-        Component * component = begin->second;
+    while( begin < end ){
+        
+        Component * component = *begin;
         delete component;
         begin ++;
     }
+
+    for( Node * node : this->children ){
+        delete node;
+    }
+
+    this->children.clear();
 
 }
 

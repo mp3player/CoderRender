@@ -3,6 +3,7 @@
 #include "stb_image.c"
 
 #include <iostream>
+#include <core/Log.hpp>
 
 
 #define R___ 0x2002
@@ -11,39 +12,35 @@
 #define RGBA 0x1908
 
 
-Texture2D::Texture2D( std::string path )
+Texture::~Texture(){}
+
+TextureImage::TextureImage( std::string path )
     : path( path ) , width( 0 ) , height( 0 )
 {
     this->loadImageData( path );
 }
 
-Texture2D::~Texture2D(){
+TextureImage::~TextureImage(){
     this->dispose();
 }
 
-int Texture2D::getWidth() const {
+int TextureImage::getWidth() const {
     return this->width;
 }
 
-int Texture2D::getHeight() const {
+int TextureImage::getHeight() const {
     return this->height;
 }
 
-int Texture2D::getChannel() const {
+int TextureImage::getChannel() const {
     return this->channel;
 }
 
-unsigned int Texture2D::getFormat() const {
-    
-    return this->format;
-
+void * TextureImage::ptr() const {
+    return (void *)this->data;
 }
 
-unsigned char * Texture2D::ptr() const {
-    return this->data;
-}
-
-void Texture2D::loadImageData( std::string path ){
+void TextureImage::loadImageData( std::string path ){
     
     if( this->data != nullptr ){
         this->dispose();
@@ -53,30 +50,14 @@ void Texture2D::loadImageData( std::string path ){
     
     if( this->data == nullptr ){
         // error
+        Log::cout( __FILE__ , "failed to load image " , path );
         return ;
     }
 
-    if( this->channel == 1 ){
-
-        this->format = R___;
-
-    }else if( this->channel == 2 ){
-
-        this->format = RG__;
-
-    }else if( this->channel == 3 ){
-
-        this->format == RGB_;
-
-    }else if( this->channel == 4 ){
-
-        this->format == RGBA;
-
-    }
 
 }
 
-void Texture2D::dispose(){
+void TextureImage::dispose(){
 
     if( this->data != nullptr ){
         stbi_image_free( this->data );

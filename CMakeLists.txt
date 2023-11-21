@@ -26,9 +26,14 @@ src/VertexBuffer.cpp
 src/RenderBuffer.cpp
 src/TextureBuffer.cpp
 src/MemoryManager.cpp
+src/IO.cpp
+src/ShaderPreProcessor.cpp
+
 
 # render 
 src/RenderPass.cpp
+src/Renderer.cpp
+src/OpenGLRenderer.cpp
 
 # util 
 src/Layer.cpp
@@ -39,7 +44,8 @@ src/Component.cpp
 src/Light.cpp
 src/Camera.cpp
 src/Mesh.cpp
-src/Renderer.cpp
+src/Transform.cpp
+
 src/Material.cpp
 
 # scene
@@ -50,7 +56,8 @@ src/Screen.cpp
 src/Window.cpp
 
 # shader 
-src/Program.cpp
+src/OpenGLShader.cpp
+src/OpenGLProgram.cpp
 
 # entity 
 src/Node.cpp

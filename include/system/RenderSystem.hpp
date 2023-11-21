@@ -3,13 +3,13 @@
 
 #include <system/System.hpp>
 
-#include <opengl/shader/Program.hpp>
+#include <opengl/shader/OpenGLProgram.hpp>
 #include <core/Buffer.hpp>
 #include <core/MemoryManager.hpp>
 #include <component/Camera.hpp>
 #include <component/Light.hpp>
 
-#include <render/Renderer.hpp>
+#include <render/OpenGLRenderer.hpp>
 
 
 
@@ -20,7 +20,7 @@ struct RenderSystem : System {
 
     private:
 
-        Renderer * renderer;
+        OpenGLRenderer * renderer;
 
     public:
 
