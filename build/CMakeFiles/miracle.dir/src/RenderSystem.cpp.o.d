@@ -321,6 +321,7 @@ CMakeFiles/miracle.dir/src/RenderSystem.cpp.o: \
  /home/coder/project/c++/engine/./include/scene/Texture.hpp \
  /home/coder/project/c++/engine/./include/glad/glad.h \
  /usr/include/KHR/khrplatform.h \
+ /home/coder/project/c++/engine/./include/core/Uniform.hpp \
  /home/coder/project/c++/engine/./include/scene/Layer.hpp \
  /home/coder/project/c++/engine/./include/core/Log.hpp \
  /usr/include/c++/11/iostream /usr/include/c++/11/ostream \

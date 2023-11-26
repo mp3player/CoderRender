@@ -22,9 +22,6 @@ struct Light : Component {
     
         void update( float deltaTime ) override;
 
-    public:
-
-        virtual LightType lightType() const ;
 
 };
 
@@ -34,9 +31,6 @@ struct AmbientLight : Light {
         
         explicit AmbientLight( glm::vec3 color , float intensity );
 
-    public:
-
-        LightType lightType() const override ;
 
 };
 
@@ -44,19 +38,25 @@ struct DirectionalLight : Light {
 
     explicit DirectionalLight( glm::vec3 color , float intensity );
 
-    public:
 
-        LightType lightType() const override ;
+
+};
+
+struct PointLight : Light {
+    
+    public:
+        explicit PointLight( glm::vec3 color , float intensity );
 
 };
 
 struct SpotLight : Light {
 
-    explicit SpotLight( glm::vec3 color , float intensity );
+    public:
+        float cutOff = glm::cos( glm::radians( 30.0f ) );
 
     public:
+        explicit SpotLight( glm::vec3 color , float intensity );
 
-        LightType lightType() const override ;
 
 };
 

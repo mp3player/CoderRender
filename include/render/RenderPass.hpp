@@ -13,19 +13,18 @@ struct RenderPass {
         int height ;
     
     public:
+
         FrameBuffer * frameBuffer;
         RenderBuffer * depthBuffer;
         RenderTexture * renderTexture;
 
     public:
         RenderPass( int width , int height );
-        // RenderPass( int width , int height );
         ~RenderPass();
 
     public:
         void init() ;
         void dispose();
-        void render( Scene * scene );
 
 
 };

@@ -341,6 +341,7 @@ CMakeFiles/miracle.dir/main.cc.o: /home/coder/project/c++/engine/main.cc \
  /home/coder/project/c++/engine/./include/core/Ref.hpp \
  /home/coder/project/c++/engine/./include/scene/Material.hpp \
  /home/coder/project/c++/engine/./include/scene/Texture.hpp \
+ /home/coder/project/c++/engine/./include/core/Uniform.hpp \
  /home/coder/project/c++/engine/./include/scene/Layer.hpp \
  /home/coder/project/c++/engine/./include/core/Log.hpp \
  /home/coder/project/c++/engine/./include/system/System.hpp \
@@ -363,8 +364,6 @@ CMakeFiles/miracle.dir/main.cc.o: /home/coder/project/c++/engine/main.cc \
  /home/coder/project/c++/engine/./include/system/TimeSystem.hpp \
  /usr/include/c++/11/ctime \
  /home/coder/project/c++/engine/./include/scene/Screen.hpp \
- /home/coder/project/c++/engine/./include/render/RenderPass.hpp \
- /home/coder/project/c++/engine/./include/core/RenderBuffer.hpp \
  /usr/local/include/glm/gtc/matrix_transform.hpp \
  /usr/local/include/glm/ext/matrix_projection.hpp \
  /usr/local/include/glm/gtc/constants.hpp \
@@ -378,4 +377,5 @@ CMakeFiles/miracle.dir/main.cc.o: /home/coder/project/c++/engine/main.cc \
  /usr/local/include/glm/ext/matrix_transform.inl \
  /usr/local/include/glm/gtc/matrix_transform.inl \
  /home/coder/project/c++/engine/./include/opengl/shader/ShaderPreProcessor.hpp \
- /home/coder/project/c++/engine/./include/core/io/IO.hpp
+ /home/coder/project/c++/engine/./include/core/io/IO.hpp \
+ /home/coder/project/c++/engine/./include/component/Transform.hpp

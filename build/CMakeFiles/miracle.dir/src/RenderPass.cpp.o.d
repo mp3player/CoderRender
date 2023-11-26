@@ -339,6 +339,7 @@ CMakeFiles/miracle.dir/src/RenderPass.cpp.o: \
  /home/coder/project/c++/engine/./include/scene/Mesh.hpp \
  /home/coder/project/c++/engine/./include/scene/Material.hpp \
  /home/coder/project/c++/engine/./include/scene/Texture.hpp \
+ /home/coder/project/c++/engine/./include/core/Uniform.hpp \
  /home/coder/project/c++/engine/./include/scene/Layer.hpp \
  /home/coder/project/c++/engine/./include/core/Log.hpp \
  /home/coder/project/c++/engine/./include/component/Camera.hpp

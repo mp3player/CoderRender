@@ -18,10 +18,12 @@ uniform mat4 mvp;
 
 
 void main(){
-    gl_Position = mainCamera.viewProjectionMatrix * modelMatrix * vec4( position , 1.0f );
 
 
-    attr_VertexPosition = position;
+    gl_Position = mainCamera.projectionMatrix * mainCamera.viewMatrix * modelMatrix * vec4( position , 1.0f );
+    
+    attr_VertexPosition = ( modelMatrix * vec4( position , 1.0f ) ).xyz;
     attr_VertexUV = uv;
     attr_VertexNormal = normalMatrix * normal;
+
 }

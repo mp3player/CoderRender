@@ -2,6 +2,7 @@
     - compile shader
     - shader analysis 
     - generate material 
+    - shader == material => create material according the shader attached to the object 
 
 
 

@@ -35,6 +35,8 @@ void Window::init(){
     glfwWindowHint(GLFW_OPENGL_CORE_PROFILE,GLFW_OPENGL_CORE_PROFILE);
     glfwWindowHint(GLFW_TRANSPARENT_FRAMEBUFFER, GLFW_TRUE);
 
+    glfwWindowHint(GLFW_SAMPLES, 8);
+
     if (this->window == NULL) {
         Log::cout( __FILE__ , "init window failed " );
         glfwTerminate();

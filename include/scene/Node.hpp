@@ -68,6 +68,8 @@ struct Node : Ref {
         template< typename T >
         std::vector< Node * > findChildrenWithComponent();
 
+        Node * getNodeByName( std::string name );
+
 };
 
 

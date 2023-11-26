@@ -14,11 +14,6 @@ void Light::update( float deltaTime ){
 
 }
 
-LightType Light::lightType() const {
-    return LIGHT;
-}
-
-
 
 
 
@@ -28,10 +23,6 @@ LightType Light::lightType() const {
 AmbientLight::AmbientLight( glm::vec3 color , float intensity )
     : Light( color , intensity )
 {}
-
-LightType AmbientLight::lightType() const {
-    return AMBIENT;
-}
 
 
 
@@ -48,14 +39,14 @@ DirectionalLight::DirectionalLight( glm::vec3 color , float intensity )
     : Light( color , intensity )
 {}
 
-LightType DirectionalLight::lightType() const {
-    return DIRECTIONAL;
-}
 
 
 
 
 
+PointLight::PointLight( glm::vec3 color , float intensity )
+    :Light( color , intensity )
+{}
 
 
 
@@ -63,7 +54,3 @@ LightType DirectionalLight::lightType() const {
 SpotLight::SpotLight::SpotLight( glm::vec3 color , float intensity )
     : Light( color , intensity )
 {}
-
-LightType SpotLight::lightType() const {
-    return SPOT;
-}

@@ -513,6 +513,30 @@ src/OpenGLProgram.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/OpenGLProgram.cpp.s
 .PHONY : src/OpenGLProgram.cpp.s
 
+src/OpenGLRenderTarget.o: src/OpenGLRenderTarget.cpp.o
+.PHONY : src/OpenGLRenderTarget.o
+
+# target to build an object file
+src/OpenGLRenderTarget.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/OpenGLRenderTarget.cpp.o
+.PHONY : src/OpenGLRenderTarget.cpp.o
+
+src/OpenGLRenderTarget.i: src/OpenGLRenderTarget.cpp.i
+.PHONY : src/OpenGLRenderTarget.i
+
+# target to preprocess a source file
+src/OpenGLRenderTarget.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/OpenGLRenderTarget.cpp.i
+.PHONY : src/OpenGLRenderTarget.cpp.i
+
+src/OpenGLRenderTarget.s: src/OpenGLRenderTarget.cpp.s
+.PHONY : src/OpenGLRenderTarget.s
+
+# target to generate assembly for a file
+src/OpenGLRenderTarget.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/OpenGLRenderTarget.cpp.s
+.PHONY : src/OpenGLRenderTarget.cpp.s
+
 src/OpenGLRenderer.o: src/OpenGLRenderer.cpp.o
 .PHONY : src/OpenGLRenderer.o
 
@@ -873,6 +897,30 @@ src/Transform.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/Transform.cpp.s
 .PHONY : src/Transform.cpp.s
 
+src/Uniform.o: src/Uniform.cpp.o
+.PHONY : src/Uniform.o
+
+# target to build an object file
+src/Uniform.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/Uniform.cpp.o
+.PHONY : src/Uniform.cpp.o
+
+src/Uniform.i: src/Uniform.cpp.i
+.PHONY : src/Uniform.i
+
+# target to preprocess a source file
+src/Uniform.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/Uniform.cpp.i
+.PHONY : src/Uniform.cpp.i
+
+src/Uniform.s: src/Uniform.cpp.s
+.PHONY : src/Uniform.s
+
+# target to generate assembly for a file
+src/Uniform.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/Uniform.cpp.s
+.PHONY : src/Uniform.cpp.s
+
 src/VertexBuffer.o: src/VertexBuffer.cpp.o
 .PHONY : src/VertexBuffer.o
 
@@ -1002,6 +1050,9 @@ help:
 	@echo "... src/OpenGLProgram.o"
 	@echo "... src/OpenGLProgram.i"
 	@echo "... src/OpenGLProgram.s"
+	@echo "... src/OpenGLRenderTarget.o"
+	@echo "... src/OpenGLRenderTarget.i"
+	@echo "... src/OpenGLRenderTarget.s"
 	@echo "... src/OpenGLRenderer.o"
 	@echo "... src/OpenGLRenderer.i"
 	@echo "... src/OpenGLRenderer.s"
@@ -1047,6 +1098,9 @@ help:
 	@echo "... src/Transform.o"
 	@echo "... src/Transform.i"
 	@echo "... src/Transform.s"
+	@echo "... src/Uniform.o"
+	@echo "... src/Uniform.i"
+	@echo "... src/Uniform.s"
 	@echo "... src/VertexBuffer.o"
 	@echo "... src/VertexBuffer.i"
 	@echo "... src/VertexBuffer.s"

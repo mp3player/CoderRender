@@ -1,7 +1,7 @@
 #include <render/RenderPass.hpp>
 #include <component/Camera.hpp>
 
-// RenderPass( Frame Buffer );
+// OpenGLRenderTarget( Frame Buffer );
 RenderPass::RenderPass( int width , int height )
     :width( width ) , height( height )
 {}
@@ -50,27 +50,3 @@ void RenderPass::dispose(){
 
 }
 
-void RenderPass::render( Scene * scene ){
-    
-    this->frameBuffer->bind();
-    
-    glViewport( 0 , 0 , this->width , this->height );
-
-    // render the pass 
-    Node * eye = scene->findChildWithComponent<Camera>();
-    Camera * mainCamera = eye->getComponent<Camera>();
-
-    
-
-    // Transform* 
-
-    std::vector< Node *> nodeRenderable = scene->findChildrenWithComponent<RenderComponent>();
-
-    for( Node * node : nodeRenderable ){
-
-    }
-
-
-    this->frameBuffer->unBind();
-
-}

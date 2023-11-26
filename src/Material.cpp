@@ -7,11 +7,13 @@
 typedef MemoryManager< Texture > TextureManager;
 
 static TextureManager Manager;
+
 static int MaterialReferenceCount = 0;
 
-std::string UniformBuffer::getName() const {
-    return this->name ;
-}
+
+
+
+
 
 Material::Material(){ 
     this->addUniformValue( "color" , glm::vec3( 1.0f ) );

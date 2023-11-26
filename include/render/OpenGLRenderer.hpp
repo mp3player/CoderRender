@@ -19,6 +19,7 @@ TextureBuffer * getTexture( Texture * texture );
 struct OpenGLRenderer : Renderer {
 
     public:
+
         glm::vec3 color = { 0.0f , 0.0f , 0.0f };
         float alpha = 0.2f ;
 
@@ -28,9 +29,12 @@ struct OpenGLRenderer : Renderer {
         ~OpenGLRenderer();
 
     public:
+
         void enable( );
         void disable();
         void clear() override ;
+
+    private:
 
         void setCamera( Program * program , Node * camera );
 
@@ -38,9 +42,14 @@ struct OpenGLRenderer : Renderer {
 
         void setDirectionalLight( Program * program , std::vector< Node * > directionals );
 
-        void setRenderParameter( Program * program , RenderComponent * parameters );
+        void setSpotLight( Program * program , std::vector< Node * > spots );
 
-        // render one node 
+        void setPointLight( Program * program , std::vector< Node * > points );
+
+        void setRenderParameter( Program * program , RenderComponent * parameters );
+    
+    public:
+
         void render( Scene * scene ) ;
 
 };

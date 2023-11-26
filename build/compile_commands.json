@@ -56,6 +56,11 @@
 },
 {
   "directory": "/home/coder/project/c++/engine/build",
+  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -o CMakeFiles/miracle.dir/src/Uniform.cpp.o -c /home/coder/project/c++/engine/src/Uniform.cpp",
+  "file": "/home/coder/project/c++/engine/src/Uniform.cpp"
+},
+{
+  "directory": "/home/coder/project/c++/engine/build",
   "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -o CMakeFiles/miracle.dir/src/RenderPass.cpp.o -c /home/coder/project/c++/engine/src/RenderPass.cpp",
   "file": "/home/coder/project/c++/engine/src/RenderPass.cpp"
 },
@@ -68,6 +73,11 @@
   "directory": "/home/coder/project/c++/engine/build",
   "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -o CMakeFiles/miracle.dir/src/OpenGLRenderer.cpp.o -c /home/coder/project/c++/engine/src/OpenGLRenderer.cpp",
   "file": "/home/coder/project/c++/engine/src/OpenGLRenderer.cpp"
+},
+{
+  "directory": "/home/coder/project/c++/engine/build",
+  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -o CMakeFiles/miracle.dir/src/OpenGLRenderTarget.cpp.o -c /home/coder/project/c++/engine/src/OpenGLRenderTarget.cpp",
+  "file": "/home/coder/project/c++/engine/src/OpenGLRenderTarget.cpp"
 },
 {
   "directory": "/home/coder/project/c++/engine/build",

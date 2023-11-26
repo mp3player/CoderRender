@@ -24,6 +24,7 @@ void Log::cout( std::string filename , Args ... args ){
 
 std::ostream & operator << ( std::ostream & cout , glm::mat4 vec );
 std::ostream & operator << ( std::ostream & cout , glm::vec3 vec );
+std::ostream & operator << ( std::ostream & cout , glm::vec4 vec );
 
 
 #endif

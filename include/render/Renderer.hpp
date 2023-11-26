@@ -11,6 +11,9 @@ struct Renderer {
 
         glm::vec3 clearColor = glm::vec3( 0.0f );
 
+        int multiSample = 1;
+        bool antialias = true;
+
     public:
         virtual ~Renderer();
 

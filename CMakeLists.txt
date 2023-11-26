@@ -28,12 +28,14 @@ src/TextureBuffer.cpp
 src/MemoryManager.cpp
 src/IO.cpp
 src/ShaderPreProcessor.cpp
+src/Uniform.cpp
 
 
 # render 
 src/RenderPass.cpp
 src/Renderer.cpp
 src/OpenGLRenderer.cpp
+src/OpenGLRenderTarget.cpp
 
 # util 
 src/Layer.cpp

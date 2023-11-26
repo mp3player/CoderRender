@@ -8,7 +8,6 @@
 #include <system/RenderSystem.hpp>
 #include <system/TimeSystem.hpp>
 #include <scene/Screen.hpp>
-#include <render/RenderPass.hpp>
 
 
 // single Instance Application
@@ -24,10 +23,6 @@ struct Application {
         TimeSystem * timeSystem;
 
         std::vector< System * > systems;
-
-        RenderPass * pass ;
-
-        Screen * screen;
 
     private:
         Application() = default ;
@@ -56,6 +51,10 @@ struct Application {
         Node * addAmbientLight();
         
         Node * addDirectionalLight();
+
+        Node * addSpotLight();
+
+        Node * addPointLight();
 
 
     private:

@@ -30,11 +30,22 @@ std::string Node::getName() const {
     return this->name;
 }
 
-void Node::addComponent( Component * component ){
+void Node::dispose(){
 
-    assert( component != nullptr );
-    this->components.push_back( component );
-    component->setNode( this );
+    int k = 0;
+    auto begin = this->components.begin() , end = this->components.end();
+    while( begin < end ){
+        
+        Component * component = *begin;
+        delete component;
+        begin ++;
+    }
+
+    for( Node * node : this->children ){
+        delete node;
+    }
+
+    this->children.clear();
 
 }
 
@@ -55,22 +66,26 @@ void Node::update( float deltaTime ){
 
 }
 
-void Node::dispose(){
+void Node::addComponent( Component * component ){
 
-    int k = 0;
-    auto begin = this->components.begin() , end = this->components.end();
-    while( begin < end ){
-        
-        Component * component = *begin;
-        delete component;
-        begin ++;
-    }
-
-    for( Node * node : this->children ){
-        delete node;
-    }
-
-    this->children.clear();
+    assert( component != nullptr );
+    this->components.push_back( component );
+    component->setNode( this );
 
 }
+
+Node * Node::getNodeByName( std::string name ){
+
+    for( int i = 0 ; i < this->children.size() ; ++ i ){
+        if( this->children.at( i )->getName() == name ){
+            return this->children.at( i );
+        }
+    }
+
+    return nullptr ;
+
+}
+
+
+
 

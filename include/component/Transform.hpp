@@ -21,6 +21,8 @@ struct Transform : Component {
         glm::vec3 v3Scale = glm::vec3( 1.0f , 1.0f , 1.0f );
         glm::vec3 v3Rotation = O;
 
+    public:
+
         glm::vec3 v3LookAt = -Z;
         glm::vec3 v3Right = X;
         glm::vec3 v3Up = Y;
@@ -28,18 +30,20 @@ struct Transform : Component {
 
     public:
         
-        glm::mat4 m4ModelTransform = M4ID;
-        glm::mat4 m4InverseModelTransform = M4ID;
-
-        glm::mat4 m4WorldTransform = M4ID;
-        glm::mat4 m4InverseWorldTransform = M4ID;
-
-        glm::mat4 m4ModelWorldTransform = M4ID;
-        glm::mat4 m4InverseModelWorldTransform = M4ID;
-
+        glm::mat4 m4ModelMatrix = M4ID;
+        glm::mat4 m4InverseModelMatrix = M4ID;
         glm::mat3 m3NormalMatrix = M3ID;
 
+        glm::mat4 m4WorldMatrix = M4ID;
+        glm::mat4 m4InverseWorldMatrix = M4ID;
+
+        glm::mat4 m4ModelWorldMatrix = M4ID;
+        glm::mat4 m4InverseModelWorldMatrix = M4ID;
         glm::mat3 m3NormalWorldMatrix = M3ID;
+
+        glm::mat4 m4ViewMatrix = M4ID;
+        glm::mat4 m4InverseViewMatrix = M4ID;
+
 
     public:
 
@@ -58,7 +62,8 @@ struct Transform : Component {
     public:
 
         void setWorldTransform( glm::mat4 worldTransform , glm::mat4 inverseWorldTransform );
-        void updateTransform();
+        void updateModelTransform();
+        void updateViewTransform();
         void updateModelWorldTransform();
 
     public:

@@ -337,6 +337,7 @@ CMakeFiles/miracle.dir/src/Light.cpp.o: \
  /home/coder/project/c++/engine/./include/scene/Texture.hpp \
  /home/coder/project/c++/engine/./include/glad/glad.h \
  /usr/include/KHR/khrplatform.h \
+ /home/coder/project/c++/engine/./include/core/Uniform.hpp \
  /home/coder/project/c++/engine/./include/scene/Node.hpp \
  /home/coder/project/c++/engine/./include/scene/Layer.hpp \
  /home/coder/project/c++/engine/./include/core/Log.hpp

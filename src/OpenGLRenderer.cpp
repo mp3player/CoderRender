@@ -23,11 +23,12 @@ static std::unordered_map< std::string , Program * > ProgramCaches;
 static std::unordered_map< Texture * , TextureBuffer * > TextureCaches;
 
 
-
 OpenGLRenderer::OpenGLRenderer(){
 
     RenderReferenceCount += 1;
-    glClearColor( color.r , color.g , color.b , alpha );
+
+    glEnable(GL_MULTISAMPLE);
+    glClearColor( color.r , .2f , color.b , alpha );
 
 }
 
@@ -70,13 +71,16 @@ void OpenGLRenderer::setCamera( Program * program , Node * cameraNode ){
     Transform * transform = cameraNode->getComponent<Transform>();
 
     glm::mat4 projectionMatrix = camera->getProjectionMatrix();
-    glm::mat4 viewMatrix = transform->m4InverseModelTransform;
+    glm::mat4 viewMatrix = transform->m4ViewMatrix;
     glm::mat4 viewProjectionMatrix = projectionMatrix * viewMatrix;
 
     program->setUniformValue( "mainCamera.projectionMatrix" , projectionMatrix );
     program->setUniformValue( "mainCamera.viewMatrix" , viewMatrix );
     program->setUniformValue( "mainCamera.viewProjectionMatrix" , viewProjectionMatrix );
     program->setUniformValue( "mainCamera.position" , transform->v3Translation );
+
+    // std::cout << "camera " << std::endl << viewMatrix << std::endl;
+
 
 }
 
@@ -117,12 +121,54 @@ void OpenGLRenderer::setDirectionalLight( Program * program , std::vector< Node 
         Transform * transform = node->getComponent< Transform >();
         
         program->setUniformValue( "directionalLight.color" , directionalLight->color * directionalLight->intensity );
-        program->setUniformValue( "directionalLight.direction" , transform->v3LookAt );
-        std::cout << transform->v3LookAt << std::endl;
+        program->setUniformValue( "directionalLight.direction" , transform->v3LookAt - transform->v3Translation );
+
+    }
+
+    
+
+}
+
+
+void OpenGLRenderer::setSpotLight( Program * program , std::vector< Node * > spots ){
+    
+    assert( program != nullptr );
+
+    for( int i = 0 ; i < spots.size() ; ++ i ){
+
+        Node * node = spots.at( i );
+        SpotLight * spotLight = node->getComponent< SpotLight >();
+        Transform * transform = node->getComponent< Transform >();
+        
+        program->setUniformValue( "spotLight.color" , spotLight->color );
+        program->setUniformValue( "spotLight.position" , transform->v3Translation );
+        program->setUniformValue( "spotLight.direction" , glm::normalize( transform->v3LookAt - transform->v3Translation ) );
+        program->setUniformValue( "spotLight.cutOff" , spotLight->cutOff );
+        program->setUniformValue( "spotLight.intensity" , spotLight->intensity );
+
 
     }
 
 }
+
+void OpenGLRenderer::setPointLight( Program * program , std::vector< Node * > points ){
+
+    assert( program != nullptr );
+
+    for( int i = 0 ; i < points.size() ; ++ i ){
+
+        Node * node = points.at( i );
+        PointLight * pointLight = node->getComponent< PointLight >();
+        Transform * transform = node->getComponent< Transform >();
+        
+        program->setUniformValue( "pointLight.color" , pointLight->color );
+        program->setUniformValue( "pointLight.position" , transform->v3Translation );
+        program->setUniformValue( "pointLight.intensity" , pointLight->intensity );
+
+    }
+
+}
+
 
 /**
  * @brief Set the Render Parameter of object 
@@ -165,14 +211,16 @@ void OpenGLRenderer::setRenderParameter( Program * program , RenderComponent * p
 }
 
 
-
-
 void OpenGLRenderer::render( Scene * scene  ){
 
 
     Node * camera = scene->findChildWithComponent< Camera >();
+
     std::vector< Node * > ambientLights = scene->findChildrenWithComponent< AmbientLight >();
     std::vector< Node * > directionalLights = scene->findChildrenWithComponent< DirectionalLight > ();
+    std::vector< Node * > spotLights = scene->findChildrenWithComponent< SpotLight >();
+    std::vector< Node * > pointLights = scene->findChildrenWithComponent< PointLight >();
+
     std::vector< Node * >entities = scene->findChildrenWithComponent< RenderComponent >();
 
     for( Node * entity : entities ){
@@ -184,12 +232,14 @@ void OpenGLRenderer::render( Scene * scene  ){
         this->setCamera( program , camera );
 
         Transform * transform = entity->getComponent< Transform >();
-        program->setUniformValue( "modelMatrix" , transform->m4ModelTransform );
-        program->setUniformValue( "normalMatrix" , transform->m3NormalMatrix );
+        program->setUniformValue( "modelMatrix" , transform->m4ModelWorldMatrix );
+        program->setUniformValue( "normalMatrix" , transform->m3NormalWorldMatrix );
 
         this->setRenderParameter( program , entity->getComponent< RenderComponent >() );
         this->setAmbientLight( program , ambientLights );
         this->setDirectionalLight( program , directionalLights );
+        this->setSpotLight( program , spotLights );
+        this->setPointLight( program , pointLights );
 
         VertexArrayBuffer * vao = getVAO( entity );
         vao->bind();
@@ -198,7 +248,6 @@ void OpenGLRenderer::render( Scene * scene  ){
         if( vao->hasIndex() ){
 
             vao->bindIndex();
-
             glDrawElements( GL_TRIANGLES , vao->size() , GL_UNSIGNED_INT , nullptr );
 
         }else{
@@ -210,16 +259,14 @@ void OpenGLRenderer::render( Scene * scene  ){
         glBindTexture( GL_TEXTURE_2D , 0 );
         vao->unBind();
 
-
     }
-
 
 }
 
 
 
 
-// tools 
+// buffer 
 VertexArrayBuffer * getVAO( Node * node ){
     
     assert( node != nullptr );
