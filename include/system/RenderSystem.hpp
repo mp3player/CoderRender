@@ -15,12 +15,12 @@
 
 
 
-
 struct RenderSystem : System {
 
     private:
 
         OpenGLRenderer * renderer;
+
 
     public:
 
@@ -33,7 +33,7 @@ struct RenderSystem : System {
 
     public:
 
-        RenderSystem( Scene * scene );
+        RenderSystem(  Scene * scene );
         ~RenderSystem();
 
     public:

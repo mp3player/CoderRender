@@ -22,6 +22,13 @@ static std::unordered_map< Mesh * , VertexArrayBuffer * > ShapeCaches;
 static std::unordered_map< std::string , Program * > ProgramCaches;
 static std::unordered_map< Texture * , TextureBuffer * > TextureCaches;
 
+std::unordered_map< Node * , Node * > shadowCamera;
+
+Program * shadowProgram = Program::FromFile(
+    "/home/coder/project/c++/engine/shader/depth/vertex.vert",
+    "/home/coder/project/c++/engine/shader/depth/fragment.frag"
+);
+
 
 OpenGLRenderer::OpenGLRenderer(){
 
@@ -29,6 +36,7 @@ OpenGLRenderer::OpenGLRenderer(){
 
     glEnable(GL_MULTISAMPLE);
     glClearColor( color.r , .2f , color.b , alpha );
+    shadowProgram->compile();
 
 }
 
@@ -46,15 +54,205 @@ OpenGLRenderer::~OpenGLRenderer(){
         Log::cout( __FILE__ , "release texture buffer " );
         Log::cout( __FILE__ , "release vertex buffer " );
 
+        delete shadowProgram;
+
+        auto begin = shadowCamera.begin() , end = shadowCamera.end();
+
+        while( begin != end ){
+            delete begin->second;
+            begin++;
+        }
+
+
     }
 
 }
 
-void OpenGLRenderer::clear(){
+/**
+ * @brief set the buffer of COLOR_BUFFER_BIT
+ * 
+ * @param r 
+ * @param g 
+ * @param b 
+ */
+void OpenGLRenderer::setColor( float r , float g , float b ){
+    Renderer::setColor( r , g , b );
+    glClearColor( r , g , b , this->alpha );
+}
 
-    glClear( GL_COLOR_BUFFER_BIT  | GL_DEPTH_BUFFER_BIT );
+void OpenGLRenderer::setColor( glm::vec3 color ){
+    this->setColor( color.r , color.g , color.b );
+}
+
+void OpenGLRenderer::setAlpha( float alpha ){
+    Renderer::setAlpha( alpha );
+    glClearColor( this->color.r , this->color.g , this->color.b , this->alpha );
+}
+
+/**
+ * @brief clear COLOR_BUFFER_BIT
+ * 
+ */
+void OpenGLRenderer::clearColorBuffer(){
+    this->clear( GL_COLOR_BUFFER_BIT );
+}
+
+/**
+ * @brief clear DEPTH_BUFFER_BIT
+ * 
+ */
+void OpenGLRenderer::clearDepthBuffer(){
+    this->clear( GL_DEPTH_BUFFER_BIT );
+}
+
+/**
+ * @brief clear STENCIL_BUFFER_BIT
+ * 
+ */
+void OpenGLRenderer::clearStencilBuffer(){
+    this->clear( GL_STENCIL_BUFFER_BIT );
+}
+
+
+void OpenGLRenderer::clear( unsigned int mask ){
+
+    glClear( mask );
 
 }
+
+void OpenGLRenderer::render( Scene * scene  ){
+
+
+    Node * camera = scene->findChildWithComponent< Camera >();
+
+    std::vector< Node * > ambientLights = scene->findChildrenWithComponent< AmbientLight >();
+    std::vector< Node * > directionalLights = scene->findChildrenWithComponent< DirectionalLight > ();
+    std::vector< Node * > spotLights = scene->findChildrenWithComponent< SpotLight >();
+    std::vector< Node * > pointLights = scene->findChildrenWithComponent< PointLight >();
+
+    std::vector< Node * > entities = scene->findChildrenWithComponent< RenderComponent >();
+
+    for( Node * entity : entities ){
+
+        Program * program = getProgram( entity );
+
+        program->bind();
+
+        this->setCamera( program , camera );
+
+        Transform * transform = entity->getComponent< Transform >();
+        program->setUniformValue( "modelMatrix" , transform->m4ModelWorldMatrix );
+        program->setUniformValue( "normalMatrix" , transform->m3NormalWorldMatrix );
+
+        this->setRenderParameter( program , entity->getComponent< RenderComponent >() );
+        this->setAmbientLight( program , ambientLights );
+        this->setDirectionalLight( program , directionalLights );
+        this->setSpotLight( program , spotLights );
+        this->setPointLight( program , pointLights );
+
+        VertexArrayBuffer * vao = getVAO( entity );
+        vao->bind();
+        
+
+        if( vao->hasIndex() ){
+
+            vao->bindIndex();
+            glDrawElements( GL_TRIANGLES , vao->size() , GL_UNSIGNED_INT , nullptr );
+
+        }else{
+
+            glDrawArrays( GL_TRIANGLES , 0 , vao->size() );
+
+        }
+
+        glBindTexture( GL_TEXTURE_2D , 0 );
+        vao->unBind();
+
+    }
+
+}
+
+
+void OpenGLRenderer::renderShadow( Scene * scene ){
+
+    glEnable( GL_DEPTH_TEST );
+    // generate directional light shadow
+    std::vector< Node * > directionalLights = scene->findChildrenWithComponent< DirectionalLight > ();
+    std::vector< Node * > objs = scene->findChildrenWithComponent< RenderComponent >();
+    
+    for( int i =  0 ; i < directionalLights.size() ; ++ i ){
+
+        Node * dLight = directionalLights.at( i );
+
+        Node * cameraNode ;
+        
+        // use shadowCamera 
+        if( shadowCamera.find( dLight ) == shadowCamera.end() ){
+        
+            // create a new ShadowCamera 
+            cameraNode = new Node();
+            Camera * camera = new OrthogonalCamera( -8 , 8 , 8 , -8 , .1 , 100 );
+            camera->update(0.0f);
+            cameraNode->addComponent( camera );
+            cameraNode->getComponent< Transform >()->setTranslation( dLight->getComponent< Transform >()->v3Translation );
+            cameraNode->getComponent< Transform >()->setRotation( dLight->getComponent< Transform >()->v3Rotation );
+            cameraNode->getComponent< Transform >()->setScale( dLight->getComponent< Transform >()->v3Scale );
+        
+            cameraNode->update( 0.0f );
+
+        }else{
+
+            // using the existing camera
+            cameraNode = shadowCamera.at( dLight );
+
+        }
+
+        // use program ;
+        
+
+        for( Node * obj : objs ){
+            shadowProgram->bind();
+            this->setCamera( shadowProgram , cameraNode );
+            // modelMatrix 
+            shadowProgram->setUniformValue( "modelMatrix" , obj->getComponent< Transform >()->m4ModelWorldMatrix );
+            // vao 
+            VertexArrayBuffer * vao = getVAO( obj );
+            vao->bind();
+
+            if( vao->hasIndex() ){
+                vao->bindIndex();
+                glDrawElements( GL_TRIANGLES , vao->size() , GL_UNSIGNED_INT , nullptr );
+            }else{
+                glDrawArrays( GL_TRIANGLES , 0 , vao->size() );
+            }
+
+            vao->unBind();
+
+        }
+
+
+
+        // render objects using shadowProgram 
+
+
+
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 /**
@@ -79,7 +277,7 @@ void OpenGLRenderer::setCamera( Program * program , Node * cameraNode ){
     program->setUniformValue( "mainCamera.viewProjectionMatrix" , viewProjectionMatrix );
     program->setUniformValue( "mainCamera.position" , transform->v3Translation );
 
-    // std::cout << "camera " << std::endl << viewMatrix << std::endl;
+    // std::cout << "camera " << std::endl << projectionMatrix << std::endl;
 
 
 }
@@ -129,7 +327,12 @@ void OpenGLRenderer::setDirectionalLight( Program * program , std::vector< Node 
 
 }
 
-
+/**
+ * @brief Set the spot light object of current scene
+ * 
+ * @param program 
+ * @param spots 
+ */
 void OpenGLRenderer::setSpotLight( Program * program , std::vector< Node * > spots ){
     
     assert( program != nullptr );
@@ -151,6 +354,12 @@ void OpenGLRenderer::setSpotLight( Program * program , std::vector< Node * > spo
 
 }
 
+/**
+ * @brief set the point light object of current scene
+ * 
+ * @param program 
+ * @param points 
+ */
 void OpenGLRenderer::setPointLight( Program * program , std::vector< Node * > points ){
 
     assert( program != nullptr );
@@ -168,7 +377,6 @@ void OpenGLRenderer::setPointLight( Program * program , std::vector< Node * > po
     }
 
 }
-
 
 /**
  * @brief Set the Render Parameter of object 
@@ -211,62 +419,13 @@ void OpenGLRenderer::setRenderParameter( Program * program , RenderComponent * p
 }
 
 
-void OpenGLRenderer::render( Scene * scene  ){
 
 
-    Node * camera = scene->findChildWithComponent< Camera >();
-
-    std::vector< Node * > ambientLights = scene->findChildrenWithComponent< AmbientLight >();
-    std::vector< Node * > directionalLights = scene->findChildrenWithComponent< DirectionalLight > ();
-    std::vector< Node * > spotLights = scene->findChildrenWithComponent< SpotLight >();
-    std::vector< Node * > pointLights = scene->findChildrenWithComponent< PointLight >();
-
-    std::vector< Node * >entities = scene->findChildrenWithComponent< RenderComponent >();
-
-    for( Node * entity : entities ){
-
-        Program * program = getProgram( entity );
-
-        program->bind();
-
-        this->setCamera( program , camera );
-
-        Transform * transform = entity->getComponent< Transform >();
-        program->setUniformValue( "modelMatrix" , transform->m4ModelWorldMatrix );
-        program->setUniformValue( "normalMatrix" , transform->m3NormalWorldMatrix );
-
-        this->setRenderParameter( program , entity->getComponent< RenderComponent >() );
-        this->setAmbientLight( program , ambientLights );
-        this->setDirectionalLight( program , directionalLights );
-        this->setSpotLight( program , spotLights );
-        this->setPointLight( program , pointLights );
-
-        VertexArrayBuffer * vao = getVAO( entity );
-        vao->bind();
-        
-
-        if( vao->hasIndex() ){
-
-            vao->bindIndex();
-            glDrawElements( GL_TRIANGLES , vao->size() , GL_UNSIGNED_INT , nullptr );
-
-        }else{
-
-            glDrawArrays( GL_TRIANGLES , 0 , vao->size() );
-
-        }
-
-        glBindTexture( GL_TEXTURE_2D , 0 );
-        vao->unBind();
-
-    }
-
-}
-
-
-
-
-// buffer 
+/**
+ * @brief this function are created to manage the buffer 
+ *  
+ */
+// buffer ------------------------------------------------------------------------
 VertexArrayBuffer * getVAO( Node * node ){
     
     assert( node != nullptr );
@@ -361,6 +520,7 @@ TextureBuffer * getTexture( Texture * texture ){
         TextureBuffer * tbo = new TextureBuffer();
 
         tbo->init();
+        tbo->setTarget( GL_TEXTURE_2D );
         tbo->bind();
         tbo->bufferData( texture );
         tbo->unBind();

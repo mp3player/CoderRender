@@ -273,6 +273,54 @@ src/CoordinateSystem.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/CoordinateSystem.cpp.s
 .PHONY : src/CoordinateSystem.cpp.s
 
+src/Event.o: src/Event.cpp.o
+.PHONY : src/Event.o
+
+# target to build an object file
+src/Event.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/Event.cpp.o
+.PHONY : src/Event.cpp.o
+
+src/Event.i: src/Event.cpp.i
+.PHONY : src/Event.i
+
+# target to preprocess a source file
+src/Event.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/Event.cpp.i
+.PHONY : src/Event.cpp.i
+
+src/Event.s: src/Event.cpp.s
+.PHONY : src/Event.s
+
+# target to generate assembly for a file
+src/Event.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/Event.cpp.s
+.PHONY : src/Event.cpp.s
+
+src/EventSystem.o: src/EventSystem.cpp.o
+.PHONY : src/EventSystem.o
+
+# target to build an object file
+src/EventSystem.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/EventSystem.cpp.o
+.PHONY : src/EventSystem.cpp.o
+
+src/EventSystem.i: src/EventSystem.cpp.i
+.PHONY : src/EventSystem.i
+
+# target to preprocess a source file
+src/EventSystem.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/EventSystem.cpp.i
+.PHONY : src/EventSystem.cpp.i
+
+src/EventSystem.s: src/EventSystem.cpp.s
+.PHONY : src/EventSystem.s
+
+# target to generate assembly for a file
+src/EventSystem.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/EventSystem.cpp.s
+.PHONY : src/EventSystem.cpp.s
+
 src/Geometry.o: src/Geometry.cpp.o
 .PHONY : src/Geometry.o
 
@@ -585,6 +633,54 @@ src/OpenGLShader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/OpenGLShader.cpp.s
 .PHONY : src/OpenGLShader.cpp.s
 
+src/OpenGLState.o: src/OpenGLState.cpp.o
+.PHONY : src/OpenGLState.o
+
+# target to build an object file
+src/OpenGLState.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/OpenGLState.cpp.o
+.PHONY : src/OpenGLState.cpp.o
+
+src/OpenGLState.i: src/OpenGLState.cpp.i
+.PHONY : src/OpenGLState.i
+
+# target to preprocess a source file
+src/OpenGLState.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/OpenGLState.cpp.i
+.PHONY : src/OpenGLState.cpp.i
+
+src/OpenGLState.s: src/OpenGLState.cpp.s
+.PHONY : src/OpenGLState.s
+
+# target to generate assembly for a file
+src/OpenGLState.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/OpenGLState.cpp.s
+.PHONY : src/OpenGLState.cpp.s
+
+src/Pass.o: src/Pass.cpp.o
+.PHONY : src/Pass.o
+
+# target to build an object file
+src/Pass.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/Pass.cpp.o
+.PHONY : src/Pass.cpp.o
+
+src/Pass.i: src/Pass.cpp.i
+.PHONY : src/Pass.i
+
+# target to preprocess a source file
+src/Pass.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/Pass.cpp.i
+.PHONY : src/Pass.cpp.i
+
+src/Pass.s: src/Pass.cpp.s
+.PHONY : src/Pass.s
+
+# target to generate assembly for a file
+src/Pass.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/Pass.cpp.s
+.PHONY : src/Pass.cpp.s
+
 src/Ref.o: src/Ref.cpp.o
 .PHONY : src/Ref.o
 
@@ -729,30 +825,6 @@ src/Scene.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/Scene.cpp.s
 .PHONY : src/Scene.cpp.s
 
-src/Screen.o: src/Screen.cpp.o
-.PHONY : src/Screen.o
-
-# target to build an object file
-src/Screen.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/Screen.cpp.o
-.PHONY : src/Screen.cpp.o
-
-src/Screen.i: src/Screen.cpp.i
-.PHONY : src/Screen.i
-
-# target to preprocess a source file
-src/Screen.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/Screen.cpp.i
-.PHONY : src/Screen.cpp.i
-
-src/Screen.s: src/Screen.cpp.s
-.PHONY : src/Screen.s
-
-# target to generate assembly for a file
-src/Screen.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/Screen.cpp.s
-.PHONY : src/Screen.cpp.s
-
 src/ShaderPreProcessor.o: src/ShaderPreProcessor.cpp.o
 .PHONY : src/ShaderPreProcessor.o
 
@@ -776,6 +848,30 @@ src/ShaderPreProcessor.s: src/ShaderPreProcessor.cpp.s
 src/ShaderPreProcessor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/ShaderPreProcessor.cpp.s
 .PHONY : src/ShaderPreProcessor.cpp.s
+
+src/ShadowPass.o: src/ShadowPass.cpp.o
+.PHONY : src/ShadowPass.o
+
+# target to build an object file
+src/ShadowPass.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/ShadowPass.cpp.o
+.PHONY : src/ShadowPass.cpp.o
+
+src/ShadowPass.i: src/ShadowPass.cpp.i
+.PHONY : src/ShadowPass.i
+
+# target to preprocess a source file
+src/ShadowPass.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/ShadowPass.cpp.i
+.PHONY : src/ShadowPass.cpp.i
+
+src/ShadowPass.s: src/ShadowPass.cpp.s
+.PHONY : src/ShadowPass.s
+
+# target to generate assembly for a file
+src/ShadowPass.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miracle.dir/build.make CMakeFiles/miracle.dir/src/ShadowPass.cpp.s
+.PHONY : src/ShadowPass.cpp.s
 
 src/System.o: src/System.cpp.o
 .PHONY : src/System.o
@@ -1020,6 +1116,12 @@ help:
 	@echo "... src/CoordinateSystem.o"
 	@echo "... src/CoordinateSystem.i"
 	@echo "... src/CoordinateSystem.s"
+	@echo "... src/Event.o"
+	@echo "... src/Event.i"
+	@echo "... src/Event.s"
+	@echo "... src/EventSystem.o"
+	@echo "... src/EventSystem.i"
+	@echo "... src/EventSystem.s"
 	@echo "... src/Geometry.o"
 	@echo "... src/Geometry.i"
 	@echo "... src/Geometry.s"
@@ -1059,6 +1161,12 @@ help:
 	@echo "... src/OpenGLShader.o"
 	@echo "... src/OpenGLShader.i"
 	@echo "... src/OpenGLShader.s"
+	@echo "... src/OpenGLState.o"
+	@echo "... src/OpenGLState.i"
+	@echo "... src/OpenGLState.s"
+	@echo "... src/Pass.o"
+	@echo "... src/Pass.i"
+	@echo "... src/Pass.s"
 	@echo "... src/Ref.o"
 	@echo "... src/Ref.i"
 	@echo "... src/Ref.s"
@@ -1077,12 +1185,12 @@ help:
 	@echo "... src/Scene.o"
 	@echo "... src/Scene.i"
 	@echo "... src/Scene.s"
-	@echo "... src/Screen.o"
-	@echo "... src/Screen.i"
-	@echo "... src/Screen.s"
 	@echo "... src/ShaderPreProcessor.o"
 	@echo "... src/ShaderPreProcessor.i"
 	@echo "... src/ShaderPreProcessor.s"
+	@echo "... src/ShadowPass.o"
+	@echo "... src/ShadowPass.i"
+	@echo "... src/ShadowPass.s"
 	@echo "... src/System.o"
 	@echo "... src/System.i"
 	@echo "... src/System.s"

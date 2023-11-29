@@ -9,7 +9,7 @@ struct VertexBuffer : Buffer {
     public:
 
         virtual void init() override;
-        virtual void bind( GLenum target ) override;
+        virtual void bind() override;
         virtual void unBind() override;
 
         // glDeleteBuffers()
@@ -37,7 +37,7 @@ struct VertexBuffer : Buffer {
 template< typename T >
 bool VertexBuffer::bufferSubData( std::vector< T > data , unsigned int offset ){
 
-    if( !this->binded || this->bufferSize <= 0 ){
+    if( this->bufferSize <= 0 ){
         return false;
     }
 
@@ -48,7 +48,6 @@ bool VertexBuffer::bufferSubData( std::vector< T > data , unsigned int offset ){
 template< typename T> 
 bool VertexBuffer::bufferData( const std::vector< T > data , GLenum usage ){
     
-    if( !this->binded ) return false;
     this->bufferSize = data.size() * sizeof( T );
     glBufferData( this->target , this->bufferSize , data.data() , usage );
     return true;

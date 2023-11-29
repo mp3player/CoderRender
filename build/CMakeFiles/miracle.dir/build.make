@@ -237,24 +237,38 @@ CMakeFiles/miracle.dir/src/Uniform.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/miracle.dir/src/Uniform.cpp.s"
 	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/coder/project/c++/engine/src/Uniform.cpp -o CMakeFiles/miracle.dir/src/Uniform.cpp.s
 
-CMakeFiles/miracle.dir/src/RenderPass.cpp.o: CMakeFiles/miracle.dir/flags.make
-CMakeFiles/miracle.dir/src/RenderPass.cpp.o: ../src/RenderPass.cpp
-CMakeFiles/miracle.dir/src/RenderPass.cpp.o: CMakeFiles/miracle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/miracle.dir/src/RenderPass.cpp.o"
-	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/miracle.dir/src/RenderPass.cpp.o -MF CMakeFiles/miracle.dir/src/RenderPass.cpp.o.d -o CMakeFiles/miracle.dir/src/RenderPass.cpp.o -c /home/coder/project/c++/engine/src/RenderPass.cpp
+CMakeFiles/miracle.dir/src/OpenGLState.cpp.o: CMakeFiles/miracle.dir/flags.make
+CMakeFiles/miracle.dir/src/OpenGLState.cpp.o: ../src/OpenGLState.cpp
+CMakeFiles/miracle.dir/src/OpenGLState.cpp.o: CMakeFiles/miracle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/miracle.dir/src/OpenGLState.cpp.o"
+	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/miracle.dir/src/OpenGLState.cpp.o -MF CMakeFiles/miracle.dir/src/OpenGLState.cpp.o.d -o CMakeFiles/miracle.dir/src/OpenGLState.cpp.o -c /home/coder/project/c++/engine/src/OpenGLState.cpp
 
-CMakeFiles/miracle.dir/src/RenderPass.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/miracle.dir/src/RenderPass.cpp.i"
-	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/coder/project/c++/engine/src/RenderPass.cpp > CMakeFiles/miracle.dir/src/RenderPass.cpp.i
+CMakeFiles/miracle.dir/src/OpenGLState.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/miracle.dir/src/OpenGLState.cpp.i"
+	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/coder/project/c++/engine/src/OpenGLState.cpp > CMakeFiles/miracle.dir/src/OpenGLState.cpp.i
 
-CMakeFiles/miracle.dir/src/RenderPass.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/miracle.dir/src/RenderPass.cpp.s"
-	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/coder/project/c++/engine/src/RenderPass.cpp -o CMakeFiles/miracle.dir/src/RenderPass.cpp.s
+CMakeFiles/miracle.dir/src/OpenGLState.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/miracle.dir/src/OpenGLState.cpp.s"
+	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/coder/project/c++/engine/src/OpenGLState.cpp -o CMakeFiles/miracle.dir/src/OpenGLState.cpp.s
+
+CMakeFiles/miracle.dir/src/Event.cpp.o: CMakeFiles/miracle.dir/flags.make
+CMakeFiles/miracle.dir/src/Event.cpp.o: ../src/Event.cpp
+CMakeFiles/miracle.dir/src/Event.cpp.o: CMakeFiles/miracle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/miracle.dir/src/Event.cpp.o"
+	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/miracle.dir/src/Event.cpp.o -MF CMakeFiles/miracle.dir/src/Event.cpp.o.d -o CMakeFiles/miracle.dir/src/Event.cpp.o -c /home/coder/project/c++/engine/src/Event.cpp
+
+CMakeFiles/miracle.dir/src/Event.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/miracle.dir/src/Event.cpp.i"
+	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/coder/project/c++/engine/src/Event.cpp > CMakeFiles/miracle.dir/src/Event.cpp.i
+
+CMakeFiles/miracle.dir/src/Event.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/miracle.dir/src/Event.cpp.s"
+	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/coder/project/c++/engine/src/Event.cpp -o CMakeFiles/miracle.dir/src/Event.cpp.s
 
 CMakeFiles/miracle.dir/src/Renderer.cpp.o: CMakeFiles/miracle.dir/flags.make
 CMakeFiles/miracle.dir/src/Renderer.cpp.o: ../src/Renderer.cpp
 CMakeFiles/miracle.dir/src/Renderer.cpp.o: CMakeFiles/miracle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/miracle.dir/src/Renderer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/miracle.dir/src/Renderer.cpp.o"
 	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/miracle.dir/src/Renderer.cpp.o -MF CMakeFiles/miracle.dir/src/Renderer.cpp.o.d -o CMakeFiles/miracle.dir/src/Renderer.cpp.o -c /home/coder/project/c++/engine/src/Renderer.cpp
 
 CMakeFiles/miracle.dir/src/Renderer.cpp.i: cmake_force
@@ -268,7 +282,7 @@ CMakeFiles/miracle.dir/src/Renderer.cpp.s: cmake_force
 CMakeFiles/miracle.dir/src/OpenGLRenderer.cpp.o: CMakeFiles/miracle.dir/flags.make
 CMakeFiles/miracle.dir/src/OpenGLRenderer.cpp.o: ../src/OpenGLRenderer.cpp
 CMakeFiles/miracle.dir/src/OpenGLRenderer.cpp.o: CMakeFiles/miracle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/miracle.dir/src/OpenGLRenderer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/miracle.dir/src/OpenGLRenderer.cpp.o"
 	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/miracle.dir/src/OpenGLRenderer.cpp.o -MF CMakeFiles/miracle.dir/src/OpenGLRenderer.cpp.o.d -o CMakeFiles/miracle.dir/src/OpenGLRenderer.cpp.o -c /home/coder/project/c++/engine/src/OpenGLRenderer.cpp
 
 CMakeFiles/miracle.dir/src/OpenGLRenderer.cpp.i: cmake_force
@@ -282,7 +296,7 @@ CMakeFiles/miracle.dir/src/OpenGLRenderer.cpp.s: cmake_force
 CMakeFiles/miracle.dir/src/OpenGLRenderTarget.cpp.o: CMakeFiles/miracle.dir/flags.make
 CMakeFiles/miracle.dir/src/OpenGLRenderTarget.cpp.o: ../src/OpenGLRenderTarget.cpp
 CMakeFiles/miracle.dir/src/OpenGLRenderTarget.cpp.o: CMakeFiles/miracle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/miracle.dir/src/OpenGLRenderTarget.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/miracle.dir/src/OpenGLRenderTarget.cpp.o"
 	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/miracle.dir/src/OpenGLRenderTarget.cpp.o -MF CMakeFiles/miracle.dir/src/OpenGLRenderTarget.cpp.o.d -o CMakeFiles/miracle.dir/src/OpenGLRenderTarget.cpp.o -c /home/coder/project/c++/engine/src/OpenGLRenderTarget.cpp
 
 CMakeFiles/miracle.dir/src/OpenGLRenderTarget.cpp.i: cmake_force
@@ -293,10 +307,52 @@ CMakeFiles/miracle.dir/src/OpenGLRenderTarget.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/miracle.dir/src/OpenGLRenderTarget.cpp.s"
 	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/coder/project/c++/engine/src/OpenGLRenderTarget.cpp -o CMakeFiles/miracle.dir/src/OpenGLRenderTarget.cpp.s
 
+CMakeFiles/miracle.dir/src/Pass.cpp.o: CMakeFiles/miracle.dir/flags.make
+CMakeFiles/miracle.dir/src/Pass.cpp.o: ../src/Pass.cpp
+CMakeFiles/miracle.dir/src/Pass.cpp.o: CMakeFiles/miracle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/miracle.dir/src/Pass.cpp.o"
+	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/miracle.dir/src/Pass.cpp.o -MF CMakeFiles/miracle.dir/src/Pass.cpp.o.d -o CMakeFiles/miracle.dir/src/Pass.cpp.o -c /home/coder/project/c++/engine/src/Pass.cpp
+
+CMakeFiles/miracle.dir/src/Pass.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/miracle.dir/src/Pass.cpp.i"
+	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/coder/project/c++/engine/src/Pass.cpp > CMakeFiles/miracle.dir/src/Pass.cpp.i
+
+CMakeFiles/miracle.dir/src/Pass.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/miracle.dir/src/Pass.cpp.s"
+	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/coder/project/c++/engine/src/Pass.cpp -o CMakeFiles/miracle.dir/src/Pass.cpp.s
+
+CMakeFiles/miracle.dir/src/RenderPass.cpp.o: CMakeFiles/miracle.dir/flags.make
+CMakeFiles/miracle.dir/src/RenderPass.cpp.o: ../src/RenderPass.cpp
+CMakeFiles/miracle.dir/src/RenderPass.cpp.o: CMakeFiles/miracle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/miracle.dir/src/RenderPass.cpp.o"
+	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/miracle.dir/src/RenderPass.cpp.o -MF CMakeFiles/miracle.dir/src/RenderPass.cpp.o.d -o CMakeFiles/miracle.dir/src/RenderPass.cpp.o -c /home/coder/project/c++/engine/src/RenderPass.cpp
+
+CMakeFiles/miracle.dir/src/RenderPass.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/miracle.dir/src/RenderPass.cpp.i"
+	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/coder/project/c++/engine/src/RenderPass.cpp > CMakeFiles/miracle.dir/src/RenderPass.cpp.i
+
+CMakeFiles/miracle.dir/src/RenderPass.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/miracle.dir/src/RenderPass.cpp.s"
+	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/coder/project/c++/engine/src/RenderPass.cpp -o CMakeFiles/miracle.dir/src/RenderPass.cpp.s
+
+CMakeFiles/miracle.dir/src/ShadowPass.cpp.o: CMakeFiles/miracle.dir/flags.make
+CMakeFiles/miracle.dir/src/ShadowPass.cpp.o: ../src/ShadowPass.cpp
+CMakeFiles/miracle.dir/src/ShadowPass.cpp.o: CMakeFiles/miracle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/miracle.dir/src/ShadowPass.cpp.o"
+	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/miracle.dir/src/ShadowPass.cpp.o -MF CMakeFiles/miracle.dir/src/ShadowPass.cpp.o.d -o CMakeFiles/miracle.dir/src/ShadowPass.cpp.o -c /home/coder/project/c++/engine/src/ShadowPass.cpp
+
+CMakeFiles/miracle.dir/src/ShadowPass.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/miracle.dir/src/ShadowPass.cpp.i"
+	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/coder/project/c++/engine/src/ShadowPass.cpp > CMakeFiles/miracle.dir/src/ShadowPass.cpp.i
+
+CMakeFiles/miracle.dir/src/ShadowPass.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/miracle.dir/src/ShadowPass.cpp.s"
+	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/coder/project/c++/engine/src/ShadowPass.cpp -o CMakeFiles/miracle.dir/src/ShadowPass.cpp.s
+
 CMakeFiles/miracle.dir/src/Layer.cpp.o: CMakeFiles/miracle.dir/flags.make
 CMakeFiles/miracle.dir/src/Layer.cpp.o: ../src/Layer.cpp
 CMakeFiles/miracle.dir/src/Layer.cpp.o: CMakeFiles/miracle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/miracle.dir/src/Layer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/miracle.dir/src/Layer.cpp.o"
 	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/miracle.dir/src/Layer.cpp.o -MF CMakeFiles/miracle.dir/src/Layer.cpp.o.d -o CMakeFiles/miracle.dir/src/Layer.cpp.o -c /home/coder/project/c++/engine/src/Layer.cpp
 
 CMakeFiles/miracle.dir/src/Layer.cpp.i: cmake_force
@@ -310,7 +366,7 @@ CMakeFiles/miracle.dir/src/Layer.cpp.s: cmake_force
 CMakeFiles/miracle.dir/src/Component.cpp.o: CMakeFiles/miracle.dir/flags.make
 CMakeFiles/miracle.dir/src/Component.cpp.o: ../src/Component.cpp
 CMakeFiles/miracle.dir/src/Component.cpp.o: CMakeFiles/miracle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/miracle.dir/src/Component.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/miracle.dir/src/Component.cpp.o"
 	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/miracle.dir/src/Component.cpp.o -MF CMakeFiles/miracle.dir/src/Component.cpp.o.d -o CMakeFiles/miracle.dir/src/Component.cpp.o -c /home/coder/project/c++/engine/src/Component.cpp
 
 CMakeFiles/miracle.dir/src/Component.cpp.i: cmake_force
@@ -324,7 +380,7 @@ CMakeFiles/miracle.dir/src/Component.cpp.s: cmake_force
 CMakeFiles/miracle.dir/src/Light.cpp.o: CMakeFiles/miracle.dir/flags.make
 CMakeFiles/miracle.dir/src/Light.cpp.o: ../src/Light.cpp
 CMakeFiles/miracle.dir/src/Light.cpp.o: CMakeFiles/miracle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/miracle.dir/src/Light.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/miracle.dir/src/Light.cpp.o"
 	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/miracle.dir/src/Light.cpp.o -MF CMakeFiles/miracle.dir/src/Light.cpp.o.d -o CMakeFiles/miracle.dir/src/Light.cpp.o -c /home/coder/project/c++/engine/src/Light.cpp
 
 CMakeFiles/miracle.dir/src/Light.cpp.i: cmake_force
@@ -338,7 +394,7 @@ CMakeFiles/miracle.dir/src/Light.cpp.s: cmake_force
 CMakeFiles/miracle.dir/src/Camera.cpp.o: CMakeFiles/miracle.dir/flags.make
 CMakeFiles/miracle.dir/src/Camera.cpp.o: ../src/Camera.cpp
 CMakeFiles/miracle.dir/src/Camera.cpp.o: CMakeFiles/miracle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/miracle.dir/src/Camera.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/miracle.dir/src/Camera.cpp.o"
 	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/miracle.dir/src/Camera.cpp.o -MF CMakeFiles/miracle.dir/src/Camera.cpp.o.d -o CMakeFiles/miracle.dir/src/Camera.cpp.o -c /home/coder/project/c++/engine/src/Camera.cpp
 
 CMakeFiles/miracle.dir/src/Camera.cpp.i: cmake_force
@@ -352,7 +408,7 @@ CMakeFiles/miracle.dir/src/Camera.cpp.s: cmake_force
 CMakeFiles/miracle.dir/src/Mesh.cpp.o: CMakeFiles/miracle.dir/flags.make
 CMakeFiles/miracle.dir/src/Mesh.cpp.o: ../src/Mesh.cpp
 CMakeFiles/miracle.dir/src/Mesh.cpp.o: CMakeFiles/miracle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/miracle.dir/src/Mesh.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/miracle.dir/src/Mesh.cpp.o"
 	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/miracle.dir/src/Mesh.cpp.o -MF CMakeFiles/miracle.dir/src/Mesh.cpp.o.d -o CMakeFiles/miracle.dir/src/Mesh.cpp.o -c /home/coder/project/c++/engine/src/Mesh.cpp
 
 CMakeFiles/miracle.dir/src/Mesh.cpp.i: cmake_force
@@ -366,7 +422,7 @@ CMakeFiles/miracle.dir/src/Mesh.cpp.s: cmake_force
 CMakeFiles/miracle.dir/src/Transform.cpp.o: CMakeFiles/miracle.dir/flags.make
 CMakeFiles/miracle.dir/src/Transform.cpp.o: ../src/Transform.cpp
 CMakeFiles/miracle.dir/src/Transform.cpp.o: CMakeFiles/miracle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/miracle.dir/src/Transform.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/miracle.dir/src/Transform.cpp.o"
 	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/miracle.dir/src/Transform.cpp.o -MF CMakeFiles/miracle.dir/src/Transform.cpp.o.d -o CMakeFiles/miracle.dir/src/Transform.cpp.o -c /home/coder/project/c++/engine/src/Transform.cpp
 
 CMakeFiles/miracle.dir/src/Transform.cpp.i: cmake_force
@@ -380,7 +436,7 @@ CMakeFiles/miracle.dir/src/Transform.cpp.s: cmake_force
 CMakeFiles/miracle.dir/src/Material.cpp.o: CMakeFiles/miracle.dir/flags.make
 CMakeFiles/miracle.dir/src/Material.cpp.o: ../src/Material.cpp
 CMakeFiles/miracle.dir/src/Material.cpp.o: CMakeFiles/miracle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/miracle.dir/src/Material.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/miracle.dir/src/Material.cpp.o"
 	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/miracle.dir/src/Material.cpp.o -MF CMakeFiles/miracle.dir/src/Material.cpp.o.d -o CMakeFiles/miracle.dir/src/Material.cpp.o -c /home/coder/project/c++/engine/src/Material.cpp
 
 CMakeFiles/miracle.dir/src/Material.cpp.i: cmake_force
@@ -394,7 +450,7 @@ CMakeFiles/miracle.dir/src/Material.cpp.s: cmake_force
 CMakeFiles/miracle.dir/src/Texture.cpp.o: CMakeFiles/miracle.dir/flags.make
 CMakeFiles/miracle.dir/src/Texture.cpp.o: ../src/Texture.cpp
 CMakeFiles/miracle.dir/src/Texture.cpp.o: CMakeFiles/miracle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/miracle.dir/src/Texture.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/miracle.dir/src/Texture.cpp.o"
 	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/miracle.dir/src/Texture.cpp.o -MF CMakeFiles/miracle.dir/src/Texture.cpp.o.d -o CMakeFiles/miracle.dir/src/Texture.cpp.o -c /home/coder/project/c++/engine/src/Texture.cpp
 
 CMakeFiles/miracle.dir/src/Texture.cpp.i: cmake_force
@@ -405,24 +461,10 @@ CMakeFiles/miracle.dir/src/Texture.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/miracle.dir/src/Texture.cpp.s"
 	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/coder/project/c++/engine/src/Texture.cpp -o CMakeFiles/miracle.dir/src/Texture.cpp.s
 
-CMakeFiles/miracle.dir/src/Screen.cpp.o: CMakeFiles/miracle.dir/flags.make
-CMakeFiles/miracle.dir/src/Screen.cpp.o: ../src/Screen.cpp
-CMakeFiles/miracle.dir/src/Screen.cpp.o: CMakeFiles/miracle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/miracle.dir/src/Screen.cpp.o"
-	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/miracle.dir/src/Screen.cpp.o -MF CMakeFiles/miracle.dir/src/Screen.cpp.o.d -o CMakeFiles/miracle.dir/src/Screen.cpp.o -c /home/coder/project/c++/engine/src/Screen.cpp
-
-CMakeFiles/miracle.dir/src/Screen.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/miracle.dir/src/Screen.cpp.i"
-	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/coder/project/c++/engine/src/Screen.cpp > CMakeFiles/miracle.dir/src/Screen.cpp.i
-
-CMakeFiles/miracle.dir/src/Screen.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/miracle.dir/src/Screen.cpp.s"
-	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/coder/project/c++/engine/src/Screen.cpp -o CMakeFiles/miracle.dir/src/Screen.cpp.s
-
 CMakeFiles/miracle.dir/src/Window.cpp.o: CMakeFiles/miracle.dir/flags.make
 CMakeFiles/miracle.dir/src/Window.cpp.o: ../src/Window.cpp
 CMakeFiles/miracle.dir/src/Window.cpp.o: CMakeFiles/miracle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/miracle.dir/src/Window.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/miracle.dir/src/Window.cpp.o"
 	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/miracle.dir/src/Window.cpp.o -MF CMakeFiles/miracle.dir/src/Window.cpp.o.d -o CMakeFiles/miracle.dir/src/Window.cpp.o -c /home/coder/project/c++/engine/src/Window.cpp
 
 CMakeFiles/miracle.dir/src/Window.cpp.i: cmake_force
@@ -436,7 +478,7 @@ CMakeFiles/miracle.dir/src/Window.cpp.s: cmake_force
 CMakeFiles/miracle.dir/src/OpenGLShader.cpp.o: CMakeFiles/miracle.dir/flags.make
 CMakeFiles/miracle.dir/src/OpenGLShader.cpp.o: ../src/OpenGLShader.cpp
 CMakeFiles/miracle.dir/src/OpenGLShader.cpp.o: CMakeFiles/miracle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/miracle.dir/src/OpenGLShader.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/miracle.dir/src/OpenGLShader.cpp.o"
 	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/miracle.dir/src/OpenGLShader.cpp.o -MF CMakeFiles/miracle.dir/src/OpenGLShader.cpp.o.d -o CMakeFiles/miracle.dir/src/OpenGLShader.cpp.o -c /home/coder/project/c++/engine/src/OpenGLShader.cpp
 
 CMakeFiles/miracle.dir/src/OpenGLShader.cpp.i: cmake_force
@@ -450,7 +492,7 @@ CMakeFiles/miracle.dir/src/OpenGLShader.cpp.s: cmake_force
 CMakeFiles/miracle.dir/src/OpenGLProgram.cpp.o: CMakeFiles/miracle.dir/flags.make
 CMakeFiles/miracle.dir/src/OpenGLProgram.cpp.o: ../src/OpenGLProgram.cpp
 CMakeFiles/miracle.dir/src/OpenGLProgram.cpp.o: CMakeFiles/miracle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/miracle.dir/src/OpenGLProgram.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/miracle.dir/src/OpenGLProgram.cpp.o"
 	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/miracle.dir/src/OpenGLProgram.cpp.o -MF CMakeFiles/miracle.dir/src/OpenGLProgram.cpp.o.d -o CMakeFiles/miracle.dir/src/OpenGLProgram.cpp.o -c /home/coder/project/c++/engine/src/OpenGLProgram.cpp
 
 CMakeFiles/miracle.dir/src/OpenGLProgram.cpp.i: cmake_force
@@ -464,7 +506,7 @@ CMakeFiles/miracle.dir/src/OpenGLProgram.cpp.s: cmake_force
 CMakeFiles/miracle.dir/src/Node.cpp.o: CMakeFiles/miracle.dir/flags.make
 CMakeFiles/miracle.dir/src/Node.cpp.o: ../src/Node.cpp
 CMakeFiles/miracle.dir/src/Node.cpp.o: CMakeFiles/miracle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/miracle.dir/src/Node.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/miracle.dir/src/Node.cpp.o"
 	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/miracle.dir/src/Node.cpp.o -MF CMakeFiles/miracle.dir/src/Node.cpp.o.d -o CMakeFiles/miracle.dir/src/Node.cpp.o -c /home/coder/project/c++/engine/src/Node.cpp
 
 CMakeFiles/miracle.dir/src/Node.cpp.i: cmake_force
@@ -478,7 +520,7 @@ CMakeFiles/miracle.dir/src/Node.cpp.s: cmake_force
 CMakeFiles/miracle.dir/src/Scene.cpp.o: CMakeFiles/miracle.dir/flags.make
 CMakeFiles/miracle.dir/src/Scene.cpp.o: ../src/Scene.cpp
 CMakeFiles/miracle.dir/src/Scene.cpp.o: CMakeFiles/miracle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/miracle.dir/src/Scene.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/miracle.dir/src/Scene.cpp.o"
 	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/miracle.dir/src/Scene.cpp.o -MF CMakeFiles/miracle.dir/src/Scene.cpp.o.d -o CMakeFiles/miracle.dir/src/Scene.cpp.o -c /home/coder/project/c++/engine/src/Scene.cpp
 
 CMakeFiles/miracle.dir/src/Scene.cpp.i: cmake_force
@@ -492,7 +534,7 @@ CMakeFiles/miracle.dir/src/Scene.cpp.s: cmake_force
 CMakeFiles/miracle.dir/src/System.cpp.o: CMakeFiles/miracle.dir/flags.make
 CMakeFiles/miracle.dir/src/System.cpp.o: ../src/System.cpp
 CMakeFiles/miracle.dir/src/System.cpp.o: CMakeFiles/miracle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/miracle.dir/src/System.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/miracle.dir/src/System.cpp.o"
 	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/miracle.dir/src/System.cpp.o -MF CMakeFiles/miracle.dir/src/System.cpp.o.d -o CMakeFiles/miracle.dir/src/System.cpp.o -c /home/coder/project/c++/engine/src/System.cpp
 
 CMakeFiles/miracle.dir/src/System.cpp.i: cmake_force
@@ -506,7 +548,7 @@ CMakeFiles/miracle.dir/src/System.cpp.s: cmake_force
 CMakeFiles/miracle.dir/src/CoordinateSystem.cpp.o: CMakeFiles/miracle.dir/flags.make
 CMakeFiles/miracle.dir/src/CoordinateSystem.cpp.o: ../src/CoordinateSystem.cpp
 CMakeFiles/miracle.dir/src/CoordinateSystem.cpp.o: CMakeFiles/miracle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/miracle.dir/src/CoordinateSystem.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/miracle.dir/src/CoordinateSystem.cpp.o"
 	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/miracle.dir/src/CoordinateSystem.cpp.o -MF CMakeFiles/miracle.dir/src/CoordinateSystem.cpp.o.d -o CMakeFiles/miracle.dir/src/CoordinateSystem.cpp.o -c /home/coder/project/c++/engine/src/CoordinateSystem.cpp
 
 CMakeFiles/miracle.dir/src/CoordinateSystem.cpp.i: cmake_force
@@ -520,7 +562,7 @@ CMakeFiles/miracle.dir/src/CoordinateSystem.cpp.s: cmake_force
 CMakeFiles/miracle.dir/src/RenderSystem.cpp.o: CMakeFiles/miracle.dir/flags.make
 CMakeFiles/miracle.dir/src/RenderSystem.cpp.o: ../src/RenderSystem.cpp
 CMakeFiles/miracle.dir/src/RenderSystem.cpp.o: CMakeFiles/miracle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/miracle.dir/src/RenderSystem.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/miracle.dir/src/RenderSystem.cpp.o"
 	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/miracle.dir/src/RenderSystem.cpp.o -MF CMakeFiles/miracle.dir/src/RenderSystem.cpp.o.d -o CMakeFiles/miracle.dir/src/RenderSystem.cpp.o -c /home/coder/project/c++/engine/src/RenderSystem.cpp
 
 CMakeFiles/miracle.dir/src/RenderSystem.cpp.i: cmake_force
@@ -534,7 +576,7 @@ CMakeFiles/miracle.dir/src/RenderSystem.cpp.s: cmake_force
 CMakeFiles/miracle.dir/src/TimeSystem.cpp.o: CMakeFiles/miracle.dir/flags.make
 CMakeFiles/miracle.dir/src/TimeSystem.cpp.o: ../src/TimeSystem.cpp
 CMakeFiles/miracle.dir/src/TimeSystem.cpp.o: CMakeFiles/miracle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/miracle.dir/src/TimeSystem.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/miracle.dir/src/TimeSystem.cpp.o"
 	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/miracle.dir/src/TimeSystem.cpp.o -MF CMakeFiles/miracle.dir/src/TimeSystem.cpp.o.d -o CMakeFiles/miracle.dir/src/TimeSystem.cpp.o -c /home/coder/project/c++/engine/src/TimeSystem.cpp
 
 CMakeFiles/miracle.dir/src/TimeSystem.cpp.i: cmake_force
@@ -545,10 +587,24 @@ CMakeFiles/miracle.dir/src/TimeSystem.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/miracle.dir/src/TimeSystem.cpp.s"
 	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/coder/project/c++/engine/src/TimeSystem.cpp -o CMakeFiles/miracle.dir/src/TimeSystem.cpp.s
 
+CMakeFiles/miracle.dir/src/EventSystem.cpp.o: CMakeFiles/miracle.dir/flags.make
+CMakeFiles/miracle.dir/src/EventSystem.cpp.o: ../src/EventSystem.cpp
+CMakeFiles/miracle.dir/src/EventSystem.cpp.o: CMakeFiles/miracle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/miracle.dir/src/EventSystem.cpp.o"
+	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/miracle.dir/src/EventSystem.cpp.o -MF CMakeFiles/miracle.dir/src/EventSystem.cpp.o.d -o CMakeFiles/miracle.dir/src/EventSystem.cpp.o -c /home/coder/project/c++/engine/src/EventSystem.cpp
+
+CMakeFiles/miracle.dir/src/EventSystem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/miracle.dir/src/EventSystem.cpp.i"
+	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/coder/project/c++/engine/src/EventSystem.cpp > CMakeFiles/miracle.dir/src/EventSystem.cpp.i
+
+CMakeFiles/miracle.dir/src/EventSystem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/miracle.dir/src/EventSystem.cpp.s"
+	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/coder/project/c++/engine/src/EventSystem.cpp -o CMakeFiles/miracle.dir/src/EventSystem.cpp.s
+
 CMakeFiles/miracle.dir/src/Application.cpp.o: CMakeFiles/miracle.dir/flags.make
 CMakeFiles/miracle.dir/src/Application.cpp.o: ../src/Application.cpp
 CMakeFiles/miracle.dir/src/Application.cpp.o: CMakeFiles/miracle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/miracle.dir/src/Application.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/miracle.dir/src/Application.cpp.o"
 	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/miracle.dir/src/Application.cpp.o -MF CMakeFiles/miracle.dir/src/Application.cpp.o.d -o CMakeFiles/miracle.dir/src/Application.cpp.o -c /home/coder/project/c++/engine/src/Application.cpp
 
 CMakeFiles/miracle.dir/src/Application.cpp.i: cmake_force
@@ -562,7 +618,7 @@ CMakeFiles/miracle.dir/src/Application.cpp.s: cmake_force
 CMakeFiles/miracle.dir/main.cc.o: CMakeFiles/miracle.dir/flags.make
 CMakeFiles/miracle.dir/main.cc.o: ../main.cc
 CMakeFiles/miracle.dir/main.cc.o: CMakeFiles/miracle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/miracle.dir/main.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/miracle.dir/main.cc.o"
 	/bin/x86_64-linux-gnu-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/miracle.dir/main.cc.o -MF CMakeFiles/miracle.dir/main.cc.o.d -o CMakeFiles/miracle.dir/main.cc.o -c /home/coder/project/c++/engine/main.cc
 
 CMakeFiles/miracle.dir/main.cc.i: cmake_force
@@ -587,10 +643,14 @@ miracle_OBJECTS = \
 "CMakeFiles/miracle.dir/src/IO.cpp.o" \
 "CMakeFiles/miracle.dir/src/ShaderPreProcessor.cpp.o" \
 "CMakeFiles/miracle.dir/src/Uniform.cpp.o" \
-"CMakeFiles/miracle.dir/src/RenderPass.cpp.o" \
+"CMakeFiles/miracle.dir/src/OpenGLState.cpp.o" \
+"CMakeFiles/miracle.dir/src/Event.cpp.o" \
 "CMakeFiles/miracle.dir/src/Renderer.cpp.o" \
 "CMakeFiles/miracle.dir/src/OpenGLRenderer.cpp.o" \
 "CMakeFiles/miracle.dir/src/OpenGLRenderTarget.cpp.o" \
+"CMakeFiles/miracle.dir/src/Pass.cpp.o" \
+"CMakeFiles/miracle.dir/src/RenderPass.cpp.o" \
+"CMakeFiles/miracle.dir/src/ShadowPass.cpp.o" \
 "CMakeFiles/miracle.dir/src/Layer.cpp.o" \
 "CMakeFiles/miracle.dir/src/Component.cpp.o" \
 "CMakeFiles/miracle.dir/src/Light.cpp.o" \
@@ -599,7 +659,6 @@ miracle_OBJECTS = \
 "CMakeFiles/miracle.dir/src/Transform.cpp.o" \
 "CMakeFiles/miracle.dir/src/Material.cpp.o" \
 "CMakeFiles/miracle.dir/src/Texture.cpp.o" \
-"CMakeFiles/miracle.dir/src/Screen.cpp.o" \
 "CMakeFiles/miracle.dir/src/Window.cpp.o" \
 "CMakeFiles/miracle.dir/src/OpenGLShader.cpp.o" \
 "CMakeFiles/miracle.dir/src/OpenGLProgram.cpp.o" \
@@ -609,6 +668,7 @@ miracle_OBJECTS = \
 "CMakeFiles/miracle.dir/src/CoordinateSystem.cpp.o" \
 "CMakeFiles/miracle.dir/src/RenderSystem.cpp.o" \
 "CMakeFiles/miracle.dir/src/TimeSystem.cpp.o" \
+"CMakeFiles/miracle.dir/src/EventSystem.cpp.o" \
 "CMakeFiles/miracle.dir/src/Application.cpp.o" \
 "CMakeFiles/miracle.dir/main.cc.o"
 
@@ -627,10 +687,14 @@ miracle: CMakeFiles/miracle.dir/src/MemoryManager.cpp.o
 miracle: CMakeFiles/miracle.dir/src/IO.cpp.o
 miracle: CMakeFiles/miracle.dir/src/ShaderPreProcessor.cpp.o
 miracle: CMakeFiles/miracle.dir/src/Uniform.cpp.o
-miracle: CMakeFiles/miracle.dir/src/RenderPass.cpp.o
+miracle: CMakeFiles/miracle.dir/src/OpenGLState.cpp.o
+miracle: CMakeFiles/miracle.dir/src/Event.cpp.o
 miracle: CMakeFiles/miracle.dir/src/Renderer.cpp.o
 miracle: CMakeFiles/miracle.dir/src/OpenGLRenderer.cpp.o
 miracle: CMakeFiles/miracle.dir/src/OpenGLRenderTarget.cpp.o
+miracle: CMakeFiles/miracle.dir/src/Pass.cpp.o
+miracle: CMakeFiles/miracle.dir/src/RenderPass.cpp.o
+miracle: CMakeFiles/miracle.dir/src/ShadowPass.cpp.o
 miracle: CMakeFiles/miracle.dir/src/Layer.cpp.o
 miracle: CMakeFiles/miracle.dir/src/Component.cpp.o
 miracle: CMakeFiles/miracle.dir/src/Light.cpp.o
@@ -639,7 +703,6 @@ miracle: CMakeFiles/miracle.dir/src/Mesh.cpp.o
 miracle: CMakeFiles/miracle.dir/src/Transform.cpp.o
 miracle: CMakeFiles/miracle.dir/src/Material.cpp.o
 miracle: CMakeFiles/miracle.dir/src/Texture.cpp.o
-miracle: CMakeFiles/miracle.dir/src/Screen.cpp.o
 miracle: CMakeFiles/miracle.dir/src/Window.cpp.o
 miracle: CMakeFiles/miracle.dir/src/OpenGLShader.cpp.o
 miracle: CMakeFiles/miracle.dir/src/OpenGLProgram.cpp.o
@@ -649,11 +712,12 @@ miracle: CMakeFiles/miracle.dir/src/System.cpp.o
 miracle: CMakeFiles/miracle.dir/src/CoordinateSystem.cpp.o
 miracle: CMakeFiles/miracle.dir/src/RenderSystem.cpp.o
 miracle: CMakeFiles/miracle.dir/src/TimeSystem.cpp.o
+miracle: CMakeFiles/miracle.dir/src/EventSystem.cpp.o
 miracle: CMakeFiles/miracle.dir/src/Application.cpp.o
 miracle: CMakeFiles/miracle.dir/main.cc.o
 miracle: CMakeFiles/miracle.dir/build.make
 miracle: CMakeFiles/miracle.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Linking CXX executable miracle"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/coder/project/c++/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Linking CXX executable miracle"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/miracle.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

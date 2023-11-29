@@ -10,8 +10,8 @@ void TextureBuffer::init() {
     this->init( GL_TEXTURE_2D );
 }
 
-void TextureBuffer::bind( GLenum target ) {
-    glBindTexture( target , this->id );
+void TextureBuffer::bind() {
+    glBindTexture( this->target , this->id );
 }
 
 void TextureBuffer::unBind() {
@@ -28,9 +28,6 @@ void TextureBuffer::init( GLenum target ){
     glCreateTextures( this->target , 1 , &( this->id ) );
 }
 
-void TextureBuffer::bind(){
-    this->bind( GL_TEXTURE_2D );
-}
 
 
 

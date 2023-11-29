@@ -8,6 +8,8 @@ struct TimeSystem : System {
 
     public:
         float tick;
+        float startTime = 0.0f;
+        float currentTime = 0.0f;
 
     public:
         explicit TimeSystem( Scene * scene );
@@ -19,6 +21,8 @@ struct TimeSystem : System {
         void update( float deltaTime ) ;
 
         float getDeltaTime();
+
+        float getCurrentTime();
 
 };
 

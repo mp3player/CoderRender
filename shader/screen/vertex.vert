@@ -4,6 +4,6 @@ layout( location = 1 ) in vec2 uv;
 out vec2 oUv;
 
 void main(){
-    gl_Position = vec4( position * .9f , 0.0f , 1.0f );
+    gl_Position = vec4( position , 0.0f , 1.0f );
     oUv = uv;
 }

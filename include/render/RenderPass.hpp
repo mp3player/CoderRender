@@ -3,15 +3,17 @@
 
 #include <core/RenderBuffer.hpp>
 #include <scene/Scene.hpp>
+#include <render/OpenGLRenderTarget.hpp>
+#include <render/OpenGLRenderer.hpp>
+#include <render/Pass.hpp>
 
-
-
-struct RenderPass {
+struct RenderPass : Pass {
 
     public:
+
         int width ; 
         int height ;
-    
+
     public:
 
         FrameBuffer * frameBuffer;
@@ -19,15 +21,21 @@ struct RenderPass {
         RenderTexture * renderTexture;
 
     public:
+
         RenderPass( int width , int height );
         ~RenderPass();
 
     public:
+
         void init() ;
         void dispose();
+        void render();
 
 
 };
+
+
+
 
 
 #endif

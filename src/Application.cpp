@@ -4,6 +4,7 @@
 #include <component/Camera.hpp>
 #include <component/Light.hpp>
 #include <component/Transform.hpp>
+#include <cmath>
 
 #define MOUSEDOWN 1
 #define MOUSEUP 0
@@ -121,9 +122,16 @@ void MouseMoveHandler(GLFWwindow* window, double xpos, double ypos){
     
 }
 
-float k = 0.0f;
+Application::Application( int width , int height , std::string title ){
 
+    this->window = new Window( width , height , title );
+    this->scene = new Scene();
 
+    this->renderSystem = new RenderSystem( this->scene );
+    this->coordinateSystem = new CoordinateSystem( this->scene );
+    this->timeSystem = new TimeSystem( this->scene );
+
+}
 
 Application::~Application(){
 
@@ -131,6 +139,8 @@ Application::~Application(){
     delete this->renderSystem;
     delete this->coordinateSystem;
     delete this->timeSystem;
+
+
     delete this->window;
 
 }
@@ -146,22 +156,19 @@ void Application::registSystem( System * system ){
 
 void Application::init(){
 
-    this->window = new Window( WIDTH , HEIGHT , "OpenGL" );
+    // Node * plane = this->addNode( "/home/coder/project/c++/engine/assets/models/plane.obj" );
+    // this->scene->addChild( plane );
+    // plane->getComponent< Transform >()->rotate( glm::radians( -10.0f ) , 0 , 0 );
 
-    this->scene = new Scene();
+    Node * monkey = this->addNode( "/home/coder/project/c++/engine/assets/models/toru.obj" );
+    monkey->getComponent< Transform >()->translate( -0.5 , 0 , 0 ); 
     
-    this->renderSystem = new RenderSystem( this->scene );
-    this->coordinateSystem = new CoordinateSystem( this->scene );
-    this->timeSystem = new TimeSystem( this->scene );
 
-    Node * monkey = this->addNode( "/home/coder/project/c++/engine/monkey.obj" );
-    monkey->getComponent< Transform >()->translate( -2 , 0 , 0 ); 
-
-    Node * cube = this->addNode( "/home/coder/project/c++/engine/cube.obj" );
+    Node * cube = this->addNode( "/home/coder/project/c++/engine/assets/models/cube.obj" );
+    cube->getComponent<Transform>()->translate( .5 , 0, 0 );
 
     cube->addChild( monkey );
-
-    cube->getComponent<Transform>()->translate( 0 , 0, 0 );
+    this->scene->addChild( cube );
 
     mainCamera = this->addCamera();
 
@@ -169,7 +176,7 @@ void Application::init(){
     Node * dlight = this->addDirectionalLight();
     // Node * sLight = this->addSpotLight();
     Node * pLight = this->addPointLight();
-    // pLight->getComponent< Transform >()->setTranslation( glm::vec3( 0.0f ) );
+    pLight->getComponent< Transform >()->setTranslation( glm::vec3( 1.0f ) );
 
     node = cube;
 
@@ -177,7 +184,7 @@ void Application::init(){
 
     Material * mat = render->material;
 
-    TextureImage * img = new TextureImage("/home/coder/project/c++/engine/fire_shader_8.png");
+    TextureImage * img = new TextureImage("/home/coder/project/c++/engine/assets/pictures/fire_shader_8.png");
 
     mat->addUniformValue< Texture* >( "map" , img );
 
@@ -188,14 +195,14 @@ void Application::init(){
 
 }
 
+// TODO : create a thread to call init function 
+
 void Application::run(){
 
     while( !window->shouldClose() ){
 
-
         float deltaTime = this->timeSystem->getDeltaTime();
-
-
+        
         this->coordinateSystem->update( deltaTime );
         this->renderSystem->update( deltaTime );
 
@@ -227,8 +234,6 @@ Node * Application::addNode( std::string path ){
     node->addComponent( meshComponent );
     node->addComponent( renderComponent );
 
-    this->scene->addChild( node );
-
     return node;
 
 }
@@ -243,8 +248,8 @@ Node * Application::addCamera(){
 
     Transform * transform = node->getComponent< Transform >();
 
-    transform->setTranslation( glm::vec3( 0 , 0 , 8 ) );
-    transform->rotate( -0 * M_PI / 180.0f );
+    transform->setTranslation( glm::vec3( 0 , 8 , 8 ) );
+    transform->rotate( -45 * M_PI / 180.0f );
 
     this->scene->addChild( node );
 
@@ -273,8 +278,8 @@ Node * Application::addDirectionalLight(){
 
     node->addComponent( light );
 
-    node->getComponent< Transform >()->translate( 0 , 0 , 10 );
-    // node->getComponent< Transform >()->rotate( -45 * M_PI / 180.0f , 0 ,0 );
+    node->getComponent< Transform >()->translate( 0 , 10 , 10 );
+    node->getComponent< Transform >()->rotate( -45 * M_PI / 180.0f , 0 ,0 );
 
     lightNode = node;
 
@@ -307,7 +312,7 @@ Node * Application::addPointLight(){
     Light * light = new PointLight( glm::vec3( 1.0f , 0.0f , 0.0f ) , 2.0f );
 
     node->addComponent( light );
-    node->getComponent< Transform >()->setTranslation( glm::vec3( 0 , 3, 3 ) );
+    node->getComponent< Transform >()->setTranslation( glm::vec3( 0 , 9, 9 ) );
 
     lightNode = node;
     this->scene->addChild( node );
@@ -324,8 +329,7 @@ Application * Application::application = nullptr;
 Application * Application::getInstance(){
 
     if( Application::application == nullptr ){
-        Application::application = new Application();
-        Application::application->init();
+        Application::application = new Application( WIDTH , HEIGHT , "OpenGL" );
     }
 
     return Application::application;

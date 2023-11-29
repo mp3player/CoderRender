@@ -2,30 +2,33 @@
 #define _APPLICATION_HPP_
 
 
+#include <thread>
 #include <Window.hpp>
 #include <system/System.hpp>
 #include <system/CoordinateSystem.hpp>
 #include <system/RenderSystem.hpp>
 #include <system/TimeSystem.hpp>
-#include <scene/Screen.hpp>
+#include <render/RenderPass.hpp>
 
-
+// thread
 // single Instance Application
 struct Application {
 
     public:
-        Window * window;
+        Window * window = nullptr ;
 
-        Scene * scene;
+        Scene * scene = nullptr ;
 
-        RenderSystem * renderSystem;
-        CoordinateSystem * coordinateSystem;
-        TimeSystem * timeSystem;
+        RenderSystem * renderSystem = nullptr ;
+        CoordinateSystem * coordinateSystem = nullptr ;
+        TimeSystem * timeSystem = nullptr ;
 
         std::vector< System * > systems;
 
+
+
     private:
-        Application() = default ;
+        Application( int width , int height , std::string title );
 
     public:
         ~Application();
@@ -35,6 +38,8 @@ struct Application {
         void registSystem( System * system );
 
         void init();
+
+        void asynInit();
         
         void run();
 

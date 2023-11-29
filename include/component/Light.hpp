@@ -38,8 +38,6 @@ struct DirectionalLight : Light {
 
     explicit DirectionalLight( glm::vec3 color , float intensity );
 
-
-
 };
 
 struct PointLight : Light {

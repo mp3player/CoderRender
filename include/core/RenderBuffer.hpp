@@ -1,5 +1,7 @@
-#include <core/Buffer.hpp>
+#ifndef _RENDER_BUFFER_HPP_
+#define _RENDER_BUFFER_HPP_
 
+#include <core/Buffer.hpp>
 
 
 struct RenderBuffer : Buffer {
@@ -16,13 +18,12 @@ struct RenderBuffer : Buffer {
 
     public:
         void init() override;
-        void bind( GLenum target ) override;
+        void bind() override;
         void unBind() override;
         void dispose() override;
 
 
     public:
-        void bind() ;
         void allocate( GLenum format );
 
 };
@@ -38,12 +39,9 @@ struct RenderTexture : Buffer {
 
     public:
         void init() override;
-        void bind( GLenum target ) override;
+        void bind() override;
         void unBind() override;
         void dispose() override;
-
-    public:
-        void bind();
 
 
 
@@ -61,11 +59,17 @@ struct FrameBuffer : Buffer {
 
     public:
         void init() override;
-        void bind( GLenum target ) override;
+        void bind() override;
         void unBind() override;
         void dispose() override;
 
     public:
-        void bind() ;
+        void bindRenderBuffer( RenderBuffer * renderBuffer , GLenum format , GLenum attachment );
+        void bindRenderTexture( RenderTexture * texture , GLenum attachment , int level );
+        void drawBuffer( std::vector< GLenum > attachments );
+        void copy( FrameBuffer * destination , int sx , int sy , int sw , int sh , int dx , int dy , int dw , int dh , unsigned char mask , unsigned int filter );
 
 };
+
+
+#endif

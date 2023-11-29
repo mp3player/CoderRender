@@ -22,7 +22,6 @@ struct Buffer : Ref {
 
         unsigned int id = 0;
         unsigned int target = 0;
-        bool binded = false;
         bool valid = false;
 
     protected:
@@ -36,15 +35,19 @@ struct Buffer : Ref {
     public:
 
         unsigned int ID() const ;
+        unsigned int getTarget() const ;
 
     public:
 
         virtual void init() = 0;
-        virtual void bind( GLenum target ) = 0;
+        virtual void bind() = 0;
         virtual void unBind() = 0;
 
         // glDeleteBuffers()
         virtual void dispose() = 0;
+
+    public:
+        void setTarget( GLenum target );
 
 };
 

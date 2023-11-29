@@ -29,13 +29,18 @@ src/MemoryManager.cpp
 src/IO.cpp
 src/ShaderPreProcessor.cpp
 src/Uniform.cpp
+src/OpenGLState.cpp
+src/Event.cpp
 
 
 # render 
-src/RenderPass.cpp
+
 src/Renderer.cpp
 src/OpenGLRenderer.cpp
 src/OpenGLRenderTarget.cpp
+src/Pass.cpp
+src/RenderPass.cpp
+src/ShadowPass.cpp
 
 # util 
 src/Layer.cpp
@@ -52,7 +57,6 @@ src/Material.cpp
 
 # scene
 src/Texture.cpp
-src/Screen.cpp
 
 # window 
 src/Window.cpp
@@ -70,6 +74,7 @@ src/System.cpp
 src/CoordinateSystem.cpp
 src/RenderSystem.cpp
 src/TimeSystem.cpp
+src/EventSystem.cpp
 
 # application
 src/Application.cpp

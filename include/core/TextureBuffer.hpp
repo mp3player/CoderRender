@@ -21,7 +21,7 @@ struct TextureBuffer : Buffer {
 
     public:
         void init() override ;
-        void bind( GLenum target ) override ;
+        void bind() override ;
         void unBind() override ;
 
         void dispose() override ;
@@ -33,7 +33,6 @@ struct TextureBuffer : Buffer {
 
     public: 
         void init( GLenum type );
-        void bind();
 
 
 };

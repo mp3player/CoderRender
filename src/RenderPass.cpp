@@ -3,7 +3,7 @@
 
 // OpenGLRenderTarget( Frame Buffer );
 RenderPass::RenderPass( int width , int height )
-    :width( width ) , height( height )
+    :Pass( width , height )
 {}
 
 RenderPass::~RenderPass(){
@@ -20,26 +20,14 @@ void RenderPass::init(){
     this->frameBuffer->init();
     this->depthBuffer->init();
     this->renderTexture->init();
+    
+    // target
+    this->frameBuffer->setTarget( GL_FRAMEBUFFER );
+    this->depthBuffer->setTarget( GL_RENDERBUFFER );
+    this->renderTexture->setTarget( GL_TEXTURE_2D );
 
-    // bind Buffer
-    this->frameBuffer->bind();
 
-    // depth buffer 
-    this->depthBuffer->allocate( GL_DEPTH_COMPONENT );
-
-    glFramebufferRenderbuffer( GL_FRAMEBUFFER , GL_DEPTH_ATTACHMENT , GL_RENDERBUFFER , this->depthBuffer->ID() );
-
-    // render to texture => not need color render buffer
-    this->renderTexture->bind();
-
-    glFramebufferTexture( GL_FRAMEBUFFER , GL_COLOR_ATTACHMENT0 , this->renderTexture->ID() , 0 );
-
-    // TODO : may need stencil buffer & multi-sample buffer
-
-    this->depthBuffer->unBind();
-    this->renderTexture->unBind();
-    this->frameBuffer->unBind();
-
+    // TODO : 
 }
 
 void RenderPass::dispose(){
@@ -49,4 +37,9 @@ void RenderPass::dispose(){
     delete this->renderTexture;
 
 }
+
+void RenderPass::render(){
+
+}
+
 

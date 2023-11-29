@@ -360,4 +360,7 @@ CMakeFiles/miracle.dir/src/RenderSystem.cpp.o: \
  /home/coder/project/c++/engine/./include/render/Renderer.hpp \
  /home/coder/project/c++/engine/./include/core/VertexBuffer.hpp \
  /home/coder/project/c++/engine/./include/core/TextureBuffer.hpp \
+ /home/coder/project/c++/engine/./include/render/OpenGLRenderTarget.hpp \
+ /home/coder/project/c++/engine/./include/core/RenderBuffer.hpp \
+ /home/coder/project/c++/engine/./include/core/OpenGLState.hpp \
  /home/coder/project/c++/engine/./include/component/Transform.hpp

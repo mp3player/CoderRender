@@ -6,8 +6,6 @@
 
 typedef MemoryManager< Node > NodeManager;
 
-#include <scene/Node.hpp>
-
 struct Scene : Node {
 
     private:
@@ -16,16 +14,9 @@ struct Scene : Node {
 
     public:
 
-        std::vector< Node * > children;
-
-    public:
-
         template< typename T >
         std::vector< Node * > findWithComponent();
 
-    public:
-
-        ~Scene();
 
 };
 

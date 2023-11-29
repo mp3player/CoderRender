@@ -6,7 +6,9 @@
 #include <opengl/shader/OpenGLProgram.hpp>
 #include <core/VertexBuffer.hpp>
 #include <core/TextureBuffer.hpp>
-#include <scene/Scene.hpp>
+
+#include <render/OpenGLRenderTarget.hpp>
+#include <core/OpenGLState.hpp>
 
 
 Program * getProgram( Node * node );
@@ -19,9 +21,8 @@ TextureBuffer * getTexture( Texture * texture );
 struct OpenGLRenderer : Renderer {
 
     public:
-
-        glm::vec3 color = { 0.0f , 0.0f , 0.0f };
-        float alpha = 0.2f ;
+    
+        OpenGLState state = OpenGLState();
 
     public:
     
@@ -30,9 +31,28 @@ struct OpenGLRenderer : Renderer {
 
     public:
 
+        void setColor( float r , float g , float b );
+        void setColor( glm::vec3 color );
+        void setAlpha( float alpha );
+
         void enable( );
         void disable();
-        void clear() override ;
+    
+    public:
+
+        void clearColorBuffer();
+        void clearDepthBuffer();
+        void clearStencilBuffer();
+        
+    public:
+
+        void clear( unsigned int mask ) override ;
+        void render( Scene * scene ) override ;
+
+    public:
+
+        void renderShadow( Scene * scene );
+
 
     private:
 
@@ -47,12 +67,12 @@ struct OpenGLRenderer : Renderer {
         void setPointLight( Program * program , std::vector< Node * > points );
 
         void setRenderParameter( Program * program , RenderComponent * parameters );
-    
-    public:
 
-        void render( Scene * scene ) ;
 
 };
+
+
+
 
 
 

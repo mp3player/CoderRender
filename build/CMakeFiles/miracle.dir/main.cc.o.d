@@ -128,15 +128,23 @@ CMakeFiles/miracle.dir/main.cc.o: /home/coder/project/c++/engine/main.cc \
  /usr/include/c++/11/bits/charconv.h \
  /usr/include/c++/11/bits/basic_string.tcc \
  /home/coder/project/c++/engine/./include/Application.hpp \
+ /usr/include/c++/11/thread /usr/include/c++/11/bits/std_thread.h \
+ /usr/include/c++/11/exception /usr/include/c++/11/bits/exception_ptr.h \
+ /usr/include/c++/11/bits/cxxabi_init_exception.h \
+ /usr/include/c++/11/typeinfo /usr/include/c++/11/bits/nested_exception.h \
+ /usr/include/c++/11/tuple /usr/include/c++/11/utility \
+ /usr/include/c++/11/bits/stl_relops.h /usr/include/c++/11/array \
+ /usr/include/c++/11/bits/uses_allocator.h \
+ /usr/include/c++/11/bits/invoke.h /usr/include/c++/11/bits/refwrap.h \
+ /usr/include/c++/11/bits/unique_ptr.h \
+ /usr/include/c++/11/bits/this_thread_sleep.h /usr/include/c++/11/chrono \
+ /usr/include/c++/11/ratio /usr/include/c++/11/limits \
+ /usr/include/c++/11/ctime /usr/include/c++/11/bits/parse_numbers.h \
  /home/coder/project/c++/engine/./include/Window.hpp \
  /home/coder/project/c++/engine/./include/glad/glad.h \
  /usr/include/KHR/khrplatform.h /usr/local/include/GLFW/glfw3.h \
  /usr/include/c++/11/iostream /usr/include/c++/11/ostream \
- /usr/include/c++/11/ios /usr/include/c++/11/exception \
- /usr/include/c++/11/bits/exception_ptr.h \
- /usr/include/c++/11/bits/cxxabi_init_exception.h \
- /usr/include/c++/11/typeinfo /usr/include/c++/11/bits/nested_exception.h \
- /usr/include/c++/11/bits/ios_base.h \
+ /usr/include/c++/11/ios /usr/include/c++/11/bits/ios_base.h \
  /usr/include/c++/11/bits/locale_classes.h \
  /usr/include/c++/11/bits/locale_classes.tcc \
  /usr/include/c++/11/system_error \
@@ -163,10 +171,7 @@ CMakeFiles/miracle.dir/main.cc.o: /home/coder/project/c++/engine/main.cc \
  /usr/include/c++/11/unordered_map \
  /usr/include/c++/11/ext/aligned_buffer.h \
  /usr/include/c++/11/bits/hashtable.h \
- /usr/include/c++/11/bits/hashtable_policy.h /usr/include/c++/11/tuple \
- /usr/include/c++/11/utility /usr/include/c++/11/bits/stl_relops.h \
- /usr/include/c++/11/array /usr/include/c++/11/bits/uses_allocator.h \
- /usr/include/c++/11/bits/invoke.h \
+ /usr/include/c++/11/bits/hashtable_policy.h \
  /usr/include/c++/11/bits/enable_special_members.h \
  /usr/include/c++/11/bits/node_handle.h \
  /usr/include/c++/11/bits/unordered_map.h \
@@ -183,8 +188,7 @@ CMakeFiles/miracle.dir/main.cc.o: /home/coder/project/c++/engine/main.cc \
  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
- /usr/include/c++/11/bits/specfun.h /usr/include/c++/11/limits \
- /usr/include/c++/11/tr1/gamma.tcc \
+ /usr/include/c++/11/bits/specfun.h /usr/include/c++/11/tr1/gamma.tcc \
  /usr/include/c++/11/tr1/special_function_util.h \
  /usr/include/c++/11/tr1/bessel_function.tcc \
  /usr/include/c++/11/tr1/beta_function.tcc \
@@ -361,21 +365,9 @@ CMakeFiles/miracle.dir/main.cc.o: /home/coder/project/c++/engine/main.cc \
  /home/coder/project/c++/engine/./include/render/Renderer.hpp \
  /home/coder/project/c++/engine/./include/core/VertexBuffer.hpp \
  /home/coder/project/c++/engine/./include/core/TextureBuffer.hpp \
+ /home/coder/project/c++/engine/./include/render/OpenGLRenderTarget.hpp \
+ /home/coder/project/c++/engine/./include/core/RenderBuffer.hpp \
+ /home/coder/project/c++/engine/./include/core/OpenGLState.hpp \
  /home/coder/project/c++/engine/./include/system/TimeSystem.hpp \
- /usr/include/c++/11/ctime \
- /home/coder/project/c++/engine/./include/scene/Screen.hpp \
- /usr/local/include/glm/gtc/matrix_transform.hpp \
- /usr/local/include/glm/ext/matrix_projection.hpp \
- /usr/local/include/glm/gtc/constants.hpp \
- /usr/local/include/glm/ext/scalar_constants.hpp \
- /usr/local/include/glm/ext/scalar_constants.inl \
- /usr/local/include/glm/gtc/constants.inl \
- /usr/local/include/glm/ext/matrix_projection.inl \
- /usr/local/include/glm/ext/matrix_clip_space.hpp \
- /usr/local/include/glm/ext/matrix_clip_space.inl \
- /usr/local/include/glm/ext/matrix_transform.hpp \
- /usr/local/include/glm/ext/matrix_transform.inl \
- /usr/local/include/glm/gtc/matrix_transform.inl \
- /home/coder/project/c++/engine/./include/opengl/shader/ShaderPreProcessor.hpp \
- /home/coder/project/c++/engine/./include/core/io/IO.hpp \
- /home/coder/project/c++/engine/./include/component/Transform.hpp
+ /home/coder/project/c++/engine/./include/render/RenderPass.hpp \
+ /home/coder/project/c++/engine/./include/render/Pass.hpp

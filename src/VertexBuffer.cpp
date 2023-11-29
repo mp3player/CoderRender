@@ -8,26 +8,19 @@ void VertexBuffer::init(){
 
 }
 
-void VertexBuffer::bind( GLenum target ){
+void VertexBuffer::bind(){
 
-    glBindBuffer( target , this->id );
-    this->target = target;
-    this->binded = true;
+    glBindBuffer( this->target , this->id );
 
 }
 
 void VertexBuffer::unBind(){
 
-    if( this->binded ){
-        this->binded = false;
-        glBindBuffer( this->target , this->id );
-    }
-    
+    glBindBuffer( this->target , 0 );
+
 }
 
 bool VertexBuffer::allocate( int size ){
-
-    if( !this->binded ) return false;
 
     this->bufferSize = size;
     glBufferData( this->target , size , nullptr , GL_READ_WRITE );
@@ -37,10 +30,6 @@ bool VertexBuffer::allocate( int size ){
 }
 
 void VertexBuffer::clearBufferData( GLenum internalFormat , GLenum format , GLenum type , void * data ){
-    
-    if( !this->binded ){
-        return ;
-    }
 
     glClearBufferData( this->target , internalFormat , format , type , data );
 
@@ -69,12 +58,12 @@ bool AttributeBuffer::bufferData( const std::vector< float > data , GLenum usage
     return VertexBuffer::bufferData<float>( data , usage );
 }
 
+
+
 void AttributeBuffer::enable(){
 
-    if(!this->binded ) return ;
     glEnableVertexAttribArray( this->index );
     glVertexAttribPointer( this->index , this->itemSize , GL_FLOAT , GL_FALSE , this->stride * sizeof( float ) , (void *)( this->offset * sizeof( float ) ) );
-    
 
 }
 
@@ -157,7 +146,8 @@ bool VertexArrayBuffer::setIndex( std::vector< unsigned int > index ){
 
     this->index = new IndexBuffer();
     this->index->init();
-    this->index->bind( GL_ELEMENT_ARRAY_BUFFER );
+    this->index->setTarget( GL_ELEMENT_ARRAY_BUFFER );
+    this->index->bind();
     this->index->bufferData( index , GL_STATIC_DRAW );
     this->index->unBind();
     return true;
@@ -167,7 +157,7 @@ bool VertexArrayBuffer::setIndex( std::vector< unsigned int > index ){
 void VertexArrayBuffer::bindIndex(){
 
     if( this->index != nullptr )
-    this->index->bind( GL_ELEMENT_ARRAY_BUFFER );
+    this->index->bind();
 
 }
 
@@ -184,7 +174,8 @@ bool VertexArrayBuffer::addAttribute( std::vector< float > data , int itemSize )
     AttributeBuffer * buffer = new AttributeBuffer( this->buffer.size() , itemSize , 0 );
 
     buffer->init();
-    buffer->bind( GL_ARRAY_BUFFER );
+    buffer->setTarget( GL_ARRAY_BUFFER );
+    buffer->bind(  );
     buffer->bufferData( data , GL_STATIC_DRAW );
     buffer->enable();
     buffer->unBind();

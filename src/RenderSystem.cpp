@@ -36,15 +36,12 @@ void RenderSystem::update( float deltaTime ){
         object->update( deltaTime );
     }
 
-    Node * camera = scene->findChildWithComponent< Camera >();
-    std::vector< Node * > nodes = scene->findChildrenWithComponent< RenderComponent >();
-    std::vector< Node * > ambientLights = scene->findChildrenWithComponent< AmbientLight >();
-    std::vector< Node * > directionalLights = scene->findChildrenWithComponent< DirectionalLight >();
+    this->renderer->clearColorBuffer();
+    this->renderer->clearDepthBuffer();
+    this->renderer->clearStencilBuffer();
 
-    this->renderer->clear();
-    this->renderer->render( this->scene );
-
-
+    // this->renderer->render( this->scene );
+    this->renderer->renderShadow( this->scene );
 
 }
 

@@ -61,8 +61,13 @@
 },
 {
   "directory": "/home/coder/project/c++/engine/build",
-  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -o CMakeFiles/miracle.dir/src/RenderPass.cpp.o -c /home/coder/project/c++/engine/src/RenderPass.cpp",
-  "file": "/home/coder/project/c++/engine/src/RenderPass.cpp"
+  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -o CMakeFiles/miracle.dir/src/OpenGLState.cpp.o -c /home/coder/project/c++/engine/src/OpenGLState.cpp",
+  "file": "/home/coder/project/c++/engine/src/OpenGLState.cpp"
+},
+{
+  "directory": "/home/coder/project/c++/engine/build",
+  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -o CMakeFiles/miracle.dir/src/Event.cpp.o -c /home/coder/project/c++/engine/src/Event.cpp",
+  "file": "/home/coder/project/c++/engine/src/Event.cpp"
 },
 {
   "directory": "/home/coder/project/c++/engine/build",
@@ -78,6 +83,21 @@
   "directory": "/home/coder/project/c++/engine/build",
   "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -o CMakeFiles/miracle.dir/src/OpenGLRenderTarget.cpp.o -c /home/coder/project/c++/engine/src/OpenGLRenderTarget.cpp",
   "file": "/home/coder/project/c++/engine/src/OpenGLRenderTarget.cpp"
+},
+{
+  "directory": "/home/coder/project/c++/engine/build",
+  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -o CMakeFiles/miracle.dir/src/Pass.cpp.o -c /home/coder/project/c++/engine/src/Pass.cpp",
+  "file": "/home/coder/project/c++/engine/src/Pass.cpp"
+},
+{
+  "directory": "/home/coder/project/c++/engine/build",
+  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -o CMakeFiles/miracle.dir/src/RenderPass.cpp.o -c /home/coder/project/c++/engine/src/RenderPass.cpp",
+  "file": "/home/coder/project/c++/engine/src/RenderPass.cpp"
+},
+{
+  "directory": "/home/coder/project/c++/engine/build",
+  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -o CMakeFiles/miracle.dir/src/ShadowPass.cpp.o -c /home/coder/project/c++/engine/src/ShadowPass.cpp",
+  "file": "/home/coder/project/c++/engine/src/ShadowPass.cpp"
 },
 {
   "directory": "/home/coder/project/c++/engine/build",
@@ -118,11 +138,6 @@
   "directory": "/home/coder/project/c++/engine/build",
   "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -o CMakeFiles/miracle.dir/src/Texture.cpp.o -c /home/coder/project/c++/engine/src/Texture.cpp",
   "file": "/home/coder/project/c++/engine/src/Texture.cpp"
-},
-{
-  "directory": "/home/coder/project/c++/engine/build",
-  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -o CMakeFiles/miracle.dir/src/Screen.cpp.o -c /home/coder/project/c++/engine/src/Screen.cpp",
-  "file": "/home/coder/project/c++/engine/src/Screen.cpp"
 },
 {
   "directory": "/home/coder/project/c++/engine/build",
@@ -168,6 +183,11 @@
   "directory": "/home/coder/project/c++/engine/build",
   "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -o CMakeFiles/miracle.dir/src/TimeSystem.cpp.o -c /home/coder/project/c++/engine/src/TimeSystem.cpp",
   "file": "/home/coder/project/c++/engine/src/TimeSystem.cpp"
+},
+{
+  "directory": "/home/coder/project/c++/engine/build",
+  "command": "/bin/x86_64-linux-gnu-g++-11  -I/home/coder/project/c++/engine/./include -I/usr/local/include/opencv4 -g -o CMakeFiles/miracle.dir/src/EventSystem.cpp.o -c /home/coder/project/c++/engine/src/EventSystem.cpp",
+  "file": "/home/coder/project/c++/engine/src/EventSystem.cpp"
 },
 {
   "directory": "/home/coder/project/c++/engine/build",

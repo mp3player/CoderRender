@@ -3,13 +3,27 @@
 
 #include <core/TextureBuffer.hpp>
 #include <core/RenderBuffer.hpp>
+#include <array>
 
 struct OpenGLRenderTarget {
 
     public:
-        std::unordered_map< int , RenderTexture * > targets;
+        int width ;
+        int height;
+        int count;
+        RenderTexture * target;
 
+    public: 
+        OpenGLRenderTarget( int width , int height );
+        ~OpenGLRenderTarget( );
     
+    public:
+
+        void init();
+        void bind( );
+        void unBind( );
+        void dispose( );
+
 
 };
 
